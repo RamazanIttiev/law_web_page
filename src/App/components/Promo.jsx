@@ -8,10 +8,11 @@ const Base = styled.div`
   text-align: center;
   color: #fff;
 `;
+
 const Wrapper = styled.div`
-    background-image: -webkit-linear-gradient(top, rgb(52, 90, 128), rgba(163, 163, 163, 0.7));
-    padding: 32px 0;
-}`;
+  background-image: -webkit-linear-gradient(top, rgb(52, 90, 128), rgba(163, 163, 163, 0.7));
+  padding: 32px 0 56px;
+`;
 
 const Title = styled.h1`
   font-size: 56px;
