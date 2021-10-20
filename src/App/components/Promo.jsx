@@ -6,6 +6,7 @@ import PromoBgr from '../../assets/Promo_bgr.jpeg';
 const Base = styled.div`
   background: url(${PromoBgr});
   text-align: center;
+  color: #fff;
 `;
 const Wrapper = styled.div`
     background-image: -webkit-linear-gradient(top, rgb(52, 90, 128), rgba(163, 163, 163, 0.7));
