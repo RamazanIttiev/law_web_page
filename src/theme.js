@@ -14,16 +14,21 @@ export const theme = createTheme({
       paper: '#fff',
     },
     text: {
-      primary: '#345a80',
-      secondary: '#000',
+      primary: '#fff',
+      secondary: '#345a80',
     },
   },
   typography: {
     fontFamily: '"Montserrat", "Open Sans"',
     fontSize: 16,
     h1: {
-      fontSize: 24,
+      fontSize: 56,
       fontWeight: 700,
+      lineHeight: 1.54,
+    },
+    h2: {
+      fontSize: 20,
+      fontWeight: 500,
       lineHeight: 1.54,
     },
   },
