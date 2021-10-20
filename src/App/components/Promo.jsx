@@ -13,7 +13,11 @@ const Wrapper = styled.div`
     padding: 32px 0;
 }`;
 
-const Title = styled(Typography).attrs({ variant: 'h1' })``;
+const Title = styled.h1`
+  font-size: 56px;
+  font-weight: 700;
+  color: #fff;
+`;
 
 const Subtitle = styled(Typography).attrs({ variant: 'h2' })`
   &.css-1imety6-MuiTypography-root {
