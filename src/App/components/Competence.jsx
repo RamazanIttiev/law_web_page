@@ -10,10 +10,6 @@ import {
   Home,
 } from '@mui/icons-material';
 
-const Background = styled.div`
-  background: #fff;
-`;
-
 const Base = styled(Container)`
   &.css-1oqqzyl-MuiContainer-root {
     display: flex;
@@ -21,7 +17,7 @@ const Base = styled(Container)`
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 32px 0;
+    padding: 56px 0;
   }
 `;
 
@@ -49,35 +45,33 @@ const Item = styled.div`
 `;
 
 const Competence = () => (
-  <Background>
-    <Base maxWidth="lg">
-      <Title>Наши компетенции</Title>
-      <Item>
-        <AccountBalance />
-        Взыскание долгов с МФО и брокеров
-      </Item>
-      <Item>
-        <MonetizationOn />
-        Дела о мошенничестве
-      </Item>
-      <Item>
-        <WifiProtectedSetup />
-        Возврат денежных средств с КПК
-      </Item>
-      <Item>
-        <NightShelter />
-        Защита прав потребителей
-      </Item>
-      <Item>
-        <FamilyRestroom />
-        Семейные споры
-      </Item>
-      <Item>
-        <Home />
-        Жилищные споры
-      </Item>
-    </Base>
-  </Background>
+  <Base maxWidth="lg">
+    <Title>Наши компетенции</Title>
+    <Item>
+      <AccountBalance />
+      Взыскание долгов с МФО и брокеров
+    </Item>
+    <Item>
+      <MonetizationOn />
+      Дела о мошенничестве
+    </Item>
+    <Item>
+      <WifiProtectedSetup />
+      Возврат денежных средств с КПК
+    </Item>
+    <Item>
+      <NightShelter />
+      Защита прав потребителей
+    </Item>
+    <Item>
+      <FamilyRestroom />
+      Семейные споры
+    </Item>
+    <Item>
+      <Home />
+      Жилищные споры
+    </Item>
+  </Base>
 );
 
 export default Competence;

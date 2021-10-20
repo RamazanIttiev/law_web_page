@@ -22,9 +22,10 @@ export const theme = createTheme({
     fontFamily: '"Montserrat", "Open Sans"',
     fontSize: 16,
     h1: {
-      fontSize: 56,
+      fontSize: 48,
       fontWeight: 700,
       lineHeight: 1.54,
+      color: '#345a80',
     },
     h2: {
       fontSize: 20,

@@ -11,7 +11,7 @@ import Committee from '../../assets/committee.png';
 import GeneralCourt from '../../assets/general-court.png';
 
 const Background = styled.div`
-  background: #fff;
+  background: ${props => props.theme.palette.background.paper};
 `;
 
 const Base = styled(Container)`
