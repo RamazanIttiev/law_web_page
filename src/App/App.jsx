@@ -1,5 +1,6 @@
 import React from 'react';
 import Advantages from './components/Advantages';
+import Examples from './components/Carousel';
 import Competence from './components/Competence';
 import Consultation from './components/Consultation';
 import Guaranties from './components/Guaranties';
@@ -20,6 +21,7 @@ const App = () => (
     <Advantages />
     <Consultation />
     <Services />
+    <Examples />
   </>
 );
 
