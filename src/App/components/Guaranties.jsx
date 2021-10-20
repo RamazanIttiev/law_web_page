@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import Eagle from '../../assets/eagleImg.png';
@@ -21,6 +21,7 @@ const Article = styled.div`
 const Link = styled.a`
   text-decoration: none;
   padding: 16px;
+  color: black;
 `;
 
 const EagleIcon = styled.img`
@@ -31,19 +32,21 @@ const EagleIcon = styled.img`
 
 const Guaranties = () => (
   <Base>
-    <Text>
-      «Каждому гарантируется право на получение квалифицированной юридической помощи. В случаях,
-      предусмотренных законом, юридическая помощь оказывается бесплатно»
-    </Text>
-    <Article>
-      <EagleIcon src={Eagle} />
-      <Link
-        href="http://www.consultant.ru/document/cons_doc_LAW_28399/78dcbb89fb8a04e896d5863e68edd708540f844c/ "
-        target="_blank"
-      >
-        ст.48 Конституции РФ
-      </Link>
-    </Article>
+    <Container maxWidth="lg">
+      <Text>
+        «Каждому гарантируется право на получение квалифицированной юридической помощи. В случаях,
+        предусмотренных законом, юридическая помощь оказывается бесплатно»
+      </Text>
+      <Article>
+        <EagleIcon src={Eagle} />
+        <Link
+          href="http://www.consultant.ru/document/cons_doc_LAW_28399/78dcbb89fb8a04e896d5863e68edd708540f844c/ "
+          target="_blank"
+        >
+          ст.48 Конституции РФ
+        </Link>
+      </Article>
+    </Container>
   </Base>
 );
 
