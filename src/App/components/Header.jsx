@@ -8,6 +8,9 @@ const Base = styled.header`
   justify-content: space-between;
   padding: 24px;
   color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 100px;
 `;
 
 const Logo = styled.div`
@@ -46,32 +49,38 @@ const Number = styled.div`
   border-radius: 32px;
   padding: 16px;
 `;
+const EmptyDiv = styled.div`
+  height: 100px;
+`;
 
 const Header = () => (
-  <Base>
-    <Logo>
-      <Link href="/">
-        ЦЕНТР ЮРИДИЧЕСКОЙ ПОМОЩИ <br />
-        <span>по Москве и Московской области</span>
-      </Link>
-    </Logo>
-    <Nav>
-      <List>
-        <ListItem>
-          <Link href="/">Компетенции</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/">Услуги</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/">Контакты</Link>
-        </ListItem>
-      </List>
-    </Nav>
-    <Number>
-      <Link href="tel:99999999999">99999999999</Link>
-    </Number>
-  </Base>
+  <>
+    <Base>
+      <Logo>
+        <Link href="/">
+          ЦЕНТР ЮРИДИЧЕСКОЙ ПОМОЩИ <br />
+          <span>по Москве и Московской области</span>
+        </Link>
+      </Logo>
+      <Nav>
+        <List>
+          <ListItem>
+            <Link href="/">Компетенции</Link>
+          </ListItem>
+          <ListItem>
+            <Link href="/">Услуги</Link>
+          </ListItem>
+          <ListItem>
+            <Link href="/">Контакты</Link>
+          </ListItem>
+        </List>
+      </Nav>
+      <Number>
+        <Link href="tel:99999999999">99999999999</Link>
+      </Number>
+    </Base>
+    <EmptyDiv />
+  </>
 );
 
 export default Header;
