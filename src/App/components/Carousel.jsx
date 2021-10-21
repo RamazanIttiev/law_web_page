@@ -22,7 +22,6 @@ const Title = styled(Typography).attrs({ variant: 'h1' })`
   }
   width: 100%;
   text-transform: uppercase;
-  text-align: center;
 `;
 
 const Slide = styled.div`
