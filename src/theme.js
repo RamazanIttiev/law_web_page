@@ -26,11 +26,29 @@ export const theme = createTheme({
       fontWeight: 700,
       lineHeight: 1.54,
       color: '#345a80',
+      textAlign: 'center',
     },
     h2: {
       fontSize: 20,
       fontWeight: 500,
       lineHeight: 1.54,
+    },
+  },
+  components: {
+    MuiAccordion: {
+      styleOverrides: {
+        root: {
+          width: '70%',
+          margin: '0 auto',
+          background: 'transparent',
+          border: 'none',
+
+          '&.Mui-expanded': {
+            margin: '0 auto',
+          },
+        },
+        gutters: {},
+      },
     },
   },
 });

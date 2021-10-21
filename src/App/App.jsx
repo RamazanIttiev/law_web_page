@@ -1,8 +1,10 @@
 import React from 'react';
+import AccordionServices from './components/Accordion';
 import Advantages from './components/Advantages';
 import Examples from './components/Carousel';
 import Competence from './components/Competence';
 import Consultation from './components/Consultation';
+import Contacts from './components/Contacts';
 import Guaranties from './components/Guaranties';
 import Header from './components/Header';
 import Promo from './components/Promo';
@@ -19,9 +21,11 @@ const App = () => (
     <Spheres />
     <Statistics />
     <Advantages />
+    <AccordionServices />
     <Consultation />
     <Services />
     <Examples />
+    <Contacts />
   </>
 );
 
