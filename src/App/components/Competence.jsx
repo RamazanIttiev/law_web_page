@@ -15,7 +15,7 @@ const Base = styled(Container)`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     text-align: center;
     padding: 56px 0;
   }

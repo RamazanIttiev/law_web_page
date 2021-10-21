@@ -28,7 +28,6 @@ const Bold = styled.span`
 `;
 
 const Link = styled.a`
-  text-decoration: none;
   padding: 8px;
   color: black;
 `;

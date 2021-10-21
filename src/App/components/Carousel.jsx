@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { Container, Typography } from '@mui/material';
 
 const Base = styled(Container)`
-  padding: 56px 0;
+  padding: 124px 0;
 `;
 
 const Button = styled.button`
@@ -17,8 +17,8 @@ const Button = styled.button`
 `;
 
 const Title = styled(Typography).attrs({ variant: 'h1' })`
-  &.css-dz9mf5-MuiTypography-root {
-    margin-bottom: 56px;
+  &.css-qtipo4-MuiTypography-root {
+    margin-bottom: 48px;
   }
   width: 100%;
   text-transform: uppercase;
@@ -35,7 +35,7 @@ const Slide = styled.div`
 
 const Examples = () => (
   <Base>
-    <Title>Примерв наших дел</Title>
+    <Title>Примеры наших дел</Title>
     <Carousel
       plugins={[
         'infinite',

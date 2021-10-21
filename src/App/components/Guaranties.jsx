@@ -20,7 +20,6 @@ const Article = styled.div`
 `;
 
 const Link = styled.a`
-  text-decoration: none;
   padding: 16px;
   color: black;
 `;

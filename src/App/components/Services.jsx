@@ -5,6 +5,7 @@ import { Container } from '@mui/material';
 
 const Base = styled.div`
   padding: 124px 0;
+  background: ${props => props.theme.palette.background.paper};
 `;
 
 const Table = styled.table`

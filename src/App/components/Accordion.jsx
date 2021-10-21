@@ -9,6 +9,7 @@ import Button from '../Ui/Button';
 
 const Base = styled.div`
   padding: 124px 0;
+  background: ${props => props.theme.palette.background.paper};
 `;
 
 const Details = styled(AccordionDetails)``;
