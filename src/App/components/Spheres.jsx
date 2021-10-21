@@ -26,7 +26,7 @@ const Base = styled(Container)`
 `;
 
 const Title = styled(Typography).attrs({ variant: 'h1' })`
-  &.css-dz9mf5-MuiTypography-root {
+  &.css-qtipo4-MuiTypography-root {
     margin-bottom: 56px;
   }
   width: 100%;

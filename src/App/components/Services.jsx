@@ -4,7 +4,7 @@ import { CheckCircle, Cancel } from '@mui/icons-material';
 import { Container } from '@mui/material';
 
 const Base = styled.div`
-  padding: 72px 0;
+  padding: 124px 0;
 `;
 
 const Table = styled.table`

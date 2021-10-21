@@ -134,7 +134,7 @@ const AccordionServices = () => (
     </Accordion>
     <Subtitle>Заказать услугу</Subtitle>
     <Text>Получите бесплатную консультацию по Вашему делу</Text>
-    <StyledButton>Проконсультироваться</StyledButton>
+    <StyledButton>Заказать</StyledButton>
   </Base>
 );
 
