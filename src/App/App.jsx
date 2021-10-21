@@ -2,6 +2,7 @@ import React from 'react';
 import AccordionServices from './components/Accordion';
 import Advantages from './components/Advantages';
 import Examples from './components/Carousel';
+import Companies from './components/Companies';
 import Competence from './components/Competence';
 import Consultation from './components/Consultation';
 import Contacts from './components/Contacts';
@@ -25,6 +26,7 @@ const App = () => (
     <Consultation />
     <Services />
     <Examples />
+    <Companies />
     <Contacts />
   </>
 );
