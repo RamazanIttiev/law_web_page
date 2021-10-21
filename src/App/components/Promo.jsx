@@ -2,6 +2,7 @@ import { Container, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import PromoBgr from '../../assets/Promo_bgr.jpeg';
+import Button from '../Ui/Button';
 
 const Base = styled.div`
   background: url(${PromoBgr});
@@ -26,19 +27,6 @@ const Subtitle = styled(Typography).attrs({ variant: 'h2' })`
   }
 `;
 
-const StyledButton = styled.button`
-  background: ${props => props.theme.palette.secondary.main};
-  border-radius: 50px;
-  color: #fff;
-  padding: 24px;
-  font-size: 24px;
-  font-weight: 700;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 50px;
-`;
-
 const Promo = () => (
   <Base>
     <Wrapper>
@@ -50,7 +38,7 @@ const Promo = () => (
         <Subtitle>
           Позвоните на нашу горячую линию и получите бесплатную консультацию от наших юристов.
         </Subtitle>
-        <StyledButton>Получите бесплатную консультацию</StyledButton>
+        <Button margin="72" text="Получите бесплатную консультацию" />
       </Container>
     </Wrapper>
   </Base>

@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { CheckCircle } from '@mui/icons-material';
 import ConsultationImg from '../../assets/Consultation.png';
+import Button from '../Ui/Button';
 
 const Base = styled(Container)`
   &.css-1oqqzyl-MuiContainer-root {
@@ -44,20 +45,6 @@ const Item = styled.div`
   }
 `;
 
-const StyledButton = styled.button`
-  background: ${props => props.theme.palette.secondary.main};
-  border-radius: 50px;
-  color: #fff;
-  padding: 24px;
-  font-size: 24px;
-  font-weight: 700;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 50px;
-  margin-top: 24px;
-`;
-
 const Image = styled.img`
   width: 650px;
   border-radius: 8px;
@@ -83,7 +70,7 @@ const Consultation = () => (
         <CheckCircle />
         Прогноз результатов и сроков{' '}
       </Item>
-      <StyledButton>Проконсультироваться</StyledButton>
+      <Button text="Проконсультироваться" />
     </Wrapper>
     <Image src={ConsultationImg} />
   </Base>

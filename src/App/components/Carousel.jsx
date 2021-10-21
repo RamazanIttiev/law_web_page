@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel, { arrowsPlugin, autoplayPlugin } from '@brainhubeu/react-carousel';
+import Carousel, { arrowsPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
 import styled from 'styled-components';

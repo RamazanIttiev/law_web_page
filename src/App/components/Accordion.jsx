@@ -5,6 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styled from 'styled-components';
+import Button from '../Ui/Button';
 
 const Base = styled.div`
   padding: 124px 0;
@@ -54,21 +55,6 @@ const Text = styled(Typography)`
     text-align: center;
     font-size: 24px;
   }
-`;
-
-const StyledButton = styled.button`
-  background: ${props => props.theme.palette.secondary.main};
-  border-radius: 50px;
-  color: #fff;
-  padding: 24px;
-  font-size: 24px;
-  font-weight: 700;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 50px;
-  margin: 72px auto 0;
-  display: block;
 `;
 
 const AccordionServices = () => (
@@ -134,7 +120,7 @@ const AccordionServices = () => (
     </Accordion>
     <Subtitle>Заказать услугу</Subtitle>
     <Text>Получите бесплатную консультацию по Вашему делу</Text>
-    <StyledButton>Заказать</StyledButton>
+    <Button margin="72" text="Заказать" />
   </Base>
 );
 
