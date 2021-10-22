@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, TextareaAutosize, Typography } from '@mui/material';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
+import { postData } from '../services';
 
 const StyledForm = styled.form`
   display: flex;
@@ -48,11 +49,12 @@ const Subtitle = styled(Typography).attrs({ variant: 'h2' })``;
 const StyledButton = styled.button`
   background: ${props => props.theme.palette.secondary.main};
   border-radius: 50px;
+  opacity: ${props => (props.disabled ? '0.6' : 1)};
   color: #fff;
   padding: 24px;
   font-size: 24px;
   font-weight: 700;
-  cursor: pointer;
+  cursor: ${props => (props.disabled ? 'default' : 'pointer')};
   border: none;
   outline: none;
   border-radius: 50px;
@@ -74,6 +76,8 @@ const style = {
 };
 
 const Dialog = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const {
     handleSubmit,
     formState: { errors },
@@ -81,34 +85,40 @@ const Dialog = () => {
   } = useForm();
 
   const formSubmit = data => {
-    console.log(data);
+    postData(data, setIsLoading);
   };
 
   return (
     <Box sx={style}>
       <Title>Получите бесплатную консультацию</Title>
       <Subtitle>Заполните контактные данные и мы свяжемся с вами в течение 10 минут</Subtitle>
+
       <StyledForm onSubmit={handleSubmit(formSubmit)}>
         <Input
+          name="name"
           error={errors.name}
           {...register('name', { required: true })}
           type="text"
           placeholder="ФИО"
         />
         <Input
+          name="phone"
           error={errors.phone}
           {...register('phone', { required: true })}
           type="number"
           placeholder="Ваш номер телефона"
         />
         <Textarea
-          {...register('problem', { required: true })}
+          name="message"
+          {...register('message', { required: true })}
           style={{ height: '280px', resize: 'none' }}
-          error={errors.problem}
+          error={errors.message}
           type="text"
           placeholder="Кратко опишите проблему"
         />
-        <StyledButton type="submit">Получить консультацию</StyledButton>
+        <StyledButton disabled={isLoading} type="submit">
+          Получить консультацию
+        </StyledButton>
       </StyledForm>
     </Box>
   );
