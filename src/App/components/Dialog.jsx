@@ -26,7 +26,6 @@ const Input = styled.input`
 
 const Textarea = styled(TextareaAutosize)`
   padding: 8px;
-  height: 148px;
   border: 1px solid #c9cacc;
   box-sizing: border-box;
   border-radius: 4px;
@@ -106,7 +105,7 @@ const Dialog = () => {
         <Textarea
           name="message"
           {...register('message', { required: true })}
-          style={{ height: '280px', resize: 'none' }}
+          style={{ height: '148px', resize: 'none' }}
           error={errors.message}
           type="text"
           placeholder="Кратко опишите проблему"
