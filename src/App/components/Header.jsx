@@ -10,7 +10,8 @@ const Base = styled.header`
   color: #fff;
   position: fixed;
   width: 100%;
-  height: 100px;
+  height: 72px;
+  z-index: 1;
 `;
 
 const Logo = styled.div`
@@ -37,7 +38,7 @@ const ListItem = styled.li`
 `;
 
 const Link = styled.a`
-  padding: 16px;
+  padding: 8px;
   color: #fff;
   text-decoration: none;
 `;
@@ -47,10 +48,10 @@ const Number = styled.div`
   color: #fff;
   background: #199c68;
   border-radius: 32px;
-  padding: 16px;
+  padding: 8px;
 `;
 const EmptyDiv = styled.div`
-  height: 100px;
+  height: 72px;
 `;
 
 const Header = () => (

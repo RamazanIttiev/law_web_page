@@ -12,8 +12,7 @@ const StyledForm = styled.form`
 
 const Input = styled.input`
   padding: 8px;
-  height: 81px;
-  font-size: 24px;
+  height: 64px;
   border: 1px solid #c9cacc;
   box-sizing: border-box;
   border-radius: 4px;
@@ -22,12 +21,12 @@ const Input = styled.input`
   box-shadow: 0px 0px 4px rgba(235, 23, 23, 0.2);
   border-radius: 4px;
   margin-bottom: 32px;
+  font-size: 16px;
 `;
 
 const Textarea = styled(TextareaAutosize)`
   padding: 8px;
-  height: 81px;
-  font-size: 24px;
+  height: 148px;
   border: 1px solid #c9cacc;
   box-sizing: border-box;
   border-radius: 4px;
@@ -35,14 +34,11 @@ const Textarea = styled(TextareaAutosize)`
   box-sizing: border-box;
   box-shadow: 0px 0px 4px rgba(235, 23, 23, 0.2);
   border-radius: 4px;
+  font-size: 16px
   margin-bottom: 32px;
 `;
 
-const Title = styled(Typography).attrs({ variant: 'h1' })`
-  &.css-qtipo4-MuiTypography-root {
-    font-size: 36px;
-  }
-`;
+const Title = styled(Typography).attrs({ variant: 'h1' })``;
 
 const Subtitle = styled(Typography).attrs({ variant: 'h2' })``;
 
@@ -52,14 +48,13 @@ const StyledButton = styled.button`
   opacity: ${props => (props.disabled ? '0.6' : 1)};
   color: #fff;
   padding: 24px;
-  font-size: 24px;
   font-weight: 700;
   cursor: ${props => (props.disabled ? 'default' : 'pointer')};
   border: none;
   outline: none;
   border-radius: 50px;
   display: block;
-  margin: ${props => props.margin}px auto 0;
+  margin: 24px auto 0;
 `;
 
 const style = {

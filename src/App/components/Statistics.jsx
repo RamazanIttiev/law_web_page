@@ -9,7 +9,7 @@ const Base = styled.div`
 
 const Background = styled.div`
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1), rgba(163, 163, 163, 0.7));
-  padding: 56px 0;
+  padding: ${props => props.theme.spacing(10)} 0;
 `;
 
 const Wrapper = styled.div`
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 const Item = styled.div`
   color: ${props => props.theme.palette.secondary.main};
   text-align: center;
-  font-size: 68px;
+  font-size: 56px;
   font-weight: 600;
   span {
     display: flex;
@@ -30,7 +30,7 @@ const Item = styled.div`
     justify-content: center;
     max-width: 320px;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 

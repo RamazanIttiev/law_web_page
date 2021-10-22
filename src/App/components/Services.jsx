@@ -4,7 +4,7 @@ import { CheckCircle, Cancel } from '@mui/icons-material';
 import { Container } from '@mui/material';
 
 const Base = styled.div`
-  padding: 124px 0;
+  padding: ${props => props.theme.spacing(10)} 0;
   background: ${props => props.theme.palette.background.paper};
 `;
 
@@ -34,17 +34,9 @@ const Data = styled.td`
   padding: 16px;
 `;
 
-const Check = styled(CheckCircle)`
-  &.css-1jxdcj3-MuiSvgIcon-root {
-    fill: #199c68;
-  }
-`;
+const Check = styled(CheckCircle)``;
 
-const Cross = styled(Cancel)`
-  &.css-1jxdcj3-MuiSvgIcon-root {
-    fill: ${props => props.theme.palette.secondary.main};
-  }
-`;
+const Cross = styled(Cancel)``;
 
 const Services = () => (
   <Base>
@@ -61,55 +53,55 @@ const Services = () => (
           <Row>
             <Data>Получение справочной информации</Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
           </Row>
           <Row>
             <Data>Уточнение типа суда или учреждения, в которые нужно обратиться</Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
           </Row>
           <Row>
             <Data>Консультирование по типовым ситуациям</Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
           </Row>
           <Row>
             <Data>Пояснение механизмов взаимодействия с органами и ведомствами</Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
           </Row>
           <Row>
             <Data>Прочие консультационные услуги</Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
           </Row>
           <Row>
             <Data>Тщательное изучение обстоятельств дела и правовой анализ ситуации</Data>
             <Data>
-              <Cross />
+              <Cross sx={{ fill: '#e3322b' }} />
             </Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
           </Row>
           <Row>
@@ -118,19 +110,19 @@ const Services = () => (
               исков и пр.
             </Data>
             <Data>
-              <Cross />
+              <Cross sx={{ fill: '#e3322b' }} />
             </Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
           </Row>
           <Row>
             <Data>Представительство в судах различных юрисдикций</Data>
             <Data>
-              <Cross />
+              <Cross sx={{ fill: '#e3322b' }} />
             </Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
           </Row>
           <Row>
@@ -138,19 +130,19 @@ const Services = () => (
               Сопровождение сделок, в том числе проверка чистоты и правоустанавливающей документации
             </Data>
             <Data>
-              <Cross />
+              <Cross sx={{ fill: '#e3322b' }} />
             </Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
           </Row>
           <Row>
             <Data>Регистрация прав</Data>
             <Data>
-              <Cross />
+              <Cross sx={{ fill: '#e3322b' }} />
             </Data>
             <Data>
-              <Check />
+              <Check sx={{ fill: '#199c68' }} />
             </Data>
           </Row>
         </Tbody>

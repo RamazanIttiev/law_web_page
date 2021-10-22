@@ -15,23 +15,20 @@ const Wrapper = styled.div`
   padding: 32px 0 56px;
 `;
 
-const Title = styled.h1`
-  font-size: 56px;
-  font-weight: 700;
-  color: #fff;
-`;
+const Title = styled(Typography).attrs({ variant: 'h1' })``;
 
-const Subtitle = styled(Typography).attrs({ variant: 'h2' })`
-  &.css-1imety6-MuiTypography-root {
-    margin: 48px 0;
-  }
-`;
+const Subtitle = styled(Typography).attrs({ variant: 'h2' })``;
 
 const Promo = () => (
   <Base>
     <Wrapper>
       <Container>
-        <Title>
+        <Title
+          sx={{
+            marginBottom: '56px',
+            color: '#fff',
+          }}
+        >
           Вы вложили ваши деньги в КПК Капитал Плюс? Вас обманули и вы хотите вернуть свои средства?
           Мы поможем вам!
         </Title>

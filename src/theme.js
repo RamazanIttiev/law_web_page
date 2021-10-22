@@ -20,9 +20,9 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: '"Montserrat", "Open Sans"',
-    fontSize: 16,
+    fontSize: 14,
     h1: {
-      fontSize: 48,
+      fontSize: 32,
       fontWeight: 700,
       lineHeight: 1.54,
       color: '#345a80',
@@ -47,7 +47,11 @@ export const theme = createTheme({
             margin: '0 auto',
           },
         },
-        gutters: {},
+      },
+    },
+    MuiTypography: {
+      root: {
+        fontSize: 14,
       },
     },
   },

@@ -6,7 +6,6 @@ const Base = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: ${props => props.theme.palette.background.paper};
 `;
 
 const Iframe = styled.iframe`
@@ -14,7 +13,7 @@ const Iframe = styled.iframe`
 `;
 
 const Info = styled.div`
-  padding: 72px;
+  padding: 32px 56px;
   p {
     line-height: 4;
     font-size: 18px;

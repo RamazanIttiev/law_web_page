@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { Container, Typography } from '@mui/material';
 
 const Base = styled(Container)`
-  padding: 124px 0;
+  padding: ${props => props.theme.spacing(10)} 0;
 `;
 
 const Button = styled.button`
@@ -17,9 +17,6 @@ const Button = styled.button`
 `;
 
 const Title = styled(Typography).attrs({ variant: 'h1' })`
-  &.css-qtipo4-MuiTypography-root {
-    margin-bottom: 48px;
-  }
   width: 100%;
   text-transform: uppercase;
 `;
@@ -35,7 +32,13 @@ const Slide = styled.div`
 
 const Examples = () => (
   <Base>
-    <Title>Примеры наших дел</Title>
+    <Title
+      sx={{
+        marginBottom: '48px',
+      }}
+    >
+      Примеры наших дел
+    </Title>
     <Carousel
       plugins={[
         'infinite',

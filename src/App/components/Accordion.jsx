@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import Button from '../Ui/Button';
 
 const Base = styled.div`
-  padding: 124px 0;
+  padding: ${props => props.theme.spacing(10)} 0;
   background: ${props => props.theme.palette.background.paper};
 `;
 
@@ -16,10 +16,6 @@ const Details = styled(AccordionDetails)``;
 
 const Title = styled(Typography).attrs({ variant: 'h1' })`
   text-transform: uppercase;
-
-  &.css-qtipo4-MuiTypography-root {
-    margin-bottom: 32px;
-  }
 `;
 
 const List = styled.ul`
@@ -31,61 +27,52 @@ const ListItem = styled.li`
   margin: 0 24px;
 `;
 
-const StyledTypography = styled(Typography)`
-  &.css-1w59d56-MuiTypography-root {
-    font-size: 16px;
-  }
-`;
+const DetailsText = styled(Typography)``;
 
-const AccordionTitle = styled(Typography)`
-  &.css-1w59d56-MuiTypography-root {
-    font-size: 24px;
-    font-weight: 700;
-    color: ${props => props.theme.palette.primary.main};
-  }
-`;
+const AccordionTitle = styled(Typography)``;
 
-const Subtitle = styled(Typography).attrs({ variant: 'h1' })`
-  &.css-qtipo4-MuiTypography-root {
-    margin-top: 124px;
-  }
-`;
+const Subtitle = styled(Typography).attrs({ variant: 'h1', paragraph: 'true' })``;
 
-const Text = styled(Typography)`
-  &.css-1w59d56-MuiTypography-root {
-    text-align: center;
-    font-size: 24px;
-  }
-`;
+const Text = styled(Typography)``;
 
 const AccordionServices = () => (
   <Base>
-    <Title>мы оказываем все виды юридических услуг</Title>
+    <Title
+      sx={{
+        marginBottom: '32px',
+      }}
+    >
+      мы оказываем все виды юридических услуг
+    </Title>
     <Accordion sx={{ marginBottom: 4, padding: 2 }}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <AccordionTitle>Консультирование</AccordionTitle>
+        <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
+          Консультирование
+        </AccordionTitle>
       </AccordionSummary>
       <Details>
-        <StyledTypography>
+        <DetailsText>
           По всем юридическим вопросам, наши юристы дадут Вам развернутую консультацию и
           профессиональную поддержку на любом этапе решения проблемы
-        </StyledTypography>
+        </DetailsText>
       </Details>
     </Accordion>
     <Accordion sx={{ marginBottom: 4, padding: 2 }}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <AccordionTitle>Представительство</AccordionTitle>
+        <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
+          Представительство
+        </AccordionTitle>
       </AccordionSummary>
       <Details>
-        <StyledTypography>
+        <DetailsText>
           На любом этапе процесса. <br /> В правоохранительных органах:
-        </StyledTypography>
+        </DetailsText>
         <List>
           <ListItem>МВД (в т.ч. ГУЭБиПК)</ListItem>
           <ListItem>Прокуратура</ListItem>
           <ListItem>Следственный комитет</ListItem>
         </List>
-        <StyledTypography>В судах:</StyledTypography>
+        <DetailsText>В судах:</DetailsText>
         <List>
           <ListItem>мировых</ListItem>
           <ListItem>городских</ListItem>
@@ -93,7 +80,7 @@ const AccordionServices = () => (
           <ListItem>верховных</ListItem>
           <ListItem>арбитражных судах</ListItem>
         </List>
-        <StyledTypography>Любой инстанции:</StyledTypography>
+        <DetailsText>Любой инстанции:</DetailsText>
         <List>
           <ListItem>первой</ListItem>
           <ListItem>апелляционной</ListItem>
@@ -104,10 +91,12 @@ const AccordionServices = () => (
     </Accordion>
     <Accordion sx={{ marginBottom: 4, padding: 2 }}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <AccordionTitle>Составление и экспертиза всех видов документов</AccordionTitle>
+        <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
+          Составление и экспертиза всех видов документов
+        </AccordionTitle>
       </AccordionSummary>
       <Details>
-        <StyledTypography>Составление:</StyledTypography>
+        <DetailsText>Составление:</DetailsText>
         <List>
           <ListItem>заявлений</ListItem>
           <ListItem>договоров</ListItem>
@@ -119,9 +108,22 @@ const AccordionServices = () => (
         </List>
       </Details>
     </Accordion>
-    <Subtitle>Заказать услугу</Subtitle>
-    <Text>Получите бесплатную консультацию по Вашему делу</Text>
-    <Button margin="72" text="Заказать" />
+    <Subtitle
+      sx={{
+        marginTop: '124px',
+        marginBottom: '0',
+      }}
+    >
+      Заказать услугу
+    </Subtitle>
+    <Text
+      sx={{
+        textAlign: 'center',
+      }}
+    >
+      Получите бесплатную консультацию по Вашему делу
+    </Text>
+    <Button margin="36" text="Заказать" />
   </Base>
 );
 

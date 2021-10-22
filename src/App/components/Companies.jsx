@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styled from 'styled-components';
 
 const Base = styled.div`
-  padding: 124px 0;
+  padding: ${props => props.theme.spacing(10)} 0;
   background: ${props => props.theme.palette.background.paper};
 `;
 
@@ -20,60 +20,76 @@ const Details = styled(AccordionDetails)`
 
 const Title = styled(Typography).attrs({ variant: 'h1' })`
   text-transform: uppercase;
-
-  &.css-qtipo4-MuiTypography-root {
-    margin-bottom: 32px;
-  }
 `;
 
-const StyledTypography = styled(Typography)`
-  &.css-1w59d56-MuiTypography-root {
-    font-size: 16px;
-    margin: 8px;
-    background: #345a80;
-    color: #fff;
-    padding: 8px;
-    border-radius: 4px;
-    font-weight: 700;
-    min-width: 250px;
-    text-align: center;
-  }
+const Company = styled(Typography)`
+  margin: 8px;
+  background: #345a80;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  min-width: 250px;
+  text-align: center;
 `;
 
-const AccordionTitle = styled(Typography)`
-  &.css-1w59d56-MuiTypography-root {
-    font-size: 24px;
-    font-weight: 700;
-    color: ${props => props.theme.palette.primary.main};
-  }
-`;
+const AccordionTitle = styled(Typography)``;
+
+const AllCompanies = [
+  `КПК "РУСФИНАНС"`,
+  `ООО "ИНВЕСТ ГРУПП"`,
+  `ООО "РУССИНВЕСТГРУПП"`,
+  `ООО МКК "РУСКАПИТАЛГРУПП"`,
+  `МОССБЕРФОНД`,
+  `FOREX CLUB (FX CLUB)`,
+  `БАСТИОН (BASTIONCOOP)`,
+  `МСФ КАПИТАЛ`,
+  `ООО "СБЕРИНВЕСТ"`,
+  `ООО ИД "ЖИЗНЬ"`,
+  `"СБЕРКАПИТАЛ`,
+  `КПК "СИТИСБЕРЪ"`,
+  `АФК "НАСЛЕДИЕ"`,
+  `КАПИТАЛ ПЛЮС`,
+  `ПРОМФИНАНС БРОКЕР`,
+  `КПК «ДОВЕРИЕ 24»`,
+  `КПК «МИРФИНАНСОВ»`,
+  `ИК "ФИНИКО" (FINIKO)`,
+  `ИК "АНТАРЕС"`,
+];
 
 const Companies = () => (
   <Base>
-    <Title>списки компаний с которыми мы работаем</Title>
+    <Title
+      sx={{
+        marginBottom: '48px',
+      }}
+    >
+      списки компаний с которыми мы работаем
+    </Title>
     <Accordion sx={{ marginBottom: 4, padding: 2 }}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <AccordionTitle>Консультирование</AccordionTitle>
+        <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
+          Консультирование
+        </AccordionTitle>
       </AccordionSummary>
       <Details>
-        <StyledTypography>КПК `РУСФИНАНС`</StyledTypography>
-        <StyledTypography>ООО `ИНВЕСТ ГРУПП`</StyledTypography>
-        <StyledTypography>ООО `РУССИНВЕСТГРУПП`</StyledTypography>
-        <StyledTypography>ООО МКК `РУСКАПИТАЛГРУПП`</StyledTypography>
-        <StyledTypography>МОССБЕРФОНД</StyledTypography>
-        <StyledTypography>ООО `СБЕРИНВЕСТ`</StyledTypography>
-        <StyledTypography>ООО ИД `ЖИЗНЬ`</StyledTypography>
-        <StyledTypography>`СБЕРКАПИТАЛ, КПК `СИТИСБЕРЪ`</StyledTypography>
-        <StyledTypography> АФК `НАСЛЕДИЕ`</StyledTypography>
-        <StyledTypography>КАПИТАЛ ПЛЮС</StyledTypography>
-        <StyledTypography>ПРОМФИНАНС БРОКЕР</StyledTypography>
-        <StyledTypography>КПК `ДОВЕРИЕ 24`</StyledTypography>
-        <StyledTypography>КПК `МИРФИНАНСОВ`</StyledTypography>
-        <StyledTypography>КПК `МИРФИНАНСОВ`</StyledTypography>
-        <StyledTypography>FOREX CLUB (FX CLUB)</StyledTypography>
-        <StyledTypography>ИК `ФИНИКО` (FINIKO)</StyledTypography>
-        <StyledTypography>БАСТИОН (BASTIONCOOP)</StyledTypography>
-        <StyledTypography>ИК `АНТАРЕС`</StyledTypography>
+        {AllCompanies.map(company => (
+          <Company
+            sx={{
+              fontSize: 14,
+              margin: 1,
+              background: '#345a80',
+              color: '#fff',
+              padding: 1,
+              borderRadius: 2,
+              fontWeight: 700,
+              minWidth: 250,
+              textAlign: 'center',
+            }}
+          >
+            {company}
+          </Company>
+        ))}
       </Details>
     </Accordion>
   </Base>

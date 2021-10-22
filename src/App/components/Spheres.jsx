@@ -1,4 +1,4 @@
-import { Container, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import Eagle from '../../assets/Eagle.png';
@@ -14,21 +14,16 @@ const Background = styled.div`
   background: ${props => props.theme.palette.background.paper};
 `;
 
-const Base = styled(Container)`
-  &.css-1oqqzyl-MuiContainer-root {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
-    text-align: center;
-    padding: 56px 0;
-  }
+const Base = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+  padding: ${props => props.theme.spacing(10)} 0;
 `;
 
 const Title = styled(Typography).attrs({ variant: 'h1' })`
-  &.css-qtipo4-MuiTypography-root {
-    margin-bottom: 56px;
-  }
   width: 100%;
   text-transform: uppercase;
 `;
@@ -41,8 +36,8 @@ const Item = styled.div`
   max-width: 400px;
 
   svg {
-    width: 100px;
-    height: 100px;
+    width: 64px;
+    height: 64px;
     display: block;
     fill: ${props => props.theme.palette.primary.main};
     margin-bottom: 16px;
@@ -50,14 +45,21 @@ const Item = styled.div`
 `;
 
 const Image = styled.img`
-  width: 130px;
+  width: 80px;
+  height: 80px;
   margin-bottom: 16px;
 `;
 
 const Spheres = () => (
   <Background>
-    <Base maxWidth="lg">
-      <Title>Представляем ваши интересы в:</Title>
+    <Base>
+      <Title
+        sx={{
+          marginBottom: '56px',
+        }}
+      >
+        Представляем ваши интересы в:
+      </Title>
       <Item>
         <Image src={Eagle} />
         Федеральная служба по надзору в сфере защиты прав потребителей

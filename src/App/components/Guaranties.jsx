@@ -5,7 +5,7 @@ import Eagle from '../../assets/eagleImg.png';
 
 const Base = styled.div`
   background: ${props => props.theme.palette.background.paper};
-  padding: 56px 0;
+  padding: ${props => props.theme.spacing(10)} 0;
 `;
 
 const Text = styled(Typography)`

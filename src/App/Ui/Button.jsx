@@ -7,8 +7,8 @@ const StyledButton = styled.button`
   background: ${props => props.theme.palette.secondary.main};
   border-radius: 50px;
   color: #fff;
-  padding: 24px;
-  font-size: 24px;
+  padding: 16px 24px;
+  font-size: 16px;
   font-weight: 700;
   cursor: pointer;
   border: none;
