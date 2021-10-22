@@ -1,6 +1,6 @@
 {
   "name": "law_web_page",
-  "homepage": "https://ramazanittiev.github.io/law_web_page/",
+  "homepage": "/",
   "version": "0.1.0",
   "dependencies": {
     "@brainhubeu/react-carousel": "^2.0.4",
