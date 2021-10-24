@@ -36,14 +36,14 @@ const Competence = () => {
 
   return (
     <Container maxWidth="lg" sx={{ padding: `${theme.spacing(10)} 0` }}>
+      <Title
+        sx={{
+          marginBottom: '32px',
+        }}
+      >
+        Наши компетенции
+      </Title>
       <Grid container spacing={6} rowSpacing={6}>
-        <Title
-          sx={{
-            marginBottom: '32px',
-          }}
-        >
-          Наши компетенции
-        </Title>
         <Grid item xs={12} sm={4} md={4}>
           <Item>
             <AccountBalance />

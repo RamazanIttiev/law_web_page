@@ -43,13 +43,9 @@ const Number = styled.div`
   padding: 8px;
 `;
 
-const EmptyDiv = styled.div`
-  height: 72px;
-`;
-
 const Header = () => (
   <>
-    <AppBar sx={{ boxShadow: 'none' }}>
+    <AppBar sx={{ boxShadow: 'none' }} position="static">
       <Toolbar sx={{ justifyContent: 'space-between', padding: '16px' }}>
         <Logo>
           <Link href="/">
@@ -75,7 +71,6 @@ const Header = () => (
         </Number>
       </Toolbar>
     </AppBar>
-    <EmptyDiv />
   </>
 );
 

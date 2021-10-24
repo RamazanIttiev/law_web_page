@@ -1,13 +1,27 @@
 import React, { useState } from 'react';
-import { Box, TextareaAutosize, Typography } from '@mui/material';
+import { TextareaAutosize, Typography, useMediaQuery } from '@mui/material';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 import { postData } from '../services';
 
+const Base = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: ${props => props.width}%;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%), 0px 24px 38px 3px rgb(0 0 0 / 14%),
+    0px 9px 46px 8px rgb(0 0 0 / 12%);
+  padding: 16px;
+  border-radius: 16px;
+`;
+
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  margin-top: 48px;
+  margin-top: 32px;
 `;
 
 const Input = styled.input`
@@ -20,7 +34,7 @@ const Input = styled.input`
   box-sizing: border-box;
   box-shadow: 0px 0px 4px rgba(235, 23, 23, 0.2);
   border-radius: 4px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   font-size: 16px;
 `;
 
@@ -33,8 +47,7 @@ const Textarea = styled(TextareaAutosize)`
   box-sizing: border-box;
   box-shadow: 0px 0px 4px rgba(235, 23, 23, 0.2);
   border-radius: 4px;
-  font-size: 16px
-  margin-bottom: 32px;
+  font-size: 16px;
 `;
 
 const Title = styled(Typography).attrs({ variant: 'h1' })``;
@@ -56,21 +69,9 @@ const StyledButton = styled.button`
   margin: 24px auto 0;
 `;
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: '50%',
-  textAlign: 'center',
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
-
 const Dialog = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const matches = useMediaQuery('(min-width:600px)');
 
   const {
     handleSubmit,
@@ -83,7 +84,7 @@ const Dialog = () => {
   };
 
   return (
-    <Box sx={style}>
+    <Base width={matches ? '50' : '75'}>
       <Title>Получите бесплатную консультацию</Title>
       <Subtitle>Заполните контактные данные и мы свяжемся с вами в течение 10 минут</Subtitle>
 
@@ -105,7 +106,7 @@ const Dialog = () => {
         <Textarea
           name="message"
           {...register('message', { required: true })}
-          style={{ height: '148px', resize: 'none' }}
+          style={{ height: '124px', resize: 'none' }}
           error={errors.message}
           type="text"
           placeholder="Кратко опишите проблему"
@@ -114,7 +115,7 @@ const Dialog = () => {
           Получить консультацию
         </StyledButton>
       </StyledForm>
-    </Box>
+    </Base>
   );
 };
 

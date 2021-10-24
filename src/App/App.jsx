@@ -1,3 +1,4 @@
+import { useMediaQuery } from '@mui/material';
 import React from 'react';
 import AccordionServices from './components/Accordion';
 import Advantages from './components/Advantages';
@@ -13,22 +14,26 @@ import Services from './components/Services';
 import Spheres from './components/Spheres';
 import Statistics from './components/Statistics';
 
-const App = () => (
-  <>
-    <Header />
-    <Promo />
-    <Guaranties />
-    <Competence />
-    <Spheres />
-    <Statistics />
-    <Advantages />
-    <AccordionServices />
-    <Consultation />
-    {window.screen.width >= 600 && <Services />}
-    <Examples />
-    <Companies />
-    <Contacts />
-  </>
-);
+const App = () => {
+  const matches = useMediaQuery('(min-width:600px)');
+
+  return (
+    <>
+      <Header />
+      <Promo />
+      <Guaranties />
+      <Competence />
+      <Spheres />
+      <Statistics />
+      <Advantages />
+      <AccordionServices />
+      <Consultation />
+      {matches && <Services />}
+      <Examples />
+      <Companies />
+      <Contacts />
+    </>
+  );
+};
 
 export default App;
