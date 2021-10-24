@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import styled from 'styled-components';
 import StatisticsBgr from '../../assets/statisticsBgr.jpeg';
 
@@ -12,23 +12,17 @@ const Background = styled.div`
   padding: ${props => props.theme.spacing(10)} 0;
 `;
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-`;
-
-const Item = styled.div`
+const Item = styled(Grid)`
   color: ${props => props.theme.palette.secondary.main};
   text-align: center;
   font-size: 56px;
   font-weight: 600;
+
   span {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 320px;
     color: #fff;
     font-size: 14px;
   }
@@ -38,18 +32,18 @@ const Statistics = () => (
   <Base>
     <Background>
       <Container maxWidth="lg">
-        <Wrapper>
-          <Item>
+        <Grid container spacing={4}>
+          <Item item xs={12} sm={12} md={4}>
             5<span>лет успешной юридической практики</span>
           </Item>
-          <Item>
+          <Item item xs={12} sm={12} md={4}>
             500<span>среднее количество консультаций в месяц</span>
           </Item>
-          <Item>
+          <Item item xs={12} sm={12} md={4}>
             &gt; 10 000
             <span>успешных дел, проведенных специалистами нашей фирмы</span>
           </Item>
-        </Wrapper>
+        </Grid>
       </Container>
     </Background>
   </Base>

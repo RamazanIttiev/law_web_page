@@ -1,18 +1,6 @@
+import { AppBar, Toolbar } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-
-const Base = styled.header`
-  background: ${props => props.theme.palette.primary.main};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px;
-  color: #fff;
-  position: fixed;
-  width: 100%;
-  height: 72px;
-  z-index: 1;
-`;
 
 const Logo = styled.div`
   cursor: pointer;
@@ -22,7 +10,11 @@ const Logo = styled.div`
   }
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+`;
 
 const List = styled.ul`
   display: flex;
@@ -50,36 +42,39 @@ const Number = styled.div`
   border-radius: 32px;
   padding: 8px;
 `;
+
 const EmptyDiv = styled.div`
   height: 72px;
 `;
 
 const Header = () => (
   <>
-    <Base>
-      <Logo>
-        <Link href="/">
-          ЦЕНТР ЮРИДИЧЕСКОЙ ПОМОЩИ <br />
-          <span>по Москве и Московской области</span>
-        </Link>
-      </Logo>
-      <Nav>
-        <List>
-          <ListItem>
-            <Link href="/">Компетенции</Link>
-          </ListItem>
-          <ListItem>
-            <Link href="/">Услуги</Link>
-          </ListItem>
-          <ListItem>
-            <Link href="/">Контакты</Link>
-          </ListItem>
-        </List>
-      </Nav>
-      <Number>
-        <Link href="tel:99999999999">99999999999</Link>
-      </Number>
-    </Base>
+    <AppBar sx={{ boxShadow: 'none' }}>
+      <Toolbar sx={{ justifyContent: 'space-between', padding: '16px' }}>
+        <Logo>
+          <Link href="/">
+            ЦЕНТР ЮРИДИЧЕСКОЙ ПОМОЩИ <br />
+            <span>по Москве и Московской области</span>
+          </Link>
+        </Logo>
+        {/* <Nav>
+          <List>
+            <ListItem>
+              <Link href="/">Компетенции</Link>
+            </ListItem>
+            <ListItem>
+              <Link href="/">Услуги</Link>
+            </ListItem>
+            <ListItem>
+              <Link href="/">Контакты</Link>
+            </ListItem>
+          </List>
+        </Nav> */}
+        <Number>
+          <Link href="tel:99999999999">99999999999</Link>
+        </Number>
+      </Toolbar>
+    </AppBar>
     <EmptyDiv />
   </>
 );

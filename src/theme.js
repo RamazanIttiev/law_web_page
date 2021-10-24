@@ -32,6 +32,7 @@ export const theme = createTheme({
       fontSize: 20,
       fontWeight: 500,
       lineHeight: 1.54,
+      textAlign: 'center',
     },
   },
   components: {
@@ -49,9 +50,13 @@ export const theme = createTheme({
         },
       },
     },
-    MuiTypography: {
-      root: {
-        fontSize: 14,
+    MuiGrid: {
+      styleOverrides: {
+        root: {
+          direction: 'row',
+          justifyContent: 'space-evenly',
+          alignItems: 'center',
+        },
       },
     },
   },

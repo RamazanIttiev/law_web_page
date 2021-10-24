@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import Eagle from '../../assets/Eagle.png';
@@ -12,14 +12,6 @@ import GeneralCourt from '../../assets/general-court.png';
 
 const Background = styled.div`
   background: ${props => props.theme.palette.background.paper};
-`;
-
-const Base = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
-  text-align: center;
   padding: ${props => props.theme.spacing(10)} 0;
 `;
 
@@ -34,14 +26,7 @@ const Item = styled.div`
   align-items: center;
   padding: 24px;
   max-width: 400px;
-
-  svg {
-    width: 64px;
-    height: 64px;
-    display: block;
-    fill: ${props => props.theme.palette.primary.main};
-    margin-bottom: 16px;
-  }
+  text-align: center;
 `;
 
 const Image = styled.img`
@@ -52,47 +37,65 @@ const Image = styled.img`
 
 const Spheres = () => (
   <Background>
-    <Base>
-      <Title
-        sx={{
-          marginBottom: '56px',
-        }}
-      >
-        Представляем ваши интересы в:
-      </Title>
-      <Item>
-        <Image src={Eagle} />
-        Федеральная служба по надзору в сфере защиты прав потребителей
-      </Item>
-      <Item>
-        <Image src={Court} />
-        Служба судебных приставов
-      </Item>
-      <Item>
-        <Image src={Prosecutor} />
-        Генеральная прокуратура Российской Федерации
-      </Item>
-      <Item>
-        <Image src={Taxes} />
-        Федеральная Налоговая служба
-      </Item>
-      <Item>
-        <Image src={Bank} />
-        Центральный банк Российской Федерации
-      </Item>
-      <Item>
-        <Image src={MVD} />
-        Министерство внутренних дел Российской Федерации
-      </Item>
-      <Item>
-        <Image src={Committee} />
-        Следственный комитет Российской Федерации
-      </Item>
-      <Item>
-        <Image src={GeneralCourt} />
-        Суды общей юрисдикции
-      </Item>
-    </Base>
+    <Container maxWidth="lg">
+      <Grid container>
+        <Title
+          sx={{
+            marginBottom: '56px',
+          }}
+        >
+          Представляем ваши интересы в:
+        </Title>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <Image src={Eagle} />
+            Федеральная служба по надзору в сфере защиты прав потребителей
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <Image src={Court} />
+            Служба судебных приставов
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <Image src={Prosecutor} />
+            Генеральная прокуратура Российской Федерации
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <Image src={Taxes} />
+            Федеральная Налоговая служба
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <Image src={Bank} />
+            Центральный банк Российской Федерации
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <Image src={MVD} />
+            Министерство внутренних дел Российской Федерации
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <Image src={Committee} />
+            Следственный комитет Российской Федерации
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <Image src={GeneralCourt} />
+            Суды общей юрисдикции
+          </Item>
+        </Grid>
+      </Grid>
+    </Container>
   </Background>
 );
 

@@ -1,4 +1,4 @@
-import { Container, Typography } from '@mui/material';
+import { Container, Grid, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import {
@@ -10,15 +10,6 @@ import {
   Home,
 } from '@mui/icons-material';
 
-const Base = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
-  text-align: center;
-  padding: ${props => props.theme.spacing(10)} 0;
-`;
-
 const Title = styled(Typography).attrs({ variant: 'h1' })`
   width: 100%;
   text-transform: uppercase;
@@ -28,7 +19,8 @@ const Item = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px;
+  // padding: 24px;
+  text-align: center;
 
   svg {
     width: 64px;
@@ -39,42 +31,58 @@ const Item = styled.div`
   }
 `;
 
-const Competence = () => (
-  <Container maxWidth="lg">
-    <Base>
-      <Title
-        sx={{
-          marginBottom: '32px',
-        }}
-      >
-        Наши компетенции
-      </Title>
-      <Item>
-        <AccountBalance />
-        Взыскание долгов с МФО и брокеров
-      </Item>
-      <Item>
-        <MonetizationOn />
-        Дела о мошенничестве
-      </Item>
-      <Item>
-        <WifiProtectedSetup />
-        Возврат денежных средств с КПК
-      </Item>
-      <Item>
-        <NightShelter />
-        Защита прав потребителей
-      </Item>
-      <Item>
-        <FamilyRestroom />
-        Семейные споры
-      </Item>
-      <Item>
-        <Home />
-        Жилищные споры
-      </Item>
-    </Base>
-  </Container>
-);
+const Competence = () => {
+  const theme = useTheme();
+
+  return (
+    <Container maxWidth="lg" sx={{ padding: `${theme.spacing(10)} 0` }}>
+      <Grid container spacing={6} rowSpacing={6}>
+        <Title
+          sx={{
+            marginBottom: '32px',
+          }}
+        >
+          Наши компетенции
+        </Title>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <AccountBalance />
+            Взыскание долгов с МФО и брокеров
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <MonetizationOn />
+            Дела о мошенничестве
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <WifiProtectedSetup />
+            Возврат денежных средств с КПК
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <NightShelter />
+            Защита прав потребителей
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <FamilyRestroom />
+            Семейные споры
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={4} md={4}>
+          <Item>
+            <Home />
+            Жилищные споры
+          </Item>
+        </Grid>
+      </Grid>
+    </Container>
+  );
+};
 
 export default Competence;

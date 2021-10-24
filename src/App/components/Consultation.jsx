@@ -43,6 +43,10 @@ const Item = styled.div`
 const Image = styled.img`
   width: 50%;
   border-radius: 8px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const Consultation = () => (

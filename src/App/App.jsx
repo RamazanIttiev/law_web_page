@@ -24,7 +24,7 @@ const App = () => (
     <Advantages />
     <AccordionServices />
     <Consultation />
-    <Services />
+    {window.screen.width >= 600 && <Services />}
     <Examples />
     <Companies />
     <Contacts />
