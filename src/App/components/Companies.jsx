@@ -75,6 +75,7 @@ const Companies = () => (
       <Details>
         {AllCompanies.map(company => (
           <Company
+            key={company}
             sx={{
               fontSize: 14,
               margin: 1,

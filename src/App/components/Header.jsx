@@ -10,24 +10,24 @@ const Logo = styled.div`
   }
 `;
 
-const Nav = styled.nav`
-  @media screen and (max-width: 600px) {
-    display: none;
-  }
-`;
+// const Nav = styled.nav`
+//   @media screen and (max-width: 600px) {
+//     display: none;
+//   }
+// `;
 
-const List = styled.ul`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
+// const List = styled.ul`
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+// `;
 
-const ListItem = styled.li`
-  margin: 0 24px;
-`;
+// const ListItem = styled.li`
+//   margin: 0 24px;
+// `;
 
 const Link = styled.a`
   padding: 8px;

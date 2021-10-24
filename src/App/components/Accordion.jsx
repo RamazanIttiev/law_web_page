@@ -32,7 +32,7 @@ const DetailsText = styled(Typography)``;
 
 const AccordionTitle = styled(Typography)``;
 
-const Subtitle = styled(Typography).attrs({ variant: 'h1', paragraph: 'true' })``;
+const Subtitle = styled(Typography).attrs({ variant: 'h1', paragraph: true })``;
 
 const Text = styled(Typography)``;
 
