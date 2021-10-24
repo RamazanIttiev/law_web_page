@@ -25,7 +25,6 @@ const Item = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 24px;
-  max-width: 400px;
   text-align: center;
 `;
 
