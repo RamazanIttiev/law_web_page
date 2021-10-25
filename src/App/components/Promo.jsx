@@ -44,7 +44,7 @@ const Promo = () => {
             sx={{
               color: '#ffc700',
               textAlign: 'start',
-              marginBottom: '56px',
+              marginBottom: '32px',
               fontWeight: 700,
             }}
           >

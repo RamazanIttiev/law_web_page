@@ -31,6 +31,10 @@ const Company = styled(Typography)`
   font-weight: 700;
   min-width: 250px;
   text-align: center;
+
+  &:last-child {
+    background: #b1b1b1;
+  }
 `;
 
 const AccordionTitle = styled(Typography)``;
@@ -55,6 +59,8 @@ const AllCompanies = [
   `КПК «МИРФИНАНСОВ»`,
   `ИК "ФИНИКО" (FINIKO)`,
   `ИК "АНТАРЕС"`,
+  `"ПРИЗМА"`,
+  'И другие',
 ];
 
 const Companies = () => (
@@ -69,7 +75,7 @@ const Companies = () => (
     <Accordion sx={{ marginBottom: 4, padding: 2 }}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
-          Консультирование
+          Сотрудничество
         </AccordionTitle>
       </AccordionSummary>
       <Details>

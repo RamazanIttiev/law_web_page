@@ -47,31 +47,13 @@ const Competence = () => {
         <Grid item xs={12} sm={4} md={4}>
           <Item>
             <AccountBalance />
-            Взыскание долгов с МФО и брокеров
+            Дела о мошенничестве и возврат денежных средств
           </Item>
         </Grid>
         <Grid item xs={12} sm={4} md={4}>
           <Item>
             <MonetizationOn />
-            Дела о мошенничестве
-          </Item>
-        </Grid>
-        <Grid item xs={12} sm={4} md={4}>
-          <Item>
-            <WifiProtectedSetup />
-            Возврат денежных средств с КПК
-          </Item>
-        </Grid>
-        <Grid item xs={12} sm={4} md={4}>
-          <Item>
-            <NightShelter />
-            Защита прав потребителей
-          </Item>
-        </Grid>
-        <Grid item xs={12} sm={4} md={4}>
-          <Item>
-            <FamilyRestroom />
-            Семейные споры
+            Вопрсы страхования
           </Item>
         </Grid>
         <Grid item xs={12} sm={4} md={4}>
