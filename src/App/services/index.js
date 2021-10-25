@@ -5,3 +5,7 @@ export const postData = async ({ name, phone, message }, setIsLoading) => {
   await fetch(`${URL}?name=${name}&phone=${phone}&message=${message}`);
   setIsLoading(false);
 };
+
+// Дела о мошенничестве и возврат денежных средств
+// Вопрсы страхования
+// Жилищные споры

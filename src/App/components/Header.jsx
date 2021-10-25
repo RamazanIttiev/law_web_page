@@ -1,9 +1,11 @@
-import { AppBar, Toolbar } from '@mui/material';
+import { Gavel } from '@mui/icons-material';
+import { AppBar, Container, Toolbar } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 
 const Logo = styled.div`
   cursor: pointer;
+  font-size: 24px;
 
   a {
     padding: 0;
@@ -33,6 +35,12 @@ const Link = styled.a`
   padding: 8px;
   color: #fff;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 16px;
+  }
 `;
 
 const Number = styled.div`
@@ -44,13 +52,17 @@ const Number = styled.div`
 `;
 
 const Header = () => (
-  <>
-    <AppBar sx={{ boxShadow: 'none' }} position="static">
-      <Toolbar sx={{ justifyContent: 'space-between', padding: '16px' }}>
+  <AppBar sx={{ boxShadow: 'none', backgroundColor: 'rgba(0, 0, 0, 1)' }} position="static">
+    <Container maxWidth="lg">
+      <Toolbar
+        sx={{
+          justifyContent: 'space-between',
+          padding: '16px 0 !important',
+        }}
+      >
         <Logo>
           <Link href="/">
-            ЦЕНТР ЮРИДИЧЕСКОЙ ПОМОЩИ <br />
-            <span>по Москве и Московской области</span>
+            <Gavel /> Бастион
           </Link>
         </Logo>
         {/* <Nav>
@@ -70,8 +82,8 @@ const Header = () => (
           <Link href="tel:99999999999">99999999999</Link>
         </Number>
       </Toolbar>
-    </AppBar>
-  </>
+    </Container>
+  </AppBar>
 );
 
 export default Header;

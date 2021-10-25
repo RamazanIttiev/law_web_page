@@ -59,5 +59,12 @@ export const theme = createTheme({
         },
       },
     },
+    MuiToolbar: {
+      styleOverrides: {
+        root: {
+          padding: '16px 0',
+        },
+      },
+    },
   },
 });
