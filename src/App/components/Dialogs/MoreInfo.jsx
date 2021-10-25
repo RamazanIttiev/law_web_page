@@ -16,6 +16,7 @@ const MoreInfo = ({ open, handleClose, title, paragraph }) => (
     BackdropProps={{
       timeout: 500,
     }}
+    sx={{ padding: '48px' }}
   >
     <Title sx={{ fontSize: '28px' }}>{title}</Title>
     <DialogContent>

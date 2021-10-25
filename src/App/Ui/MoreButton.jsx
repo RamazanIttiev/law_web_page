@@ -1,7 +1,7 @@
 import { Backdrop } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import MoreInfo from '../components/Disputes/MoreInfo';
+import MoreInfo from '../components/Dialogs/MoreInfo';
 
 const StyledButton = styled.button`
   background: ${props => props.theme.palette.secondary.main};
