@@ -1,4 +1,3 @@
-import { Backdrop } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import Form from '../components/Dialogs/Form';
@@ -28,15 +27,7 @@ const Button = ({ text, margin }) => {
       <StyledButton margin={margin} onClick={handleOpen}>
         {text}
       </StyledButton>
-      <Form
-        open={open}
-        handleClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      />
+      <Form open={open} handleClose={handleClose} />
     </>
   );
 };

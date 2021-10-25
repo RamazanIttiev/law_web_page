@@ -1,4 +1,3 @@
-import { Backdrop } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import MoreInfo from '../components/Dialogs/MoreInfo';
@@ -28,17 +27,7 @@ const MoreButton = ({ text, margin, title, paragraph }) => {
       <StyledButton margin={margin} onClick={handleOpen}>
         {text}
       </StyledButton>
-      <MoreInfo
-        open={open}
-        handleClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-        title={title}
-        paragraph={paragraph}
-      />
+      <MoreInfo open={open} handleClose={handleClose} title={title} paragraph={paragraph} />
     </>
   );
 };

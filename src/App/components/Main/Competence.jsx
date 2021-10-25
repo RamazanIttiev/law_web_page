@@ -1,14 +1,7 @@
 import { Container, Grid, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import {
-  AccountBalance,
-  MonetizationOn,
-  WifiProtectedSetup,
-  NightShelter,
-  FamilyRestroom,
-  Home,
-} from '@mui/icons-material';
+import { AccountBalance, MonetizationOn, Home } from '@mui/icons-material';
 
 const Title = styled(Typography).attrs({ variant: 'h1' })`
   width: 100%;
