@@ -1,7 +1,7 @@
-import { Backdrop, Modal } from '@mui/material';
+import { Backdrop } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import Dialog from '../components/Main/Dialog';
+import MoreInfo from '../components/Disputes/MoreInfo';
 
 const StyledButton = styled.button`
   background: ${props => props.theme.palette.secondary.main};
@@ -18,7 +18,7 @@ const StyledButton = styled.button`
   margin: ${props => props.margin}px auto 0;
 `;
 
-const Button = ({ text, margin }) => {
+const MoreButton = ({ text, margin, title, paragraph }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -28,21 +28,19 @@ const Button = ({ text, margin }) => {
       <StyledButton margin={margin} onClick={handleOpen}>
         {text}
       </StyledButton>
-      <Modal
+      <MoreInfo
         open={open}
-        onClose={handleClose}
+        handleClose={handleClose}
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,
         }}
-      >
-        <div>
-          <Dialog />
-        </div>
-      </Modal>
+        title={title}
+        paragraph={paragraph}
+      />
     </>
   );
 };
 
-export default Button;
+export default MoreButton;

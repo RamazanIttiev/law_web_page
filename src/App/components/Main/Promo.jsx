@@ -2,7 +2,7 @@ import { Container, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import PromoBgr from '../../../assets/Promo_bgr.jpeg';
-import Button from '../../Ui/Button';
+import Button from '../../Ui/FormButton';
 
 const Base = styled.div`
   background: url(${PromoBgr});

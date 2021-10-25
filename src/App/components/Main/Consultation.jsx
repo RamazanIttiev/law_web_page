@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { CheckCircle } from '@mui/icons-material';
 import ConsultationImg from '../../../assets/Consultation.png';
-import Button from '../../Ui/Button';
+import Button from '../../Ui/FormButton';
 
 const Base = styled.div`
   display: flex;

@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styled from 'styled-components';
 import { Container } from '@mui/material';
-import Button from '../../Ui/Button';
+import Button from '../../Ui/FormButton';
 
 const Base = styled.div`
   padding: ${props => props.theme.spacing(10)} 0;
