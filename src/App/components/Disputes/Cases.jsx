@@ -16,30 +16,34 @@ const CaseText = styled(Typography).attrs({ variant: 'body', component: 'div' })
 `;
 
 const Image = styled.img`
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  border-radius: 8px;
 `;
 
 const Cases = () => (
-  <Container maxWidth="lg" sx={{ padding: '56px 0' }}>
-    <Grid container alignItems="center">
-      {cases.map(item => (
-        <>
-          <Grid item s={12} sm={12} md={4}>
-            <CaseTitle
-              sx={{ textAlign: 'start', marginBottom: '24px', lineHeight: 1.2, fontSize: '28px' }}
-            >
-              {item.title}
-            </CaseTitle>
-            <CaseText sx={{ marginBottom: '32px' }}>{item.paragraph}</CaseText>
-            <MoreButton text="Подробнее" {...item} />
-          </Grid>
-          <Grid item s={12} sm={12} md={4}>
-            <Image src={item.image} />
-          </Grid>
-        </>
-      ))}
-    </Grid>
+  <Container maxWidth="md" sx={{ padding: '56px 0' }}>
+    {cases.map(item => (
+      <Grid
+        alignItems="center"
+        container
+        spacing={{ xs: 6, md: 12 }}
+        key={item.id}
+        sx={{ marginBottom: 12, flexDirection: item.id % 2 === 0 ? 'row-reverse' : 'row' }}
+      >
+        <Grid item xs={11} sm={6} md={6}>
+          <CaseTitle
+            sx={{ textAlign: 'start', marginBottom: '24px', lineHeight: 1.2, fontSize: '28px' }}
+          >
+            {item.title}
+          </CaseTitle>
+          <CaseText sx={{ marginBottom: '32px' }}>{item.paragraph}</CaseText>
+          <MoreButton text="Подробнее" {...item} />
+        </Grid>
+        <Grid item xs={11} sm={6} md={6}>
+          <Image src={item.image} />
+        </Grid>
+      </Grid>
+    ))}
   </Container>
 );
 
