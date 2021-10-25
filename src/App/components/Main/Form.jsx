@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextareaAutosize, Typography, useMediaQuery } from '@mui/material';
+import { Backdrop, Modal, TextareaAutosize, Typography, useMediaQuery } from '@mui/material';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 import { postData } from '../../services';
@@ -69,7 +69,7 @@ const StyledButton = styled.button`
   margin: 24px auto 0;
 `;
 
-const Dialog = () => {
+const Form = ({ open, handleClose }) => {
   const [isLoading, setIsLoading] = useState(false);
   const matches = useMediaQuery('(min-width:600px)');
 
@@ -84,39 +84,49 @@ const Dialog = () => {
   };
 
   return (
-    <Base width={matches ? '50' : '75'}>
-      <Title>Получите бесплатную консультацию</Title>
-      <Subtitle>Заполните контактные данные и мы свяжемся с вами в течение 10 минут</Subtitle>
+    <Modal
+      open={open}
+      onClose={handleClose}
+      closeAfterTransition
+      BackdropComponent={Backdrop}
+      BackdropProps={{
+        timeout: 500,
+      }}
+    >
+      <Base width={matches ? '50' : '75'}>
+        <Title>Получите бесплатную консультацию</Title>
+        <Subtitle>Заполните контактные данные и мы свяжемся с вами в течение 10 минут</Subtitle>
 
-      <StyledForm onSubmit={handleSubmit(formSubmit)}>
-        <Input
-          name="name"
-          error={errors.name}
-          {...register('name', { required: true })}
-          type="text"
-          placeholder="ФИО"
-        />
-        <Input
-          name="phone"
-          error={errors.phone}
-          {...register('phone', { required: true })}
-          type="number"
-          placeholder="Ваш номер телефона"
-        />
-        <Textarea
-          name="message"
-          {...register('message', { required: true })}
-          style={{ height: '124px', resize: 'none' }}
-          error={errors.message}
-          type="text"
-          placeholder="Кратко опишите проблему"
-        />
-        <StyledButton disabled={isLoading} type="submit">
-          Получить консультацию
-        </StyledButton>
-      </StyledForm>
-    </Base>
+        <StyledForm onSubmit={handleSubmit(formSubmit)}>
+          <Input
+            name="name"
+            error={errors.name}
+            {...register('name', { required: true })}
+            type="text"
+            placeholder="ФИО"
+          />
+          <Input
+            name="phone"
+            error={errors.phone}
+            {...register('phone', { required: true })}
+            type="number"
+            placeholder="Ваш номер телефона"
+          />
+          <Textarea
+            name="message"
+            {...register('message', { required: true })}
+            style={{ height: '124px', resize: 'none' }}
+            error={errors.message}
+            type="text"
+            placeholder="Кратко опишите проблему"
+          />
+          <StyledButton disabled={isLoading} type="submit">
+            Получить консультацию
+          </StyledButton>
+        </StyledForm>
+      </Base>
+    </Modal>
   );
 };
 
-export default Dialog;
+export default Form;
