@@ -23,7 +23,7 @@ const Text = styled(Typography)`
 const Description = () => (
   <Base>
     <Container maxWidth="md">
-      <Title sx={{ marginBottom: '56px' }}>Наши преимущества</Title>
+      <Title sx={{ marginBottom: '56px' }}>Консультация жилищного юриста</Title>
       <Text>
         Жилищные споры - один из самых больших разделов юриспруденции. В жилищных отношениях права
         граждан могут нарушаться по многим причинам и частой проблемой является защита прав
