@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TextareaAutosize, Typography, useMediaQuery } from '@mui/material';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
-import { postData } from '../services';
+import { postData } from '../../services';
 
 const Base = styled.div`
   position: absolute;

@@ -2,7 +2,7 @@ import { Gavel } from '@mui/icons-material';
 import { AppBar, Container, Toolbar } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Logo = styled.div`
   cursor: pointer;
@@ -46,51 +46,62 @@ const StyledLink = styled(Link)`
 
 const Number = styled.div`
   cursor: pointer;
-  background: #ffc700;
+  background: ${props => (props.path ? '#ffc700' : '#199c68')};
   border-radius: 32px;
   padding: 8px;
 
   a {
-    color: #000;
+    padding: 8px;
+    color: ${props => (props.path ? '#000' : '#fff')};
+    text-decoration: none;
+    display: flex;
+    align-items: center;
   }
 `;
 
-const Header = () => (
-  <AppBar sx={{ boxShadow: 'none', backgroundColor: 'rgba(0, 0, 0, 1)' }} position="static">
-    <Container maxWidth="lg">
-      <Toolbar
-        sx={{
-          justifyContent: 'space-between',
-          padding: '16px 0 !important',
-        }}
-      >
-        <Logo>
-          <StyledLink to="/">
-            <Gavel /> Бастион
-          </StyledLink>
-        </Logo>
-        <Nav>
-          <List>
-            <ListItem>
-              <StyledLink to="/">Главная</StyledLink>
-            </ListItem>
-            <ListItem>
-              <StyledLink to="/fraud">Дела о мошенничестве</StyledLink>
-            </ListItem>
-            <ListItem>
-              <StyledLink to="/insurance">Вопрсы страхования</StyledLink>
-            </ListItem>
-            <ListItem>
-              <StyledLink to="/disputes">Жилищные споры</StyledLink>
-            </ListItem>
-          </List>
-        </Nav>
-        <Number>
-          <StyledLink to="tel:99999999999">99999999999</StyledLink>
-        </Number>
-      </Toolbar>
-    </Container>
-  </AppBar>
-);
+const Header = () => {
+  const router = useLocation();
+
+  return (
+    <AppBar
+      sx={{ boxShadow: 'none', backgroundColor: router.pathname === '/' && 'rgba(0, 0, 0, 1)' }}
+      position="static"
+    >
+      <Container maxWidth="lg">
+        <Toolbar
+          sx={{
+            justifyContent: 'space-between',
+            padding: '16px 0 !important',
+          }}
+        >
+          <Logo>
+            <StyledLink to="/">
+              <Gavel /> Бастион
+            </StyledLink>
+          </Logo>
+          <Nav>
+            <List>
+              <ListItem>
+                <StyledLink to="/">Главная</StyledLink>
+              </ListItem>
+              <ListItem>
+                <StyledLink to="/fraud">Дела о мошенничестве</StyledLink>
+              </ListItem>
+              <ListItem>
+                <StyledLink to="/insurance">Вопрсы страхования</StyledLink>
+              </ListItem>
+              <ListItem>
+                <StyledLink to="/disputes">Жилищные споры</StyledLink>
+              </ListItem>
+            </List>
+          </Nav>
+          <Number path={router.pathname === '/'}>
+            <a href="tel:99999999999">99999999999</a>
+          </Number>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
+};
 
 export default Header;

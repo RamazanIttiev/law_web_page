@@ -2,8 +2,8 @@ import { Container, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import { CheckCircle } from '@mui/icons-material';
-import ConsultationImg from '../../assets/Consultation.png';
-import Button from '../Ui/Button';
+import ConsultationImg from '../../../assets/Consultation.png';
+import Button from '../../Ui/Button';
 
 const Base = styled.div`
   display: flex;

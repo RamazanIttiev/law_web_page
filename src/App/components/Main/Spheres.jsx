@@ -1,14 +1,14 @@
 import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import Eagle from '../../assets/Eagle.png';
-import Court from '../../assets/court.png';
-import Prosecutor from '../../assets/prosecutor.png';
-import Taxes from '../../assets/taxes.png';
-import Bank from '../../assets/bank.png';
-import MVD from '../../assets/mvd.png';
-import Committee from '../../assets/committee.png';
-import GeneralCourt from '../../assets/general-court.png';
+import Eagle from '../../../assets/Eagle.png';
+import Court from '../../../assets/court.png';
+import Prosecutor from '../../../assets/prosecutor.png';
+import Taxes from '../../../assets/taxes.png';
+import Bank from '../../../assets/bank.png';
+import MVD from '../../../assets/mvd.png';
+import Committee from '../../../assets/committee.png';
+import GeneralCourt from '../../../assets/general-court.png';
 
 const Background = styled.div`
   background: ${props => props.theme.palette.background.paper};
