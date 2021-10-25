@@ -1,39 +1,27 @@
-import { useMediaQuery } from '@mui/material';
 import React from 'react';
-import AccordionServices from './components/Accordion';
-import Advantages from './components/Advantages';
-import Examples from './components/Carousel';
-import Companies from './components/Companies';
-import Competence from './components/Competence';
-import Consultation from './components/Consultation';
-import Contacts from './components/Contacts';
-import Guaranties from './components/Guaranties';
+import { Switch, Route } from 'react-router-dom';
+import Main from './pages/Main';
+import Disputes from './pages/Disputes';
 import Header from './components/Header';
-import Promo from './components/Promo';
-import Services from './components/Services';
-import Spheres from './components/Spheres';
-import Statistics from './components/Statistics';
 
-const App = () => {
-  const matches = useMediaQuery('(min-width:600px)');
-
-  return (
-    <>
-      <Header />
-      <Promo />
-      <Guaranties />
-      <Competence />
-      <Spheres />
-      <Statistics />
-      <Advantages />
-      <AccordionServices />
-      <Consultation />
-      {matches && <Services />}
-      <Examples />
-      <Companies />
-      <Contacts />
-    </>
-  );
-};
+const App = () => (
+  <>
+    <Header />
+    <Switch>
+      <Route exact path="/">
+        <Main />
+      </Route>
+      <Route path="/fraud">
+        <Disputes />
+      </Route>
+      <Route path="/insurance">
+        <Disputes />
+      </Route>
+      <Route path="/disputes">
+        <Disputes />
+      </Route>
+    </Switch>
+  </>
+);
 
 export default App;

@@ -2,6 +2,7 @@ import { Gavel } from '@mui/icons-material';
 import { AppBar, Container, Toolbar } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Logo = styled.div`
   cursor: pointer;
@@ -12,26 +13,26 @@ const Logo = styled.div`
   }
 `;
 
-// const Nav = styled.nav`
-//   @media screen and (max-width: 600px) {
-//     display: none;
-//   }
-// `;
+const Nav = styled.nav`
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+`;
 
-// const List = styled.ul`
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   list-style: none;
-//   padding: 0;
-//   margin: 0;
-// `;
+const List = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
 
-// const ListItem = styled.li`
-//   margin: 0 24px;
-// `;
+const ListItem = styled.li`
+  margin: 0 24px;
+`;
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
   padding: 8px;
   color: #fff;
   text-decoration: none;
@@ -45,10 +46,13 @@ const Link = styled.a`
 
 const Number = styled.div`
   cursor: pointer;
-  color: #fff;
-  background: #199c68;
+  background: #ffc700;
   border-radius: 32px;
   padding: 8px;
+
+  a {
+    color: #000;
+  }
 `;
 
 const Header = () => (
@@ -61,25 +65,28 @@ const Header = () => (
         }}
       >
         <Logo>
-          <Link href="/">
+          <StyledLink to="/">
             <Gavel /> Бастион
-          </Link>
+          </StyledLink>
         </Logo>
-        {/* <Nav>
+        <Nav>
           <List>
             <ListItem>
-              <Link href="/">Компетенции</Link>
+              <StyledLink to="/">Главная</StyledLink>
             </ListItem>
             <ListItem>
-              <Link href="/">Услуги</Link>
+              <StyledLink to="/fraud">Дела о мошенничестве</StyledLink>
             </ListItem>
             <ListItem>
-              <Link href="/">Контакты</Link>
+              <StyledLink to="/insurance">Вопрсы страхования</StyledLink>
+            </ListItem>
+            <ListItem>
+              <StyledLink to="/disputes">Жилищные споры</StyledLink>
             </ListItem>
           </List>
-        </Nav> */}
+        </Nav>
         <Number>
-          <Link href="tel:99999999999">99999999999</Link>
+          <StyledLink to="tel:99999999999">99999999999</StyledLink>
         </Number>
       </Toolbar>
     </Container>
