@@ -51,7 +51,7 @@ const Advantages = () => {
       <Subtitle sx={{ marginBottom: 4 }}>
         Если мы беремся за дело, вы можете быть уверены в положительном результате!
       </Subtitle>
-      <Grid container spacing={4}>
+      <Grid container spacing={6} rowSpacing={6}>
         <Grid item xs={12} sm={12} md={4}>
           <Item>
             <VerifiedUser />

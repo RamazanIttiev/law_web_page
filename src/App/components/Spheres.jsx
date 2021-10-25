@@ -24,27 +24,26 @@ const Item = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px;
   text-align: center;
 `;
 
 const Image = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 74px;
+  height: 64px;
   margin-bottom: 16px;
 `;
 
 const Spheres = () => (
   <Background>
     <Container maxWidth="lg">
-      <Grid container>
-        <Title
-          sx={{
-            marginBottom: '56px',
-          }}
-        >
-          Представляем ваши интересы в:
-        </Title>
+      <Title
+        sx={{
+          marginBottom: '56px',
+        }}
+      >
+        Представляем ваши интересы в:
+      </Title>
+      <Grid container spacing={6} rowSpacing={6}>
         <Grid item xs={12} sm={4} md={4}>
           <Item>
             <Image src={Eagle} />

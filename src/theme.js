@@ -55,7 +55,7 @@ export const theme = createTheme({
         root: {
           direction: 'row',
           justifyContent: 'space-evenly',
-          alignItems: 'center',
+          alignItems: 'baseline',
         },
       },
     },

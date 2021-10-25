@@ -28,7 +28,7 @@ const Link = styled.a`
 `;
 
 const Contacts = () => (
-  <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+  <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }} alignItems="center">
     <Grid item xs={12} sm={6} md={6}>
       <Info>
         <Typography>
