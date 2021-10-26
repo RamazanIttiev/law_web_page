@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container, Grid, Typography } from '@mui/material';
 import MoreButton from '../../Ui/MoreButton';
-import { disputeCases } from '../../data/disputeCases';
+import { fraudCases } from '../../data/fraudCases';
 
 const CaseTitle = styled(Typography).attrs({ variant: 'h1', component: 'h2' })``;
 
@@ -22,7 +22,7 @@ const Image = styled.img`
 
 const Cases = () => (
   <Container maxWidth="md" sx={{ padding: '56px 0' }}>
-    {disputeCases.map(item => (
+    {fraudCases.map(item => (
       <Grid
         alignItems="center"
         container

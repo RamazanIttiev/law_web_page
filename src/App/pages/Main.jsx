@@ -6,7 +6,6 @@ import Examples from '../components/Main/Carousel';
 import Companies from '../components/Main/Companies';
 import Competence from '../components/Main/Competence';
 import Consultation from '../components/Main/Consultation';
-import Contacts from '../components/Main/Contacts';
 import Guaranties from '../components/Main/Guaranties';
 import Promo from '../components/Main/Promo';
 import Services from '../components/Main/Services';
@@ -29,7 +28,6 @@ const Main = () => {
       {matches && <Services />}
       {/* <Examples /> */}
       <Companies />
-      <Contacts />
     </>
   );
 };

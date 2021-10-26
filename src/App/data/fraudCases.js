@@ -1,6 +1,6 @@
 import CaseImg from '../../assets/CaseImg.webp';
 
-export const cases = [
+export const fraudCases = [
   {
     id: 1,
     title: 'Оспаривание прав собственности',

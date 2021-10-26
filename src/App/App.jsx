@@ -3,6 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import Disputes from './pages/Disputes';
 import Header from './components/Header';
+import Footer from './components/Footer';
+import Fraud from './pages/Fraud';
 
 const App = () => (
   <>
@@ -12,7 +14,7 @@ const App = () => (
         <Main />
       </Route>
       <Route path="/fraud">
-        <Disputes />
+        <Fraud />
       </Route>
       <Route path="/insurance">
         <Disputes />
@@ -21,6 +23,7 @@ const App = () => (
         <Disputes />
       </Route>
     </Switch>
+    <Footer />
   </>
 );
 
