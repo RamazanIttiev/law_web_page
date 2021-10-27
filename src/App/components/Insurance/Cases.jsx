@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { cases } from '../../data/insuranceCases';
 import { getInsuranceCase } from '../../services';
+import Case from './Case/Case';
 
 const Cases = () => {
   const { id } = useParams();
-  const [currentCase, setCurrentCase] = useState({});
+  const [currentCase, setCurrentCase] = useState(null);
 
   useEffect(() => {
     setCurrentCase(getInsuranceCase(id, cases));
@@ -13,11 +14,7 @@ const Cases = () => {
 
   getInsuranceCase(id, cases);
 
-  return (
-    <div>
-      <h3>ID: {currentCase.caseId}</h3>
-    </div>
-  );
+  return <Case currentCase={currentCase} />;
 };
 
 export default Cases;
