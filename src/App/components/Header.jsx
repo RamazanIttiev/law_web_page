@@ -2,7 +2,7 @@ import { Gavel } from '@mui/icons-material';
 import { AppBar, Container, Toolbar } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Logo = styled.div`
   cursor: pointer;
@@ -32,7 +32,7 @@ const ListItem = styled.li`
   margin: 0 24px;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   padding: 8px;
   color: #fff;
   text-decoration: none;
@@ -82,13 +82,37 @@ const Header = () => {
           <Nav>
             <List>
               <ListItem>
-                <StyledLink to="/fraud">Дела о мошенничестве</StyledLink>
+                <StyledLink
+                  activeStyle={{
+                    fontWeight: 'bold',
+                    borderBottom: '2px solid #f6f6f6',
+                  }}
+                  to="/fraud"
+                >
+                  Дела о мошенничестве
+                </StyledLink>
               </ListItem>
               <ListItem>
-                <StyledLink to="/insurance">Вопрсы страхования</StyledLink>
+                <StyledLink
+                  activeStyle={{
+                    fontWeight: 'bold',
+                    borderBottom: '2px solid #f6f6f6',
+                  }}
+                  to="/insurance"
+                >
+                  Вопрсы страхования
+                </StyledLink>
               </ListItem>
               <ListItem>
-                <StyledLink to="/disputes">Жилищные споры</StyledLink>
+                <StyledLink
+                  activeStyle={{
+                    fontWeight: 'bold',
+                    borderBottom: '2px solid #f6f6f6',
+                  }}
+                  to="/disputes"
+                >
+                  Жилищные споры
+                </StyledLink>
               </ListItem>
             </List>
           </Nav>
