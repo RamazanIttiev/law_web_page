@@ -6,6 +6,10 @@ export const postData = async ({ name, phone, message }, setIsLoading) => {
   setIsLoading(false);
 };
 
-// Дела о мошенничестве и возврат денежных средств
-// Вопрсы страхования
-// Жилищные споры
+export const getInsuranceCase = (caseId, cases) => {
+  if (!cases) {
+    return null;
+  }
+
+  return cases.find(item => item.caseId === +caseId);
+};

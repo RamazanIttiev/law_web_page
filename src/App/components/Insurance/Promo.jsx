@@ -9,7 +9,9 @@ import {
 } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import PromoBgr from '../../../assets/Promo_bgr.jpeg';
+import { cases } from '../../data/insuranceCases';
 
 const Base = styled.div`
   background: url(${PromoBgr});
@@ -20,6 +22,11 @@ const Base = styled.div`
 const Wrapper = styled.div`
   background-image: -webkit-linear-gradient(top, rgb(52, 90, 128), rgba(163, 163, 163, 0.7));
   padding: 32px 0 56px;
+`;
+
+const StyledLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
 `;
 
 const Title = styled(Typography).attrs({ variant: 'h1' })``;
@@ -41,21 +48,15 @@ const Promo = () => (
         <Box sx={{ width: '100%', maxWidth: 360 }}>
           <nav>
             <List>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemText primary="Досрочное расторжение договора страхования" />
-                </ListItemButton>
-              </ListItem>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemText primary="Получение страхового возмещения" />
-                </ListItemButton>
-              </ListItem>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemText primary="Споры при отказе от навязанного договора стразования" />
-                </ListItemButton>
-              </ListItem>
+              {cases.map(item => (
+                <ListItem key={item.caseId} disablePadding>
+                  <ListItemButton>
+                    <StyledLink to={`/insuranceCase/${item.caseId}`}>
+                      <ListItemText primary={item.primary} />
+                    </StyledLink>
+                  </ListItemButton>
+                </ListItem>
+              ))}
             </List>
           </nav>
         </Box>
