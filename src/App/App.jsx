@@ -5,6 +5,7 @@ import Disputes from './pages/Disputes';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Fraud from './pages/Fraud';
+import Insurance from './pages/Insurance';
 
 const App = () => (
   <>
@@ -17,7 +18,7 @@ const App = () => (
         <Fraud />
       </Route>
       <Route path="/insurance">
-        <Disputes />
+        <Insurance />
       </Route>
       <Route path="/disputes">
         <Disputes />

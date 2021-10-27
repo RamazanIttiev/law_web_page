@@ -82,9 +82,6 @@ const Header = () => {
           <Nav>
             <List>
               <ListItem>
-                <StyledLink to="/">Главная</StyledLink>
-              </ListItem>
-              <ListItem>
                 <StyledLink to="/fraud">Дела о мошенничестве</StyledLink>
               </ListItem>
               <ListItem>
