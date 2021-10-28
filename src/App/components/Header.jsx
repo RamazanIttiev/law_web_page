@@ -1,8 +1,9 @@
-import { Gavel } from '@mui/icons-material';
-import { AppBar, Container, Toolbar } from '@mui/material';
+import { AppBar, Container, Toolbar, useMediaQuery } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink, useLocation } from 'react-router-dom';
+import { Gavel } from '@mui/icons-material';
+import MobileMenu from './MobileMenu';
 
 const Logo = styled.div`
   cursor: pointer;
@@ -61,6 +62,12 @@ const Number = styled.div`
 
 const Header = () => {
   const router = useLocation();
+  const mobileScreen = useMediaQuery('(max-width:768px)');
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = newOpen => () => {
+    setOpen(newOpen);
+  };
 
   return (
     <AppBar
@@ -79,46 +86,52 @@ const Header = () => {
               <Gavel /> Бастион
             </StyledLink>
           </Logo>
-          <Nav>
-            <List>
-              <ListItem>
-                <StyledLink
-                  activeStyle={{
-                    fontWeight: 'bold',
-                    borderBottom: '2px solid #f6f6f6',
-                  }}
-                  to="/fraud"
-                >
-                  Дела о мошенничестве
-                </StyledLink>
-              </ListItem>
-              <ListItem>
-                <StyledLink
-                  activeStyle={{
-                    fontWeight: 'bold',
-                    borderBottom: '2px solid #f6f6f6',
-                  }}
-                  to="/insurance"
-                >
-                  Вопрсы страхования
-                </StyledLink>
-              </ListItem>
-              <ListItem>
-                <StyledLink
-                  activeStyle={{
-                    fontWeight: 'bold',
-                    borderBottom: '2px solid #f6f6f6',
-                  }}
-                  to="/disputes"
-                >
-                  Жилищные споры
-                </StyledLink>
-              </ListItem>
-            </List>
-          </Nav>
-          <Number path={router.pathname === '/'}>
-            <a href="tel:99999999999">99999999999</a>
-          </Number>
+          {mobileScreen ? (
+            <MobileMenu toggleDrawer={toggleDrawer} open={open} />
+          ) : (
+            <>
+              <Nav>
+                <List>
+                  <ListItem>
+                    <StyledLink
+                      activeStyle={{
+                        fontWeight: 'bold',
+                        borderBottom: '2px solid #f6f6f6',
+                      }}
+                      to="/fraud"
+                    >
+                      Дела о мошенничестве
+                    </StyledLink>
+                  </ListItem>
+                  <ListItem>
+                    <StyledLink
+                      activeStyle={{
+                        fontWeight: 'bold',
+                        borderBottom: '2px solid #f6f6f6',
+                      }}
+                      to="/insurance"
+                    >
+                      Вопрсы страхования
+                    </StyledLink>
+                  </ListItem>
+                  <ListItem>
+                    <StyledLink
+                      activeStyle={{
+                        fontWeight: 'bold',
+                        borderBottom: '2px solid #f6f6f6',
+                      }}
+                      to="/disputes"
+                    >
+                      Жилищные споры
+                    </StyledLink>
+                  </ListItem>
+                </List>
+              </Nav>
+              <Number path={router.pathname === '/'}>
+                <a href="tel:99999999999">99999999999</a>
+              </Number>
+            </>
+          )}
         </Toolbar>
       </Container>
     </AppBar>
