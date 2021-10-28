@@ -2,7 +2,6 @@ import { useMediaQuery } from '@mui/material';
 import React from 'react';
 import AccordionServices from '../components/Main/Accordion';
 import Advantages from '../components/Main/Advantages';
-import Examples from '../components/Main/Carousel';
 import Companies from '../components/Main/Companies';
 import Competence from '../components/Main/Competence';
 import Consultation from '../components/Main/Consultation';
@@ -26,7 +25,6 @@ const Main = () => {
       <AccordionServices />
       <Consultation />
       {matches && <Services />}
-      {/* <Examples /> */}
       <Companies />
     </>
   );
