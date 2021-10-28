@@ -5,6 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styled from 'styled-components';
+import { Container, useMediaQuery } from '@mui/material';
 
 const Base = styled.div`
   padding: ${props => props.theme.spacing(10)} 0;
@@ -63,43 +64,49 @@ const AllCompanies = [
   'И другие',
 ];
 
-const Companies = () => (
-  <Base>
-    <Title
-      sx={{
-        marginBottom: '48px',
-      }}
-    >
-      списки компаний с которыми мы работаем
-    </Title>
-    <Accordion sx={{ marginBottom: 4, padding: 2 }}>
-      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
-          Сотрудничество
-        </AccordionTitle>
-      </AccordionSummary>
-      <Details>
-        {AllCompanies.map(company => (
-          <Company
-            key={company}
-            sx={{
-              fontSize: 14,
-              margin: 1,
-              background: '#345a80',
-              color: '#fff',
-              padding: 1,
-              borderRadius: 2,
-              fontWeight: 700,
-              minWidth: 250,
-              textAlign: 'center',
-            }}
-          >
-            {company}
-          </Company>
-        ))}
-      </Details>
-    </Accordion>
-  </Base>
-);
+const Companies = () => {
+  const mobileScreen = useMediaQuery('(max-width:768px)');
+
+  return (
+    <Base>
+      <Container maxWidth="lg">
+        <Title
+          sx={{
+            marginBottom: '48px',
+          }}
+        >
+          списки компаний с которыми мы работаем
+        </Title>
+        <Accordion sx={{ width: `${mobileScreen && '100%'}`, marginBottom: 4, padding: 2 }}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
+              Сотрудничество
+            </AccordionTitle>
+          </AccordionSummary>
+          <Details>
+            {AllCompanies.map(company => (
+              <Company
+                key={company}
+                sx={{
+                  fontSize: 14,
+                  margin: 1,
+                  background: '#345a80',
+                  color: '#fff',
+                  padding: 1,
+                  borderRadius: 2,
+                  fontWeight: 700,
+                  minWidth: 250,
+                  textAlign: 'center',
+                }}
+              >
+                {company}
+              </Company>
+            ))}
+          </Details>
+        </Accordion>
+      </Container>
+    </Base>
+  );
+};
 
 export default Companies;

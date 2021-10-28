@@ -17,6 +17,9 @@ const Item = styled(Grid)`
   text-align: center;
   font-size: 56px;
   font-weight: 600;
+  @media screen and (max-width: 600px) {
+    font-size: 42px;
+  }
 
   span {
     display: flex;

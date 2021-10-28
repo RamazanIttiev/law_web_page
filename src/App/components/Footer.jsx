@@ -13,6 +13,10 @@ const Info = styled.div`
     word-break: break-word;
     margin-bottom: 24px;
     font-size: 18px;
+
+    @media screen and (max-width:600px) {
+      font-size: 14px;
+    },
   }
 `;
 
@@ -20,6 +24,10 @@ const Bold = styled.span`
   color: ${props => props.theme.palette.primary.main};
   font-weight: 700;
   font-size: 20px;
+  
+  @media screen and (max-width:600px) {
+    font-size: 16px;
+  },
 `;
 
 const Link = styled.a`
