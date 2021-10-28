@@ -37,19 +37,19 @@ const Competence = () => {
         Наши компетенции
       </Title>
       <Grid container spacing={6} rowSpacing={6}>
-        <Grid item xs={12} sm={4} md={4}>
+        <Grid item xs={11} sm={4} md={4}>
           <Item>
             <AccountBalance />
             Дела о мошенничестве и возврат денежных средств
           </Item>
         </Grid>
-        <Grid item xs={12} sm={4} md={4}>
+        <Grid item xs={11} sm={4} md={4}>
           <Item>
             <MonetizationOn />
             Вопрсы страхования
           </Item>
         </Grid>
-        <Grid item xs={12} sm={4} md={4}>
+        <Grid item xs={11} sm={4} md={4}>
           <Item>
             <Home />
             Жилищные споры

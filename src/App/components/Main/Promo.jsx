@@ -19,7 +19,7 @@ const Title = styled(Typography).attrs({ variant: 'h1' })``;
 
 const Subtitle = styled(Typography).attrs({ variant: 'h2' })``;
 
-const Text = styled(Typography).attrs({ variant: 'h2', component: 'div' })``;
+const Text = styled(Typography).attrs({ component: 'div' })``;
 
 const Promo = () => {
   const desctopScreen = useMediaQuery('(min-width:600px)');
@@ -35,7 +35,7 @@ const Promo = () => {
               textAlign: 'start',
               lineHeight: 1,
               fontWeight: 700,
-              fontSize: desctopScreen ? '48px' : '40px',
+              fontSize: desctopScreen ? '48px' : '32px',
             }}
           >
             Юридические {desctopScreen && <br />} и консультационные услуги
@@ -46,6 +46,7 @@ const Promo = () => {
               textAlign: 'start',
               marginBottom: '32px',
               fontWeight: 700,
+              fontSize: desctopScreen ? '24px' : '16px',
             }}
           >
             В Москве и Московской области
@@ -55,6 +56,7 @@ const Promo = () => {
               color: '#fff',
               textAlign: 'start',
               fontWeight: 700,
+              fontSize: '16px',
             }}
           >
             Бесплатные юридические консультаций для физических и юридических лиц
