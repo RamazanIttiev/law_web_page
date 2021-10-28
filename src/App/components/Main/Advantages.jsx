@@ -52,28 +52,28 @@ const Advantages = () => {
         Если мы беремся за дело, вы можете быть уверены в положительном результате!
       </Subtitle>
       <Grid container spacing={6} rowSpacing={6}>
-        <Grid item xs={12} sm={12} md={4}>
+        <Grid item xs={11} sm={11} md={4}>
           <Item>
             <VerifiedUser />
             <ItemTitle>Годы практики</ItemTitle>
             Все наши специалисты имеют опыт юридической практики не менее 5 лет
           </Item>
         </Grid>
-        <Grid item xs={12} sm={12} md={4}>
+        <Grid item xs={11} sm={11} md={4}>
           <Item>
             <AccessibilityNew />
             <ItemTitle>Персональный подход</ItemTitle>
             Индивидуальная работа с каждым клиентом позволяет решать даже самые сложные проблемы
           </Item>
         </Grid>
-        <Grid item xs={12} sm={12} md={4}>
+        <Grid item xs={11} sm={11} md={4}>
           <Item>
             <ManageAccounts />
             <ItemTitle>Эффективность</ItemTitle>
             На каждое дело мы выделяем специалиста, который единовременно работает только с Вами
           </Item>
         </Grid>
-        <Grid item xs={12} sm={12} md={4}>
+        <Grid item xs={11} sm={11} md={4}>
           <Item>
             <SupervisorAccount />
             <ItemTitle>Экспертиза</ItemTitle>
@@ -82,7 +82,7 @@ const Advantages = () => {
             права
           </Item>
         </Grid>
-        <Grid item xs={12} sm={12} md={4}>
+        <Grid item xs={11} sm={11} md={4}>
           <Item>
             <DownloadDone />
             <ItemTitle>Результат в 90% случаев</ItemTitle>
@@ -90,7 +90,7 @@ const Advantages = () => {
             частично
           </Item>
         </Grid>
-        <Grid item xs={12} sm={12} md={4}>
+        <Grid item xs={11} sm={11} md={4}>
           <Item>
             <SupportAgent />
             <ItemTitle>Поддержка</ItemTitle>

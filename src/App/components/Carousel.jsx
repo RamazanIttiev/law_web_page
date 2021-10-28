@@ -7,6 +7,7 @@ import { Container, Typography } from '@mui/material';
 
 const Base = styled(Container)`
   padding: ${props => props.theme.spacing(10)} 0;
+  background: ${props => props.theme.palette.background.paper};
 `;
 
 const Button = styled.button`

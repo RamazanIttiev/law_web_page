@@ -2,7 +2,7 @@ import React from 'react';
 import Cases from '../components/Disputes/Cases';
 import Description from '../components/Disputes/Description';
 import Promo from '../components/Disputes/Promo';
-import Examples from '../components/Main/Carousel';
+import Examples from '../components/Carousel';
 import { disputeExamples } from '../data/disputeCases';
 
 const Disputes = () => (
