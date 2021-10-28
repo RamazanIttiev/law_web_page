@@ -1,4 +1,4 @@
-import { Card, CardContent, Container, Grid, Typography, useTheme } from '@mui/material';
+import { Card, CardContent, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 
