@@ -4,6 +4,7 @@ import Description from '../components/Insurance/Description';
 import Promo from '../components/Insurance/Promo';
 import Examples from '../components/Carousel';
 import { insuranceExamples } from '../data/insuranceCases';
+import Steps from '../components/Insurance/Steps';
 
 const Insurance = () => (
   <>
@@ -11,6 +12,7 @@ const Insurance = () => (
     <Description />
     <AccordionInsurance />
     <Examples examples={insuranceExamples} />
+    <Steps />
   </>
 );
 

@@ -9,7 +9,6 @@ import { Container, useMediaQuery } from '@mui/material';
 
 const Base = styled.div`
   padding: ${props => props.theme.spacing(10)} 0;
-  background: ${props => props.theme.palette.background.paper};
 `;
 
 const Details = styled(AccordionDetails)``;
