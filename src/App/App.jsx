@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Fraud from './pages/Fraud';
 import Insurance from './pages/Insurance';
 import Cases from './components/Insurance/Cases';
+import Error from './pages/404';
 
 const App = () => (
   <>
@@ -25,6 +26,9 @@ const App = () => (
         <Disputes />
       </Route>
       <Route path="/insuranceCase/:id" component={Cases} />
+      <Route path="*">
+        <Error />
+      </Route>
     </Switch>
     <Footer />
   </>
