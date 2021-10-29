@@ -7,6 +7,8 @@ import {
   DialogTitle,
   TextareaAutosize,
   useMediaQuery,
+  Snackbar,
+  Alert,
 } from '@mui/material';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
@@ -65,7 +67,17 @@ const StyledButton = styled.button`
 
 const Form = ({ open, handleClose }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [openAlert, setAlert] = React.useState(false);
+  const [error, setError] = React.useState(false);
   const matches = useMediaQuery('(max-width:600px)');
+
+  const closeAlert = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setAlert(false);
+  };
 
   const {
     handleSubmit,
@@ -74,7 +86,28 @@ const Form = ({ open, handleClose }) => {
   } = useForm();
 
   const formSubmit = data => {
-    postData(data, setIsLoading);
+    setIsLoading(true);
+
+    postData(data)
+      .then(response => {
+        if (response.status === 200) {
+          setAlert(true);
+          setIsLoading(false);
+          setTimeout(() => {
+            handleClose();
+          }, 2000);
+        }
+      })
+      .catch(err => {
+        console.log(err);
+        if (err) {
+          setError(true);
+          setAlert(true);
+          setTimeout(() => {
+            handleClose();
+          }, 4000);
+        }
+      });
   };
 
   return (
@@ -120,6 +153,13 @@ const Form = ({ open, handleClose }) => {
           </StyledButton>
         </StyledForm>
       </DialogContent>
+      <Snackbar open={openAlert} autoHideDuration={6000} onClose={closeAlert}>
+        <Alert onClose={closeAlert} severity={error ? 'error' : 'success'} sx={{ width: '100%' }}>
+          {error
+            ? 'Произошла ошибка, запишитесь пожалуйста по телефону'
+            : 'Ваша заявка успешно отправлена'}
+        </Alert>
+      </Snackbar>
     </Dialog>
   );
 };
