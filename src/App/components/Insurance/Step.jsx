@@ -35,8 +35,8 @@ const Step = () => {
   return (
     <Grid container spacing={4}>
       {steps.map(({ id, title, icon, list }) => (
-        <Grid key={id} item xs={12} sm={12} md={4}>
-          <Card sx={!mobileScreen && { minHeight: '380px' }}>
+        <Grid item xs={12} sm={12} md={4}>
+          <Card key={id} sx={!mobileScreen && { minHeight: '380px' }}>
             <StyledCardHeader
               avatar={<img src={icon} alt={title} />}
               title={title}
@@ -45,7 +45,7 @@ const Step = () => {
             <CardContent>
               <List>
                 {list.map(item => (
-                  <Li>{item}</Li>
+                  <Li key={item}>{item}</Li>
                 ))}
               </List>
             </CardContent>

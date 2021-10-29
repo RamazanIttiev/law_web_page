@@ -99,7 +99,6 @@ const Form = ({ open, handleClose }) => {
         }
       })
       .catch(err => {
-        console.log(err);
         if (err) {
           setError(true);
           setAlert(true);
