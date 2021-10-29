@@ -1,16 +1,27 @@
-import { AppBar, Container, Toolbar, useMediaQuery } from '@mui/material';
+import { AppBar, Container, Toolbar, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink, useLocation } from 'react-router-dom';
-import { Gavel } from '@mui/icons-material';
 import MobileMenu from './MobileMenu';
+import LogoImg from '../../assets/scales.svg';
 
 const Logo = styled.div`
   cursor: pointer;
   font-size: 24px;
 
   a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
     padding: 0;
+  }
+
+  img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
   }
 `;
 
@@ -83,7 +94,8 @@ const Header = () => {
         >
           <Logo>
             <StyledLink to="/">
-              <Gavel /> Бастион
+              <img src={LogoImg} alt="" />
+              <Typography>Бастион</Typography>
             </StyledLink>
           </Logo>
           {mobileScreen ? (

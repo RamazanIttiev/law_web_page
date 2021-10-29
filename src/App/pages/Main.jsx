@@ -1,5 +1,6 @@
 import { useMediaQuery } from '@mui/material';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import AccordionServices from '../components/Main/Accordion';
 import Advantages from '../components/Main/Advantages';
 import Companies from '../components/Main/Companies';
@@ -26,6 +27,10 @@ const Main = () => {
       <Consultation />
       {matches && <Services />}
       <Companies />
+      <Helmet>
+        <meta name="description" content="БАСТИОН" />
+        <title>БАСТИОН</title>
+      </Helmet>
     </>
   );
 };

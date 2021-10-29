@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import AccordionInsurance from '../components/Insurance/AccordionInsurance';
 import Description from '../components/Insurance/Description';
 import Promo from '../components/Insurance/Promo';
@@ -13,6 +14,10 @@ const Insurance = () => (
     <AccordionInsurance />
     <Examples examples={insuranceExamples} />
     <Steps />
+    <Helmet>
+      <meta name="description" content="Вопросы страхования" />
+      <title>Вопросы страхования | БАСТИОН</title>
+    </Helmet>
   </>
 );
 
