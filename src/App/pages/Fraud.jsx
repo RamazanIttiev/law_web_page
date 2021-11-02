@@ -2,13 +2,19 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Cases from '../components/Fraud/Cases';
 import Promo from '../components/Fraud/Promo';
-import { fraudExamples } from '../data/fraudCases';
 import Examples from '../components/Carousel';
+import { fraudExamples } from '../data/fraudCases';
+import Companies from '../components/Main/Companies';
+import Description from '../components/Fraud/Description';
+import Services from '../components/Fraud/Services';
 
 const Fraud = () => (
   <>
     <Promo />
+    <Description />
+    <Services />
     <Cases />
+    <Companies />
     <Examples examples={fraudExamples} />
     <Helmet>
       <meta name="description" content="Дела о мошенничестве" />

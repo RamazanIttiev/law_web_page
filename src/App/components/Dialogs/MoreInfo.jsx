@@ -16,6 +16,11 @@ const MoreInfo = ({ open, handleClose, title, paragraph }) => (
     BackdropProps={{
       timeout: 500,
     }}
+    sx={{
+      '& .MuiPaper-root': {
+        maxWidth: '800px',
+      },
+    }}
   >
     <Title sx={{ fontSize: '28px' }}>{title}</Title>
     <DialogContent>

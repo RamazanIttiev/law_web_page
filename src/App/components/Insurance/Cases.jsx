@@ -12,8 +12,6 @@ const Cases = () => {
     setCurrentCase(getInsuranceCase(id, cases));
   }, [cases, id]);
 
-  getInsuranceCase(id, cases);
-
   return <Case currentCase={currentCase} />;
 };
 

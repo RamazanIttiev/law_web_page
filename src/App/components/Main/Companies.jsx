@@ -15,7 +15,7 @@ const Base = styled.div`
 const Details = styled(AccordionDetails)`
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
 `;
 
@@ -75,12 +75,18 @@ const Companies = () => {
             marginBottom: '48px',
           }}
         >
-          списки компаний с которыми мы работаем
+          Список компаний, жертвами которых становились наши клиенты:
         </Title>
-        <Accordion sx={{ width: `${mobileScreen && '100%'}`, marginBottom: 4, padding: 2 }}>
+        <Accordion
+          sx={{
+            width: `${mobileScreen && '100%'}`,
+            marginBottom: 4,
+            padding: 2,
+          }}
+        >
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
-              Сотрудничество
+              Подробнее
             </AccordionTitle>
           </AccordionSummary>
           <Details>
