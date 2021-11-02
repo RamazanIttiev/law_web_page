@@ -5,7 +5,7 @@ import PromoBgr from '../../../assets/Promo_bgr.jpeg';
 import Button from '../../Ui/FormButton';
 
 const Base = styled.div`
-  background: url(${PromoBgr});
+  background: url(${PromoBgr}) no-repeat center/cover;
   text-align: center;
   color: #fff;
 `;
