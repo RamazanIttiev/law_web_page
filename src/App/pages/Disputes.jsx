@@ -13,8 +13,8 @@ const Disputes = () => (
     <Cases />
     <Examples examples={disputeExamples} />
     <Helmet>
-      <meta name="description" content="Жилищные споры" />
-      <title>Жилищные споры | БАСТИОН</title>
+      <meta name="description" content="Жилищные вопросы" />
+      <title>Жилищные вопросы | БАСТИОН</title>
     </Helmet>
   </>
 );

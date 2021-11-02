@@ -52,7 +52,7 @@ const Competence = () => {
         <Grid item xs={11} sm={4} md={4}>
           <Item>
             <Home />
-            Жилищные споры
+            Жилищные вопросы
           </Item>
         </Grid>
       </Grid>

@@ -102,7 +102,7 @@ const MobileMenu = ({ open, toggleDrawer }) => {
                   }}
                   to="/disputes"
                 >
-                  Жилищные споры
+                  Жилищные вопросы
                 </StyledLink>
               </ListItem>
             </List>

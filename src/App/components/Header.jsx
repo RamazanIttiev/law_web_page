@@ -110,6 +110,17 @@ const Header = () => {
                         fontWeight: 'bold',
                         borderBottom: '2px solid #f6f6f6',
                       }}
+                      to="/"
+                    >
+                      Главная
+                    </StyledLink>
+                  </ListItem>
+                  <ListItem>
+                    <StyledLink
+                      activeStyle={{
+                        fontWeight: 'bold',
+                        borderBottom: '2px solid #f6f6f6',
+                      }}
                       to="/fraud"
                     >
                       Дела о мошенничестве
@@ -134,7 +145,7 @@ const Header = () => {
                       }}
                       to="/disputes"
                     >
-                      Жилищные споры
+                      Жилищные вопросы
                     </StyledLink>
                   </ListItem>
                 </List>
