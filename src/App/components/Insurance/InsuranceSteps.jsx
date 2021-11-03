@@ -25,7 +25,9 @@ const InsuranceSteps = ({ insuranceSteps }) => (
     <Container maxWidth="lg">
       <Title sx={{ marginBottom: '56px' }}>Этапы решения страховых вопросов</Title>
       <Grid container spacing={2}>
-        <Step insuranceSteps={insuranceSteps} />
+        <Grid item>
+          <Step insuranceSteps={insuranceSteps} />
+        </Grid>
       </Grid>
     </Container>
   </Base>

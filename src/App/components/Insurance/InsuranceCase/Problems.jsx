@@ -5,20 +5,18 @@ import styled from 'styled-components';
 const Title = styled(Typography).attrs({ variant: 'h1', component: 'h2' })``;
 
 const Problems = ({ problems, subtitle }) => (
-  <Container maxWidth="lg" sx={{ p: 7 }}>
+  <Container maxWidth="lg">
     <Title sx={{ mb: 3 }}>{subtitle}</Title>
     <Grid container spacing={4}>
       {problems.map(problem => (
-        <Grid item xs={12} sm={4} md={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <Card
             sx={{
               minHeight: '332px',
               textAlign: 'justify',
               transition: 'all 0.5s',
               '&:hover': {
-                background: '#345a80',
                 boxShadow: '0px 1px 20px 8px lightgrey',
-                color: '#fff',
               },
             }}
           >
