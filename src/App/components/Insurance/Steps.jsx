@@ -2,6 +2,7 @@ import { Container, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import Step from './Step';
+import { steps } from '../../data/steps';
 
 const Base = styled.div`
   padding: ${props => props.theme.spacing(10)} 0;
@@ -25,7 +26,7 @@ const Steps = () => (
         помощи приобретенного опыта нам удалось разобраться, при каких обстоятельствах к нам чаще
         всего обращаются:
       </Text>
-      <Step />
+      <Step steps={steps} />
     </Container>
   </Base>
 );

@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, Grid, useMediaQuery } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import { steps } from '../../data/steps';
 
 const StyledCardHeader = styled(CardHeader)`
   .MuiCardHeader-content {
@@ -29,7 +28,7 @@ const List = styled.ul`
 
 const Li = styled.li``;
 
-const Step = () => {
+const Step = ({ steps }) => {
   const mobileScreen = useMediaQuery('(max-width:768px)');
 
   return (
@@ -38,7 +37,7 @@ const Step = () => {
         <Grid item xs={12} sm={12} md={4}>
           <Card key={id} sx={!mobileScreen && { minHeight: '380px' }}>
             <StyledCardHeader
-              avatar={<img src={icon} alt={title} />}
+              avatar={icon && <img src={icon} alt={title} />}
               title={title}
               subheader={id}
             />
