@@ -1,4 +1,4 @@
-export const steps = [
+export const insuranceSteps = [
   {
     id: 1,
     title: 'Консультация',

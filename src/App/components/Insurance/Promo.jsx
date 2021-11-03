@@ -11,7 +11,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import PromoBgr from '../../../assets/Promo_bgr.jpeg';
-import { cases } from '../../data/insuranceCases';
+import { insuranceCases } from '../../data/insuranceCases';
 
 const Base = styled.div`
   background: url(${PromoBgr}) no-repeat center/cover;
@@ -48,7 +48,7 @@ const Promo = () => (
         <Box sx={{ width: '100%', maxWidth: 360 }}>
           <nav>
             <List>
-              {cases.map(item => (
+              {insuranceCases.map(item => (
                 <ListItem key={item.caseId} disablePadding>
                   <ListItemButton>
                     <StyledLink to={`/insuranceCase/${item.caseId}`}>

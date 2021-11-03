@@ -5,13 +5,14 @@ import Description from '../components/Insurance/Description';
 import Promo from '../components/Insurance/Promo';
 import Examples from '../components/Carousel';
 import { insuranceExamples } from '../data/insuranceCases';
-import InsuranceStages from '../components/Insurance/InsuranceStages';
+import { insuranceSteps } from '../data/insuranceSteps';
 import Companies from '../components/Insurance/Companies';
+import InsuranceSteps from '../components/Insurance/InsuranceSteps';
 
 const Insurance = () => (
   <>
     <Promo />
-    <InsuranceStages />
+    <InsuranceSteps insuranceSteps={insuranceSteps} />
     <Description />
     <AccordionInsurance />
     <Examples examples={insuranceExamples} />

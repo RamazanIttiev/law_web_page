@@ -28,18 +28,18 @@ const List = styled.ul`
 
 const Li = styled.li``;
 
-const Step = ({ steps }) => {
+const Step = ({ insuranceSteps }) => {
   const mobileScreen = useMediaQuery('(max-width:768px)');
 
   return (
     <Grid container spacing={4}>
-      {steps.map(({ id, title, icon, list }) => (
+      {insuranceSteps.map(({ stepId, id, title, icon, list }) => (
         <Grid item xs={12} sm={12} md={4}>
-          <Card key={id} sx={!mobileScreen && { minHeight: '380px' }}>
+          <Card key={stepId} sx={!mobileScreen && { minHeight: '420px' }}>
             <StyledCardHeader
               avatar={icon && <img src={icon} alt={title} />}
               title={title}
-              subheader={id}
+              subheader={stepId || id}
             />
             <CardContent>
               <List>

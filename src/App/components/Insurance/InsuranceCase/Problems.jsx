@@ -10,11 +10,20 @@ const Problems = ({ problems, subtitle }) => (
     <Grid container spacing={4}>
       {problems.map(problem => (
         <Grid item xs={12} sm={4} md={4}>
-          <Card sx={{ minHeight: '290px' }}>
+          <Card
+            sx={{
+              minHeight: '332px',
+              textAlign: 'justify',
+              transition: 'all 0.5s',
+              '&:hover': {
+                background: '#345a80',
+                boxShadow: '0px 1px 20px 8px lightgrey',
+                color: '#fff',
+              },
+            }}
+          >
             <CardContent>
-              <Typography color="text.primary" gutterBottom>
-                {problem}
-              </Typography>
+              <Typography gutterBottom>{problem}</Typography>
             </CardContent>
           </Card>
         </Grid>
