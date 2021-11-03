@@ -2,6 +2,8 @@ import { DialogContentText } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import CaseImg from '../../assets/CaseImg.webp';
+import Refund from '../../assets/refund.png';
+import Money from '../../assets/moneyBack.jpeg';
 
 const Text = styled(DialogContentText).attrs({ variant: 'body', component: 'div' })``;
 
@@ -38,7 +40,7 @@ export const fraudCases = [
         юристу, который специализируется на данных вопросах.
       </Text>
     ),
-    image: CaseImg,
+    image: Refund,
   },
   {
     id: 2,
@@ -68,7 +70,7 @@ export const fraudCases = [
         внесудебного урегулирования проблемы с долгом;
       </Text>
     ),
-    image: CaseImg,
+    image: Money,
   },
   {
     id: 3,
