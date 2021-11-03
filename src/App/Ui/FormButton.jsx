@@ -15,6 +15,11 @@ const StyledButton = styled.button`
   border-radius: 50px;
   display: block;
   margin: ${props => props.margin}px auto 0;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const Button = ({ text, margin }) => {

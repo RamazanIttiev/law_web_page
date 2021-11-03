@@ -54,6 +54,10 @@ const StyledLink = styled(NavLink)`
   svg {
     margin-right: 16px;
   }
+
+  &:hover {
+    border-bottom: 2px solid #fff;
+  }
 `;
 
 const Number = styled.div`
@@ -93,10 +97,10 @@ const Header = () => {
           }}
         >
           <Logo>
-            <StyledLink to="/">
+            <NavLink to="/" style={{ color: '#fff', textDecoration: 'none' }}>
               <img src={LogoImg} alt="" />
               <Typography>Бастион</Typography>
-            </StyledLink>
+            </NavLink>
           </Logo>
           {mobileScreen ? (
             <MobileMenu toggleDrawer={toggleDrawer} open={open} />
