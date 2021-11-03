@@ -83,6 +83,7 @@ const Form = ({ open, handleClose }) => {
     handleSubmit,
     formState: { errors },
     register,
+    reset,
   } = useForm();
 
   const formSubmit = data => {
@@ -95,6 +96,7 @@ const Form = ({ open, handleClose }) => {
           setIsLoading(false);
           setTimeout(() => {
             handleClose();
+            closeAlert();
           }, 2000);
         }
       })
@@ -104,8 +106,12 @@ const Form = ({ open, handleClose }) => {
           setAlert(true);
           setTimeout(() => {
             handleClose();
+            closeAlert();
           }, 4000);
         }
+      })
+      .finally(() => {
+        reset();
       });
   };
 
