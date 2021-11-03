@@ -7,6 +7,7 @@ import { fraudExamples } from '../data/fraudCases';
 import Companies from '../components/Main/Companies';
 import Description from '../components/Fraud/Description';
 import Services from '../components/Fraud/Services';
+import Situations from '../components/Fraud/Situations';
 
 const Fraud = () => (
   <>
@@ -15,6 +16,7 @@ const Fraud = () => (
     <Services />
     <Cases />
     <Companies />
+    <Situations />
     <Examples examples={fraudExamples} />
     <Helmet>
       <meta name="description" content="Дела о мошенничестве" />
