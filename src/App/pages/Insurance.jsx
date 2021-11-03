@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet';
 import AccordionInsurance from '../components/Insurance/AccordionInsurance';
 import Description from '../components/Insurance/Description';
 import Promo from '../components/Insurance/Promo';
-import Examples from '../components/Carousel';
-import { insuranceExamples } from '../data/insuranceCases';
+// import Examples from '../components/Carousel';
+// import { insuranceExamples } from '../data/insuranceCases';
 import { insuranceSteps } from '../data/insuranceSteps';
 import Companies from '../components/Insurance/Companies';
 import InsuranceSteps from '../components/Insurance/InsuranceSteps';
@@ -15,7 +15,7 @@ const Insurance = () => (
     <InsuranceSteps insuranceSteps={insuranceSteps} />
     <Description />
     <AccordionInsurance />
-    <Examples examples={insuranceExamples} />
+    {/* <Examples examples={insuranceExamples} /> */}
     <Companies />
     <Helmet>
       <meta name="description" content="Вопросы страхования" />

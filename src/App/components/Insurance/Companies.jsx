@@ -37,7 +37,7 @@ const Li = styled.li`
 `;
 
 const Companies = () => (
-  <Box sx={{ p: '56px 0' }}>
+  <Box sx={{ p: '56px 0', background: '#fff' }}>
     <Title>Работам со всеми страховыми компаниями России:</Title>
     <List>
       {companies.map(company => (
