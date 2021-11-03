@@ -1,12 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  Container,
-  Grid,
-  Typography,
-  useMediaQuery,
-} from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import Step from './InsuranceCase/Step';
