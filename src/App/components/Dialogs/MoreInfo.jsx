@@ -3,7 +3,11 @@ import { Backdrop, Dialog, DialogContent, DialogContentText, DialogTitle } from 
 import styled from 'styled-components';
 import FormButton from '../../Ui/FormButton';
 
-const Title = styled(DialogTitle).attrs({ variant: 'h1', component: 'h2' })``;
+const Title = styled(DialogTitle).attrs({ variant: 'h1', component: 'h2' })`
+  @media screen and (max-width: 600px) {
+    font-size: 24px;
+  }
+`;
 
 const Text = styled(DialogContentText).attrs({ variant: 'body', component: 'div' })``;
 

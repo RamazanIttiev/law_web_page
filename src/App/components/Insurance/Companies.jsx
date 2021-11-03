@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import { companies } from '../../data/insuranceCompanies';
@@ -38,12 +38,14 @@ const Li = styled.li`
 
 const Companies = () => (
   <Box sx={{ p: '56px 0', background: '#fff' }}>
-    <Title>Работам со всеми страховыми компаниями России:</Title>
-    <List>
-      {companies.map(company => (
-        <Li>{company}</Li>
-      ))}
-    </List>
+    <Container maxWidth="lg">
+      <Title>Работам со всеми страховыми компаниями России:</Title>
+      <List>
+        {companies.map(company => (
+          <Li>{company}</Li>
+        ))}
+      </List>
+    </Container>
   </Box>
 );
 
