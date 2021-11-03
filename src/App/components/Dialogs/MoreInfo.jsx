@@ -5,7 +5,7 @@ import FormButton from '../../Ui/FormButton';
 
 const Title = styled(DialogTitle).attrs({ variant: 'h1', component: 'h2' })`
   @media screen and (max-width: 600px) {
-    font-size: 24px;
+    font-size: 18px;
   }
 `;
 
