@@ -9,7 +9,7 @@ const Problems = ({ problems, subtitle }) => (
     <Title sx={{ mb: 3 }}>{subtitle}</Title>
     <Grid container spacing={4}>
       {problems.map(problem => (
-        <Grid item xs={11} sm={6} md={4}>
+        <Grid key={problem} item xs={11} sm={6} md={4}>
           <Card
             sx={{
               minHeight: '332px',

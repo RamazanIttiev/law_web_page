@@ -34,8 +34,8 @@ const Step = ({ insuranceSteps }) => {
   return (
     <Grid container spacing={4}>
       {insuranceSteps.map(({ stepId, id, title, icon, list }) => (
-        <Grid item xs={12} sm={12} md={4}>
-          <Card key={stepId} sx={!mobileScreen && { minHeight: '420px' }}>
+        <Grid key={stepId} item xs={12} sm={12} md={4}>
+          <Card sx={{ minHeight: !mobileScreen && '380px' }}>
             <StyledCardHeader
               avatar={icon && <img src={icon} alt={title} />}
               title={title}
