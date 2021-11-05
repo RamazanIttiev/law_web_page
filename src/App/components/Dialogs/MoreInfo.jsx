@@ -29,7 +29,7 @@ const MoreInfo = ({ open, handleClose, title, paragraph }) => (
     <Title sx={{ fontSize: '28px' }}>{title}</Title>
     <DialogContent>
       <Text sx={{ color: '#000', marginBottom: '24px' }}>{paragraph}</Text>
-      <FormButton text="Получить консультацию" />
+      <FormButton margin={24} text="Получить консультацию" />
     </DialogContent>
   </Dialog>
 );

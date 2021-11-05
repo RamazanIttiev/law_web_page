@@ -70,13 +70,6 @@ const Companies = () => {
   return (
     <Base>
       <Container maxWidth="lg">
-        <Title
-          sx={{
-            marginBottom: '48px',
-          }}
-        >
-          Список компаний, жертвами которых становились наши клиенты:
-        </Title>
         <Accordion
           sx={{
             width: `${mobileScreen && '100%'}`,
@@ -86,7 +79,7 @@ const Companies = () => {
         >
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
-              Подробнее
+              Список компаний, жертвами которых становились наши клиенты:
             </AccordionTitle>
           </AccordionSummary>
           <Details>

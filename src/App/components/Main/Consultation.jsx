@@ -2,7 +2,7 @@ import { Container, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import { CheckCircle } from '@mui/icons-material';
-import ConsultationImg from '../../../assets/Consultation.png';
+import ConsultationImg from '../../../assets/consultation.jpeg';
 import Button from '../../Ui/FormButton';
 
 const Base = styled.div`

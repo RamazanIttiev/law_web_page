@@ -39,15 +39,14 @@ const Promo = () => (
           sx={{
             marginBottom: '56px',
             color: '#fff',
-            textAlign: 'start',
             paddingLeft: 2,
           }}
         >
-          Споры в сфере страхования
+          Вопросы страхования
         </Title>
         <Box sx={{ width: '100%', maxWidth: 360 }}>
           <nav>
-            <List>
+            <List sx={{ flexDirection: 'row' }}>
               {insuranceCases.map(item => (
                 <ListItem key={item.caseId} disablePadding>
                   <ListItemButton>

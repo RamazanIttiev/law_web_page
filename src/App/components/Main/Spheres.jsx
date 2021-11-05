@@ -1,12 +1,12 @@
 import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import Eagle from '../../../assets/Eagle.png';
-import Court from '../../../assets/court.png';
+import Eagle from '../../../assets/eagleImg.svg';
+import Court from '../../../assets/court.svg';
 import Prosecutor from '../../../assets/prosecutor.png';
 import Taxes from '../../../assets/taxes.png';
 import Bank from '../../../assets/bank.png';
-import MVD from '../../../assets/mvd.png';
+import MVD from '../../../assets/mvd.svg';
 import Committee from '../../../assets/committee.png';
 import GeneralCourt from '../../../assets/general-court.png';
 
@@ -28,7 +28,7 @@ const Item = styled.div`
 `;
 
 const Image = styled.img`
-  width: 74px;
+  width: 64px;
   height: 64px;
   margin-bottom: 16px;
 `;
@@ -41,7 +41,7 @@ const Spheres = () => (
           marginBottom: '56px',
         }}
       >
-        Представляем ваши интересы в:
+        Представляем Ваши интересы в:
       </Title>
       <Grid container spacing={6} rowSpacing={6}>
         <Grid item xs={12} sm={4} md={4}>

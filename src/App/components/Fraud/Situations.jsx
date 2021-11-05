@@ -42,7 +42,7 @@ const Situations = () => {
               >
                 <Receipt />
                 <Typography>
-                  Вы получили отказ в страховой выплете агенства по страхованию вкладов АСВ
+                  Вы получили отказ в страховой выплате агенства по страхованию вкладов АСВ
                 </Typography>
               </CardContent>
             </Card>
@@ -63,7 +63,7 @@ const Situations = () => {
                 }}
               >
                 <Person />
-                <Typography>Вам больше не поступаю проценты по вашему вкладов</Typography>
+                <Typography>Вам больше не поступают проценты по Вашему вкладу</Typography>
               </CardContent>
             </Card>
           </Grid>

@@ -1,11 +1,11 @@
 import { Container, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import Eagle from '../../../assets/eagleImg.png';
+import Eagle from '../../../assets/eagleImg.svg';
 
 const Base = styled.div`
   background: ${props => props.theme.palette.background.paper};
-  padding: ${props => props.theme.spacing(10)} 0;
+  padding: ${props => props.theme.spacing(5)} 0;
 `;
 
 const Text = styled(Typography)`
@@ -25,8 +25,8 @@ const Link = styled.a`
 `;
 
 const EagleIcon = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   margin-bottom: 16px;
 `;
 

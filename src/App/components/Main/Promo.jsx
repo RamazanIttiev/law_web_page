@@ -11,7 +11,7 @@ const Base = styled.div`
 `;
 
 const Wrapper = styled.div`
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1), rgba(163, 163, 163, 0.7));
+  background-image: -webkit-linear-gradient(top, rgb(52, 90, 128), rgba(163, 163, 163, 0.7));
   padding: 81px 0 56px;
 `;
 
@@ -32,7 +32,6 @@ const Promo = () => {
             sx={{
               marginBottom: '56px',
               color: '#fff',
-              textAlign: 'start',
               lineHeight: 1,
               fontWeight: 700,
               fontSize: desctopScreen ? '48px' : '32px',
@@ -42,8 +41,6 @@ const Promo = () => {
           </Title>
           <Subtitle
             sx={{
-              color: '#ffc700',
-              textAlign: 'start',
               marginBottom: '32px',
               fontWeight: 700,
               fontSize: desctopScreen ? '24px' : '16px',
@@ -54,12 +51,11 @@ const Promo = () => {
           <Text
             sx={{
               color: '#fff',
-              textAlign: 'start',
               fontWeight: 700,
               fontSize: '16px',
             }}
           >
-            Бесплатные юридические консультаций для физических лиц
+            Бесплатные юридические консультации для физических лиц
           </Text>
           <Button margin="72" text="Получите бесплатную консультацию" />
         </Container>

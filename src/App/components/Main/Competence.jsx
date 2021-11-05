@@ -1,7 +1,9 @@
 import { Container, Grid, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import { AccountBalance, MonetizationOn, Home } from '@mui/icons-material';
+import Fraud from '../../../assets/fake-news.svg';
+import Insurance from '../../../assets/insurance.svg';
+import Disputes from '../../../assets/house.svg';
 
 const Title = styled(Typography).attrs({ variant: 'h1' })`
   width: 100%;
@@ -12,10 +14,9 @@ const Item = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  // padding: 24px;
   text-align: center;
 
-  svg {
+  img {
     width: 64px;
     height: 64px;
     display: block;
@@ -39,19 +40,19 @@ const Competence = () => {
       <Grid container spacing={6} rowSpacing={6}>
         <Grid item xs={11} sm={4} md={4}>
           <Item>
-            <AccountBalance />
+            <img src={Fraud} alt="" />
             Дела о мошенничестве и возврат денежных средств
           </Item>
         </Grid>
         <Grid item xs={11} sm={4} md={4}>
           <Item>
-            <MonetizationOn />
+            <img src={Insurance} alt="" />
             Вопрсы страхования
           </Item>
         </Grid>
         <Grid item xs={11} sm={4} md={4}>
           <Item>
-            <Home />
+            <img src={Disputes} alt="" />
             Жилищные вопросы
           </Item>
         </Grid>

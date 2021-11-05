@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Form from '../components/Dialogs/Form';
+import DialogForm from '../components/Dialogs/DialogForm';
 
 const StyledButton = styled.button`
   background: ${props => props.theme.palette.secondary.main};
@@ -32,7 +32,7 @@ const Button = ({ text, margin }) => {
       <StyledButton margin={margin} onClick={handleOpen}>
         {text}
       </StyledButton>
-      <Form open={open} handleClose={handleClose} />
+      <DialogForm open={open} handleClose={handleClose} />
     </>
   );
 };

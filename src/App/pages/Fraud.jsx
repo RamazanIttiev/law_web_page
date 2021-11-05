@@ -15,8 +15,8 @@ const Fraud = () => (
     <Description />
     <Services />
     <Cases />
-    <Companies />
     <Situations />
+    <Companies />
     <Examples examples={fraudExamples} />
     <Helmet>
       <meta name="description" content="Дела о мошенничестве" />

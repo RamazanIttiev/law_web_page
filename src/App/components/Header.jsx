@@ -1,7 +1,7 @@
 import { AppBar, Container, Toolbar, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import MobileMenu from './MobileMenu';
 import LogoImg from '../../assets/scales.svg';
 
@@ -62,7 +62,7 @@ const StyledLink = styled(NavLink)`
 
 const Number = styled.div`
   cursor: pointer;
-  background: ${props => (props.path ? '#ffc700' : '#199c68')};
+  background: #199c68;
   border-radius: 32px;
   padding: 8px;
 
@@ -76,7 +76,6 @@ const Number = styled.div`
 `;
 
 const Header = () => {
-  const router = useLocation();
   const mobileScreen = useMediaQuery('(max-width:768px)');
   const [open, setOpen] = React.useState(false);
 
@@ -85,10 +84,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar
-      sx={{ boxShadow: 'none', backgroundColor: router.pathname === '/' && 'rgba(0, 0, 0, 1)' }}
-      position="static"
-    >
+    <AppBar sx={{ boxShadow: 'none' }} position="static">
       <Container maxWidth="lg">
         <Toolbar
           sx={{
@@ -154,7 +150,7 @@ const Header = () => {
                   </ListItem>
                 </List>
               </Nav>
-              <Number path={router.pathname === '/'}>
+              <Number>
                 <a href="tel:99999999999">99999999999</a>
               </Number>
             </>

@@ -1,15 +1,13 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import {
-  VerifiedUser,
-  AccessibilityNew,
-  ManageAccounts,
-  SupervisorAccount,
-  DownloadDone,
-  SupportAgent,
-} from '@mui/icons-material';
 import { useTheme } from '@emotion/react';
+import Certificate from '../../../assets/certificate.svg';
+import Approach from '../../../assets/approach.svg';
+import Efficiency from '../../../assets/efficiency.svg';
+import Experts from '../../../assets/experts.svg';
+import Cup from '../../../assets/cup.svg';
+import Support from '../../../assets/support.svg';
 
 const Title = styled(Typography).attrs({ variant: 'h1' })`
   width: 100%;
@@ -26,7 +24,7 @@ const Item = styled.div`
   align-items: center;
   text-align: center;
 
-  svg {
+  img {
     width: 64px;
     height: 64px;
     display: block;
@@ -55,14 +53,14 @@ const Advantages = () => {
         <Grid container spacing={6} rowSpacing={6}>
           <Grid item xs={11} sm={11} md={4}>
             <Item>
-              <VerifiedUser />
+              <img src={Certificate} alt="Certificate" />
               <ItemTitle>Годы практики</ItemTitle>У всех наших специалистов большой практический
               опыт
             </Item>
           </Grid>
           <Grid item xs={11} sm={11} md={4}>
             <Item>
-              <AccessibilityNew />
+              <img src={Approach} alt="Certificate" />
               <ItemTitle>Персональный подход</ItemTitle>
               Персональный подход к каждому клиенту дает возможность решать даже самые сложные
               проблемы
@@ -70,14 +68,14 @@ const Advantages = () => {
           </Grid>
           <Grid item xs={11} sm={11} md={4}>
             <Item>
-              <ManageAccounts />
+              <img src={Efficiency} alt="Certificate" />
               <ItemTitle>Эффективность</ItemTitle>
               Наш специалист выделяет все его время на решение только Вашей проблемы
             </Item>
           </Grid>
           <Grid item xs={11} sm={11} md={4}>
             <Item>
-              <SupervisorAccount />
+              <img src={Experts} alt="Certificate" />
               <ItemTitle>Экспертиза</ItemTitle>
               Одна из самых сильных команд специалистов и юристов. У нас сформировалась команда
               юристов и адвокатов, которые имеют большой опыт и практикуют в разных отраслях права
@@ -85,15 +83,15 @@ const Advantages = () => {
           </Grid>
           <Grid item xs={11} sm={11} md={4}>
             <Item>
-              <DownloadDone />
+              <img src={Cup} alt="Certificate" />
               <ItemTitle>Результат в 90% случаев</ItemTitle>
-              Мы сделаем все возможное для того, чтобы вернуть ваши деньги полностью, а если нет, то
+              Мы сделаем все возможное для того, чтобы вернуть Ваши деньги полностью, а если нет, то
               с большой вероятностю вернем их чвстично
             </Item>
           </Grid>
           <Grid item xs={11} sm={11} md={4}>
             <Item>
-              <SupportAgent />
+              <img src={Support} alt="Certificate" />
               <ItemTitle>Поддержка</ItemTitle>
               Вам не придется возиться с документами, всю работу берем на себя
             </Item>
