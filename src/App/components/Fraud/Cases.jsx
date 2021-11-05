@@ -6,7 +6,7 @@ import { fraudCases } from '../../data/fraudCases';
 
 const CaseTitle = styled(Typography).attrs({ variant: 'h1', component: 'h2' })``;
 
-const CaseText = styled(Typography).attrs({ variant: 'body', component: 'div' })`
+const CaseText = styled.div`
   display: block;
   display: -webkit-box;
   -webkit-line-clamp: 6;
@@ -37,7 +37,7 @@ const Cases = () => (
             {item.title}
           </CaseTitle>
           <CaseText sx={{ marginBottom: '32px' }}>{item.paragraph}</CaseText>
-          <MoreButton text="Подробнее" {...item} />
+          <MoreButton margin={24} text="Подробнее" {...item} />
         </Grid>
         <Grid item xs={11} sm={6} md={6}>
           <Image src={item.image} />

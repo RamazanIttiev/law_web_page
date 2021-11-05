@@ -31,7 +31,7 @@ const Services = () => {
   const mobileScreen = useMediaQuery('(max-width:768px)');
 
   return (
-    <Box sx={{ background: `url(${stepBgr})` }}>
+    <Box sx={{ background: `url(${stepBgr}) no-repeat center/cover` }}>
       <Box sx={{ background: 'rgba(0, 0, 0, 0.6)', color: '#fff' }}>
         <Container maxWidth="lg" sx={mobileScreen && { p: '0' }}>
           <Grid container sx={{ alignItems: 'center' }} spacing={!mobileScreen && 2}>

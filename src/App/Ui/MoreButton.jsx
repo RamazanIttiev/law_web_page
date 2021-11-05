@@ -14,7 +14,7 @@ const StyledButton = styled.button`
   outline: none;
   border-radius: 50px;
   display: block;
-  margin: ${props => props.margin}px auto 0;
+  margin: ${props => props.margin}px 0;
 `;
 
 const MoreButton = ({ text, margin, title, paragraph }) => {

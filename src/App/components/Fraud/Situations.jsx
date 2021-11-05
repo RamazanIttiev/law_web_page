@@ -21,7 +21,12 @@ const Situations = () => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ padding: `${theme.spacing(10)} 0` }}>
+    <Box
+      sx={{
+        padding: `${theme.spacing(10)} 0`,
+        background: theme.palette.background.paper,
+      }}
+    >
       <Container maxWidth="lg">
         <Title>Мы можем Вам помочь, если вы оказались в следующих ситуациях</Title>
         <Grid container spacing={6} rowSpacing={6}>

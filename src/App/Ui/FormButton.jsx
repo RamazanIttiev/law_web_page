@@ -26,7 +26,7 @@ const Button = ({ text, margin }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
+  console.log(margin);
   return (
     <>
       <StyledButton margin={margin} onClick={handleOpen}>
