@@ -19,6 +19,11 @@ const StyledCardHeader = styled(CardHeader)`
     width: 40px;
     height: 40px;
   }
+
+  .MuiCardHeader-title {
+    color: ${props => props.theme.palette.primary.main};
+    font-weight: 700;
+  }
 `;
 
 const List = styled.ul`

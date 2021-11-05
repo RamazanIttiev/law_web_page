@@ -44,11 +44,15 @@ const Promo = () => (
         >
           Вопросы страхования
         </Title>
-        <Box sx={{ width: '100%', maxWidth: 360 }}>
+        <Box sx={{ width: '100%' }}>
           <nav>
-            <List sx={{ flexDirection: 'row' }}>
+            <List sx={{ display: 'flex' }}>
               {insuranceCases.map(item => (
-                <ListItem key={item.caseId} disablePadding>
+                <ListItem
+                  sx={{ background: 'rgb(0,0,0,.2)', margin: '0 16px', borderRadius: '8px' }}
+                  key={item.caseId}
+                  disablePadding
+                >
                   <ListItemButton>
                     <StyledLink to={`/insuranceCase/${item.caseId}`}>
                       <ListItemText primary={item.primary} />

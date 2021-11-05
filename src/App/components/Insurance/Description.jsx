@@ -12,11 +12,7 @@ const Title = styled(Typography).attrs({ variant: 'h1' })`
   text-transform: uppercase;
 `;
 
-const Text = styled(Typography)`
-  &:last-child {
-    margin-top: 48px;
-  }
-`;
+const Text = styled(Typography)``;
 
 const List = styled.ul`
   text-align: start;
@@ -28,13 +24,15 @@ const Description = () => (
   <Base>
     <Container maxWidth="md">
       <Title sx={{ marginBottom: '56px' }}>Наши услуги</Title>
-      <Text>
+      <Text sx={{ textIndent: '32px' }}>
         В рамках анализа Вашей конкретной ситуации, Вам будет предложен наиболее оптимальный вариант
         ее решения. Как правило существуют два порядка:
         <List>
           <Li>Досудебный порядок урегулирования спора;</Li>
           <Li>Направление искового заявления в суд. </Li>
         </List>
+      </Text>
+      <Text sx={{ textIndent: '32px' }}>
         В рамках досудебного порядка мы готовим необходимые заявления и комплект документов,
         представляем Ваши интересы в рамках переговоров со страховыми компаниями и банками. В случае
         отказа страховой компании или банка в решении вопроса в досудебном порядке, наши специалисты
