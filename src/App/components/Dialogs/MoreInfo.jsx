@@ -1,5 +1,5 @@
 import React from 'react';
-import { Backdrop, Dialog, DialogContent, DialogTitle, Typography } from '@mui/material';
+import { Backdrop, Dialog, DialogContent, DialogTitle } from '@mui/material';
 import styled from 'styled-components';
 import FormButton from '../../Ui/FormButton';
 
