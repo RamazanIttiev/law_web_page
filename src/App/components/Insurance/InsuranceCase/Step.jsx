@@ -23,6 +23,7 @@ const StyledCardHeader = styled(CardHeader)`
   .MuiCardHeader-title {
     color: ${props => props.theme.palette.primary.main};
     font-weight: 700;
+    font-size: 16px;
   }
 `;
 
