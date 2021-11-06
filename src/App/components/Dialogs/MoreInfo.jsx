@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Backdrop,
-  Dialog,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  Typography,
-} from '@mui/material';
+import { Backdrop, Dialog, DialogContent, DialogTitle, Typography } from '@mui/material';
 import styled from 'styled-components';
 import FormButton from '../../Ui/FormButton';
 
@@ -15,8 +8,6 @@ const Title = styled(DialogTitle).attrs({ variant: 'h1', component: 'h2' })`
     font-size: 18px;
   }
 `;
-
-const Text = styled(Typography)``;
 
 const MoreInfo = ({ open, handleClose, title, paragraph }) => (
   <Dialog
