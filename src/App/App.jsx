@@ -9,6 +9,7 @@ import Insurance from './pages/Insurance';
 import Cases from './components/Insurance/Cases';
 import Error from './pages/404';
 import ScrollBar from './components/ScrollBar';
+import PhoneButton from './components/PhoneButton';
 
 const App = () => {
   const [scrollPostion, setScrollPostion] = useState(0);
@@ -68,6 +69,7 @@ const App = () => {
           <Error />
         </Route>
       </Switch>
+      <PhoneButton />
       <Footer />
     </>
   );
