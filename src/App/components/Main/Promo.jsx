@@ -15,7 +15,11 @@ const Wrapper = styled.div`
   padding: 81px 0 56px;
 `;
 
-const Title = styled(Typography).attrs({ variant: 'h1' })``;
+const Title = styled(Typography).attrs({ variant: 'h1' })`
+  @media screen and (max-width: 600px) {
+    font-size: 24px !important;
+  }
+`;
 
 const Subtitle = styled(Typography).attrs({ variant: 'h2' })``;
 

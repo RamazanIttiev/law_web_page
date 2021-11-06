@@ -11,7 +11,11 @@ const Wrapper = styled.div`
   padding: 24px 0 56px;
 `;
 
-const Title = styled(Typography).attrs({ variant: 'h1' })``;
+const Title = styled(Typography).attrs({ variant: 'h1' })`
+  @media screen and (max-width: 600px) {
+    font-size: 24px !important;
+  }
+`;
 
 const List = styled.ul`
   padding: 0;
@@ -42,7 +46,6 @@ const Promo = ({ title, about }) => {
             sx={{
               marginBottom: '56px',
               color: '#fff',
-              textAlign: 'start',
             }}
           >
             {title}

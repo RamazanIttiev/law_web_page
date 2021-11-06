@@ -30,7 +30,11 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const Title = styled(Typography).attrs({ variant: 'h1' })``;
+const Title = styled(Typography).attrs({ variant: 'h1' })`
+  @media screen and (max-width: 600px) {
+    font-size: 24px !important;
+  }
+`;
 
 const Promo = () => {
   const mobileScreen = useMediaQuery('(max-width:768px)');
