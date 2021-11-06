@@ -24,7 +24,7 @@ const Description = () => (
         клиентам высококачественные услуги по подготовке всех необходимых документов, представлению
         интересов и возврату денежных средств.
       </Text>
-      <Text sx={{ textAlign: 'center', fontSize: '24px', color: '#345a80' }}>
+      <Text sx={{ textAlign: 'center', fontSize: '24px', color: '#345a80', m: '32px 0' }}>
         <strong>Наша главная цель – возврат денег клиента! </strong>
       </Text>
       <Text sx={{ textIndent: '32px' }}>

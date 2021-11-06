@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet';
 import Form from '../components/Form';
 import AccordionServices from '../components/Main/Accordion';
 import Advantages from '../components/Main/Advantages';
-import Companies from '../components/Main/Companies';
 import Competence from '../components/Main/Competence';
 import Consultation from '../components/Main/Consultation';
 import Guaranties from '../components/Main/Guaranties';
@@ -27,7 +26,6 @@ const Main = () => {
       <AccordionServices />
       <Consultation />
       {matches && <Services />}
-      <Companies />
       <Form title="Оставяьте заявку и получите консультацию нашего юриста" />
       <Helmet>
         <meta name="description" content="БАСТИОН" />
