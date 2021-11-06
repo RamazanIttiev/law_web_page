@@ -1,7 +1,13 @@
 import { DialogContentText } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import CaseImg from '../../assets/CaseImg.webp';
+import Disputes1 from '../../assets/disputes1.jpeg';
+import Disputes2 from '../../assets/disputes2.jpeg';
+import Disputes3 from '../../assets/disputes3.jpeg';
+import Aprtment from '../../assets/aprtment.jpeg';
+import Aprtmen2 from '../../assets/apeartment-order.jpeg';
+import Rent from '../../assets/rent.jpeg';
+import Aprtment3 from '../../assets/apartment-developer.jpeg';
 
 const List = styled.ul`
   text-align: start;
@@ -40,7 +46,7 @@ export const disputeCases = [
         </DialogContentText>
       </>
     ),
-    image: CaseImg,
+    image: Disputes1,
   },
   {
     id: 2,
@@ -57,7 +63,7 @@ export const disputeCases = [
         </DialogContentText>
       </>
     ),
-    image: CaseImg,
+    image: Disputes2,
   },
   {
     id: 3,
@@ -81,7 +87,7 @@ export const disputeCases = [
         </DialogContentText>
       </>
     ),
-    image: CaseImg,
+    image: Disputes3,
   },
   {
     id: 4,
@@ -101,7 +107,7 @@ export const disputeCases = [
         </DialogContentText>
       </>
     ),
-    image: CaseImg,
+    image: Aprtment,
   },
   {
     id: 5,
@@ -126,7 +132,7 @@ export const disputeCases = [
         </DialogContentText>
       </>
     ),
-    image: CaseImg,
+    image: Aprtmen2,
   },
   {
     id: 6,
@@ -149,7 +155,7 @@ export const disputeCases = [
         </DialogContentText>
       </>
     ),
-    image: CaseImg,
+    image: Rent,
   },
   {
     id: 7,
@@ -173,7 +179,7 @@ export const disputeCases = [
         </DialogContentText>
       </>
     ),
-    image: CaseImg,
+    image: Aprtment3,
   },
 ];
 
