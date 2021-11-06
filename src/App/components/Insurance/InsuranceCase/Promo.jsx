@@ -34,7 +34,7 @@ const Promo = ({ title, about }) => {
   };
 
   return (
-    <Box sx={{ background: `url(${PromoBgr})`, color: '#fff' }}>
+    <Box sx={{ background: `url(${PromoBgr}) no-repeat center/cover;`, color: '#fff' }}>
       <Wrapper>
         <Container>
           <ArrowBack onClick={handleClick} sx={{ mb: 3, cursor: 'pointer' }} />
