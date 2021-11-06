@@ -11,7 +11,7 @@ import Error from './pages/404';
 import ScrollBar from './components/ScrollBar';
 
 const App = () => {
-  const [scrollPostion, setScrollPostion] = useState(10);
+  const [scrollPostion, setScrollPostion] = useState(0);
 
   const getDocHeight = () =>
     Math.max(
