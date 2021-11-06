@@ -6,12 +6,24 @@ import MoreButton from '../Ui/MoreButton';
 const CaseTitle = styled(Typography).attrs({ variant: 'h1', component: 'h2' })``;
 
 const CaseText = styled(Typography).attrs({ variant: 'body', component: 'div' })`
-  display: block;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
+  max-height: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
+  content: '';
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(
+      transparent 72px,
+      ${props => props.theme.palette.background.default}
+    );
+  }
 `;
 
 const Image = styled.img`
@@ -36,7 +48,7 @@ const Cases = ({ data }) => (
             {item.title}
           </CaseTitle>
           <CaseText sx={{ marginBottom: '32px' }}>{item.paragraph}</CaseText>
-          <MoreButton margin={24} text="Подробнее" {...item} />
+          <MoreButton margin={0} text="Подробнее" {...item} />
         </Grid>
         <Grid item xs={11} sm={6} md={6}>
           <Image src={item.image} />
