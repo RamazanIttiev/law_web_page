@@ -11,8 +11,6 @@ const Base = styled.div`
   padding: ${props => props.theme.spacing(10)} 0;
 `;
 
-const Details = styled(AccordionDetails)``;
-
 const Title = styled(Typography).attrs({ variant: 'h1' })`
   text-transform: uppercase;
 `;
@@ -25,8 +23,6 @@ const List = styled.ul`
 const ListItem = styled.li`
   margin: 16px 32px;
 `;
-
-const AccordionTitle = styled(Typography)``;
 
 const AccordionInsurance = () => {
   const mobileScreen = useMediaQuery('(max-width:768px)');
@@ -43,11 +39,11 @@ const AccordionInsurance = () => {
         </Title>
         <Accordion sx={{ width: `${mobileScreen && '100%'}`, marginBottom: 4, padding: 2 }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
+            <Typography sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
               Как разрешить спор со страховщиком?
-            </AccordionTitle>
+            </Typography>
           </AccordionSummary>
-          <Details>
+          <AccordionDetails>
             <List>
               <ListItem>
                 В сфере страхования, где одной стороной является физическое лицо, а другой —
@@ -61,15 +57,15 @@ const AccordionInsurance = () => {
                 ему необязательные услуги по страхованию жизни и имущества.
               </ListItem>
             </List>
-          </Details>
+          </AccordionDetails>
         </Accordion>
         <Accordion sx={{ width: `${mobileScreen && '100%'}`, marginBottom: 4, padding: 2 }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
+            <Typography sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
               Виды споров
-            </AccordionTitle>
+            </Typography>
           </AccordionSummary>
-          <Details>
+          <AccordionDetails>
             <List>
               <ListItem>Страховая компания отказывает в выплате страхового возмещения.</ListItem>
               <Typography sx={{ mb: 2, textIndent: '32px' }}>
@@ -98,15 +94,15 @@ const AccordionInsurance = () => {
                 заведомо умалчивают данный факт, либо преподносят его как «приятный бонус».
               </Typography>
             </List>
-          </Details>
+          </AccordionDetails>
         </Accordion>
         <Accordion sx={{ width: `${mobileScreen && '100%'}`, marginBottom: 4, padding: 2 }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
+            <Typography sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
               Отказ от навязанной страховки
-            </AccordionTitle>
+            </Typography>
           </AccordionSummary>
-          <Details>
+          <AccordionDetails>
             <Typography sx={{ mb: 2, textIndent: '32px' }}>
               Банки, при заключении кредитных договоров, очень часто практикуют включение в сумму
               кредита дополнительных платежей без уведомления клиента. Наиболее часто одним из
@@ -126,15 +122,15 @@ const AccordionInsurance = () => {
               кажется, действуют в соответствии с требованием закона, и не замечают грубые
               нарушения, которые сотрудники умело скрывают.
             </Typography>
-          </Details>
+          </AccordionDetails>
         </Accordion>
         <Accordion sx={{ width: `${mobileScreen && '100%'}`, marginBottom: 4, padding: 2 }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <AccordionTitle sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
+            <Typography sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
               Погашение кредита досрочно
-            </AccordionTitle>
+            </Typography>
           </AccordionSummary>
-          <Details>
+          <AccordionDetails>
             <Typography sx={{ mb: 2, textIndent: '32px' }}>
               В случае досрочного погашения кредита, в состав которого входил страховой договор, при
               условии соблюдения определенных условий, возможно обращение в страховую компанию за
@@ -154,7 +150,7 @@ const AccordionInsurance = () => {
               исполнения страховой компанией обязанности по возврату денег, морального вреда, штрафа
               в размере 50% от присужденной суммы и судебных расходов.
             </Typography>
-          </Details>
+          </AccordionDetails>
         </Accordion>
       </Container>
     </Base>

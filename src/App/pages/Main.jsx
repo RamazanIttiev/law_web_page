@@ -28,7 +28,7 @@ const Main = () => {
       <Consultation />
       {matches && <Services />}
       <Companies />
-      <Form />
+      <Form title="Оставяьте заявку и получите консультацию нашего юриста" />
       <Helmet>
         <meta name="description" content="БАСТИОН" />
         <title>БАСТИОН</title>

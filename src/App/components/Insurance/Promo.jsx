@@ -6,6 +6,7 @@ import {
   ListItemButton,
   ListItemText,
   Typography,
+  useMediaQuery,
 } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
@@ -31,41 +32,48 @@ const StyledLink = styled(Link)`
 
 const Title = styled(Typography).attrs({ variant: 'h1' })``;
 
-const Promo = () => (
-  <Base>
-    <Wrapper>
-      <Container>
-        <Title
-          sx={{
-            marginBottom: '56px',
-            color: '#fff',
-            paddingLeft: 2,
-          }}
-        >
-          Вопросы страхования
-        </Title>
-        <Box sx={{ width: '100%' }}>
-          <nav>
-            <List sx={{ display: 'flex' }}>
-              {insuranceCases.map(item => (
-                <ListItem
-                  sx={{ background: 'rgb(0,0,0,.2)', margin: '0 16px', borderRadius: '8px' }}
-                  key={item.caseId}
-                  disablePadding
-                >
-                  <ListItemButton>
-                    <StyledLink to={`/insuranceCase/${item.caseId}`}>
-                      <ListItemText primary={item.primary} />
-                    </StyledLink>
-                  </ListItemButton>
-                </ListItem>
-              ))}
-            </List>
-          </nav>
-        </Box>
-      </Container>
-    </Wrapper>
-  </Base>
-);
+const Promo = () => {
+  const mobileScreen = useMediaQuery('(max-width:768px)');
+
+  return (
+    <Base>
+      <Wrapper>
+        <Container>
+          <Title
+            sx={{
+              marginBottom: '56px',
+              color: '#fff',
+            }}
+          >
+            Вопросы страхования
+          </Title>
+          <Box sx={{ width: '100%' }}>
+            <nav>
+              <List sx={mobileScreen ? { display: 'block' } : { display: 'flex' }}>
+                {insuranceCases.map(item => (
+                  <ListItem
+                    sx={{
+                      background: 'rgb(0,0,0,.2)',
+                      margin: !mobileScreen ? '0 16px' : '16px 0',
+                      borderRadius: '8px',
+                    }}
+                    key={item.caseId}
+                    disablePadding
+                  >
+                    <ListItemButton>
+                      <StyledLink to={`/insuranceCase/${item.caseId}`}>
+                        <ListItemText primary={item.primary} />
+                      </StyledLink>
+                    </ListItemButton>
+                  </ListItem>
+                ))}
+              </List>
+            </nav>
+          </Box>
+        </Container>
+      </Wrapper>
+    </Base>
+  );
+};
 
 export default Promo;

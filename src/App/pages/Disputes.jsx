@@ -1,17 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Cases from '../components/Disputes/Cases';
 import Description from '../components/Disputes/Description';
 import Promo from '../components/Disputes/Promo';
 import Examples from '../components/Carousel';
-import { disputeExamples } from '../data/disputeCases';
+import { disputeCases, disputeExamples } from '../data/disputeCases';
+import Cases from '../components/Cases';
+import Form from '../components/Form';
 
 const Disputes = () => (
   <>
     <Promo />
     <Description />
-    <Cases />
+    <Cases data={disputeCases} />
     <Examples examples={disputeExamples} />
+    <Form title="Оставяьте заявку и получите консультацию нашего юриста" />
     <Helmet>
       <meta name="description" content="Жилищные вопросы" />
       <title>Жилищные вопросы | БАСТИОН</title>

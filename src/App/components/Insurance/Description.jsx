@@ -12,7 +12,9 @@ const Title = styled(Typography).attrs({ variant: 'h1' })`
   text-transform: uppercase;
 `;
 
-const Text = styled(Typography)``;
+const Text = styled(Typography)`
+  text-align: justify;
+`;
 
 const List = styled.ul`
   text-align: start;

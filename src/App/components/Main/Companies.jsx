@@ -19,10 +19,6 @@ const Details = styled(AccordionDetails)`
   align-items: center;
 `;
 
-const Title = styled(Typography).attrs({ variant: 'h1' })`
-  text-transform: uppercase;
-`;
-
 const Company = styled(Typography)`
   margin: 8px;
   background: #345a80;

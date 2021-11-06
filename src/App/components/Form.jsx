@@ -1,4 +1,4 @@
-import { Alert, Container, Snackbar, TextareaAutosize } from '@mui/material';
+import { Alert, Box, Container, Snackbar, TextareaAutosize, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
@@ -8,7 +8,6 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   margin: 32px auto 0;
-  padding: 48px 0 32px;
   max-width: 600px;
 `;
 
@@ -51,9 +50,16 @@ const StyledButton = styled.button`
   border-radius: 50px;
   display: block;
   margin: 24px auto 0;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
-const Form = ({ handleClose = () => {} }) => {
+const Title = styled(Typography).attrs({ variant: 'h1' })``;
+
+const Form = ({ handleClose = () => {}, title }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [openAlert, setAlert] = useState(false);
   const [error, setError] = useState(false);
@@ -103,42 +109,49 @@ const Form = ({ handleClose = () => {} }) => {
   };
 
   return (
-    <Container maxWidth="lg">
-      <StyledForm onSubmit={handleSubmit(formSubmit)}>
-        <Input
-          name="name"
-          error={errors.name}
-          {...register('name', { required: true })}
-          type="text"
-          placeholder="ФИО"
-        />
-        <Input
-          name="phone"
-          error={errors.phone}
-          {...register('phone', { required: true })}
-          type="number"
-          placeholder="Ваш номер телефона"
-        />
-        <Textarea
-          name="message"
-          {...register('message', { required: true })}
-          style={{ height: '124px', resize: 'none' }}
-          error={errors.message}
-          type="text"
-          placeholder="Кратко опишите проблему"
-        />
-        <StyledButton disabled={isLoading} type="submit">
-          Получить консультацию
-        </StyledButton>
-        <Snackbar open={openAlert} autoHideDuration={6000} onClose={closeAlert}>
-          <Alert onClose={closeAlert} severity={error ? 'error' : 'success'} sx={{ width: '100%' }}>
-            {error
-              ? 'Произошла ошибка, запишитесь пожалуйста по телефону'
-              : 'Ваша заявка успешно отправлена'}
-          </Alert>
-        </Snackbar>
-      </StyledForm>
-    </Container>
+    <Box sx={{ p: '48px 0' }}>
+      <Container maxWidth="lg">
+        {title && <Title>{title}</Title>}
+        <StyledForm onSubmit={handleSubmit(formSubmit)}>
+          <Input
+            name="name"
+            error={errors.name}
+            {...register('name', { required: true })}
+            type="text"
+            placeholder="ФИО"
+          />
+          <Input
+            name="phone"
+            error={errors.phone}
+            {...register('phone', { required: true })}
+            type="number"
+            placeholder="Ваш номер телефона"
+          />
+          <Textarea
+            name="message"
+            {...register('message', { required: true })}
+            style={{ height: '124px', resize: 'none' }}
+            error={errors.message}
+            type="text"
+            placeholder="Кратко опишите проблему"
+          />
+          <StyledButton disabled={isLoading} type="submit">
+            Получить консультацию
+          </StyledButton>
+          <Snackbar open={openAlert} autoHideDuration={6000} onClose={closeAlert}>
+            <Alert
+              onClose={closeAlert}
+              severity={error ? 'error' : 'success'}
+              sx={{ width: '100%' }}
+            >
+              {error
+                ? 'Произошла ошибка, запишитесь пожалуйста по телефону'
+                : 'Ваша заявка успешно отправлена'}
+            </Alert>
+          </Snackbar>
+        </StyledForm>
+      </Container>
+    </Box>
   );
 };
 

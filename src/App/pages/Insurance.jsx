@@ -3,11 +3,10 @@ import { Helmet } from 'react-helmet';
 import AccordionInsurance from '../components/Insurance/AccordionInsurance';
 import Description from '../components/Insurance/Description';
 import Promo from '../components/Insurance/Promo';
-// import Examples from '../components/Carousel';
-// import { insuranceExamples } from '../data/insuranceCases';
 import { insuranceSteps } from '../data/insuranceSteps';
 import Companies from '../components/Insurance/Companies';
 import InsuranceSteps from '../components/Insurance/InsuranceSteps';
+import Form from '../components/Form';
 
 const Insurance = () => (
   <>
@@ -15,8 +14,8 @@ const Insurance = () => (
     <InsuranceSteps insuranceSteps={insuranceSteps} />
     <Description />
     <AccordionInsurance />
-    {/* <Examples examples={insuranceExamples} /> */}
     <Companies />
+    <Form title="Оставяьте заявку и получите консультацию нашего юриста" />
     <Helmet>
       <meta name="description" content="Вопросы страхования" />
       <title>Вопросы страхования | БАСТИОН</title>

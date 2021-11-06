@@ -1,11 +1,17 @@
-import { Box, Container, Typography } from '@mui/material';
+import { ExpandMore } from '@mui/icons-material';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import { companies } from '../../data/insuranceCompanies';
-
-const Title = styled(Typography).attrs({ variant: 'h1' })`
-  margin-bottom: 48px;
-`;
+import { banks, companies } from '../../data/insuranceCompanies';
 
 const List = styled.ul`
   display: flex;
@@ -17,36 +23,75 @@ const List = styled.ul`
 `;
 
 const Li = styled.li`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin: 8px;
-  background: #345a80;
+  background: #4a7db1;
   color: #fff;
   padding: 8px;
   border-radius: 4px;
   font-weight: 700;
-  width: 25%;
   text-align: center;
   list-style: none;
 
-  @media screen and (max-width: 768px) {
-    width: 45%;
-  }
-
-  @media screen and (max-width: 480px) {
-    width: 90%;
+  img {
+    height: 20px;
+    margin-bottom: 8px;
   }
 `;
 
-const Companies = () => (
-  <Box sx={{ p: '56px 0', background: '#fff' }}>
-    <Container maxWidth="lg">
-      <Title>Работам со всеми страховыми компаниями России:</Title>
-      <List>
-        {companies.map(company => (
-          <Li>{company}</Li>
-        ))}
-      </List>
-    </Container>
-  </Box>
-);
+const Companies = () => {
+  const mobileScreen = useMediaQuery('(max-width:768px)');
+
+  return (
+    <Box sx={{ p: '56px 0', background: '#fff' }}>
+      <Container maxWidth="lg">
+        <Accordion sx={{ width: `${mobileScreen && '100%'}`, marginBottom: 4, padding: 2 }}>
+          <AccordionSummary expandIcon={<ExpandMore />}>
+            <Typography sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
+              Работаем со всеми страховыми компаниями России:
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Grid container>
+              <List>
+                {companies.map(({ title, icon }) => (
+                  <Grid key={title} item xs={11} sm={6} md={6}>
+                    <Li key={title}>
+                      <img src={icon} alt={title} />
+                      <Typography>{title}</Typography>
+                    </Li>
+                  </Grid>
+                ))}
+              </List>
+            </Grid>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{ width: `${mobileScreen && '100%'}`, marginBottom: 4, padding: 2 }}>
+          <AccordionSummary expandIcon={<ExpandMore />}>
+            <Typography sx={{ fontSize: 20, fontWeight: 700, color: '#345a80' }}>
+              Работаем со всеми банками России:
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Grid container>
+              <List>
+                {banks.map(({ title, icon }) => (
+                  <Grid key={title} item xs={11} sm={6} md={6}>
+                    <Li key={title}>
+                      <img src={icon} alt={title} style={{ height: '28px' }} />
+                      <Typography>{title}</Typography>
+                    </Li>
+                  </Grid>
+                ))}
+              </List>
+            </Grid>
+          </AccordionDetails>
+        </Accordion>
+      </Container>
+    </Box>
+  );
+};
 
 export default Companies;

@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Grid, Typography } from '@mui/material';
-import MoreButton from '../../Ui/MoreButton';
-import { disputeCases } from '../../data/disputeCases';
+import MoreButton from '../Ui/MoreButton';
 
 const CaseTitle = styled(Typography).attrs({ variant: 'h1', component: 'h2' })``;
 
@@ -20,9 +19,9 @@ const Image = styled.img`
   border-radius: 8px;
 `;
 
-const Cases = () => (
+const Cases = ({ data }) => (
   <Container maxWidth="md" sx={{ padding: '56px 0' }}>
-    {disputeCases.map(item => (
+    {data.map(item => (
       <Grid
         alignItems="center"
         container
@@ -37,7 +36,7 @@ const Cases = () => (
             {item.title}
           </CaseTitle>
           <CaseText sx={{ marginBottom: '32px' }}>{item.paragraph}</CaseText>
-          <MoreButton text="Подробнее" {...item} />
+          <MoreButton margin={24} text="Подробнее" {...item} />
         </Grid>
         <Grid item xs={11} sm={6} md={6}>
           <Image src={item.image} />
