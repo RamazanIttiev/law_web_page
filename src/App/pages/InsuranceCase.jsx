@@ -14,7 +14,7 @@ const Case = ({ currentCase }) => {
       <Promo title={currentCase.title} about={currentCase.about} />
       <Problems subtitle={currentCase.subtitle} problems={currentCase.problems} />
       <Steps insuranceSteps={currentCase.insuranceSteps} />
-      <Form title="Оставяьте заявку и получите консультацию нашего юриста" />
+      <Form title="Оставьте заявку и получите консультацию нашего юриста" />
     </Box>
   ) : null;
 };

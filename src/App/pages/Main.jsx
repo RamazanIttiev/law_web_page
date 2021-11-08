@@ -26,7 +26,7 @@ const Main = () => {
       <AccordionServices />
       <Consultation />
       {matches && <Services />}
-      <Form title="Оставяьте заявку и получите консультацию нашего юриста" />
+      <Form title="Оставьте заявку и получите консультацию нашего юриста" />
       <Helmet>
         <meta name="description" content="БАСТИОН" />
         <title>БАСТИОН</title>

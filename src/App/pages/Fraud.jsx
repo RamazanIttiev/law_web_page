@@ -19,7 +19,7 @@ const Fraud = () => (
     <Situations />
     <Companies />
     <Examples examples={fraudExamples} />
-    <Form title="Оставяьте заявку и получите консультацию нашего юриста" />
+    <Form title="Оставьте заявку и получите консультацию нашего юриста" />
     <Helmet>
       <meta name="description" content="Дела о мошенничестве" />
       <title>Дела о мошенничестве | БАСТИОН</title>

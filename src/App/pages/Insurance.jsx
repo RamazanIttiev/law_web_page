@@ -15,7 +15,7 @@ const Insurance = () => (
     <Description />
     <AccordionInsurance />
     <Companies />
-    <Form title="Оставяьте заявку и получите консультацию нашего юриста" />
+    <Form title="Оставьте заявку и получите консультацию нашего юриста" />
     <Helmet>
       <meta name="description" content="Вопросы страхования" />
       <title>Вопросы страхования | БАСТИОН</title>

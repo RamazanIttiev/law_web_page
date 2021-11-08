@@ -11,7 +11,7 @@ const Disputes = () => (
     <Promo />
     <Description />
     <Cases data={disputeCases} />
-    <Form title="Оставяьте заявку и получите консультацию нашего юриста" />
+    <Form title="Оставьте заявку и получите консультацию нашего юриста" />
     <Helmet>
       <meta name="description" content="Жилищные вопросы" />
       <title>Жилищные вопросы | БАСТИОН</title>
