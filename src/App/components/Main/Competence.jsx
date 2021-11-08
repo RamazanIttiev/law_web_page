@@ -47,7 +47,7 @@ const Competence = () => {
         <Grid item xs={11} sm={4} md={4}>
           <Item>
             <img src={Insurance} alt="" />
-            Вопрсы страхования
+            Вопросы страхования
           </Item>
         </Grid>
         <Grid item xs={11} sm={4} md={4}>

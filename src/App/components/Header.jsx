@@ -156,7 +156,7 @@ const Header = () => {
                       }}
                       to="/insurance"
                     >
-                      Вопрсы страхования
+                      Вопросы страхования
                     </StyledLink>
                   </ListItem>
                   <ListItem>

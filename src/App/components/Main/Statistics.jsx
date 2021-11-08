@@ -44,7 +44,7 @@ const Statistics = () => (
           </Item>
           <Item item xs={12} sm={12} md={4}>
             &gt; 10 000
-            <span>довольных клиентов, благодоря нашим специалистам</span>
+            <span>довольных клиентов, благодаря нашим специалистам</span>
           </Item>
         </Grid>
       </Container>

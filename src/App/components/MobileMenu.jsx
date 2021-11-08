@@ -91,7 +91,7 @@ const MobileMenu = ({ open, toggleDrawer }) => {
                   }}
                   to="/insurance"
                 >
-                  Вопрсы страхования
+                  Вопросы страхования
                 </StyledLink>
               </ListItem>
               <ListItem>
