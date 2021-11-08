@@ -44,6 +44,7 @@ const StyledButton = styled.button`
   color: #fff;
   padding: 24px;
   font-weight: 700;
+  font-size: 14px;
   cursor: ${props => (props.disabled ? 'default' : 'pointer')};
   border: none;
   outline: none;

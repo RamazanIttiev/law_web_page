@@ -90,6 +90,7 @@ const Number = styled.div`
 
 const Header = () => {
   const mobileScreen = useMediaQuery('(max-width:768px)');
+  const tabletScreen = useMediaQuery('(max-width:1024px)');
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = newOpen => () => {
@@ -112,7 +113,7 @@ const Header = () => {
               ) : (
                 <>
                   <DesctopLogo src={LogoImg} alt="Центр юридической помощи" />
-                  <Typography>Центр юридической помощи</Typography>
+                  {!tabletScreen && <Typography>Центр юридической помощи</Typography>}
                 </>
               )}
             </NavLink>
@@ -123,17 +124,19 @@ const Header = () => {
             <>
               <Nav>
                 <List>
-                  <ListItem>
-                    <StyledLink
-                      activeStyle={{
-                        fontWeight: 'bold',
-                        borderBottom: '2px solid #f6f6f6',
-                      }}
-                      to="/"
-                    >
-                      Главная
-                    </StyledLink>
-                  </ListItem>
+                  {!tabletScreen && (
+                    <ListItem>
+                      <StyledLink
+                        activeStyle={{
+                          fontWeight: 'bold',
+                          borderBottom: '2px solid #f6f6f6',
+                        }}
+                        to="/"
+                      >
+                        Главная
+                      </StyledLink>
+                    </ListItem>
+                  )}
                   <ListItem>
                     <StyledLink
                       activeStyle={{
