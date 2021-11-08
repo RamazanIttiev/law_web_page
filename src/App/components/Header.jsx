@@ -3,26 +3,38 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import MobileMenu from './MobileMenu';
-import LogoImg from '../../assets/scales.svg';
+import LogoImg from '../../assets/Logo.svg';
 
 const Logo = styled.div`
   cursor: pointer;
   font-size: 24px;
 
   a {
+    max-width: 240px;
+    color: black;
+    text-decoration: none;
+    background: white;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     text-transform: uppercase;
-    padding: 0;
   }
+`;
 
-  img {
-    display: block;
-    width: 32px;
-    height: 32px;
-    margin-bottom: 8px;
-  }
+const MobileLogo = styled.img`
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-right: 0px;
+`;
+
+const DesctopLogo = styled.img`
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
 `;
 
 const Nav = styled.nav`
@@ -50,6 +62,7 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   display: flex;
   align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
 
   svg {
     margin-right: 16px;
@@ -93,9 +106,15 @@ const Header = () => {
           }}
         >
           <Logo>
-            <NavLink to="/" style={{ color: '#fff', textDecoration: 'none' }}>
-              <img src={LogoImg} alt="" />
-              <Typography>Бастион</Typography>
+            <NavLink to="/">
+              {mobileScreen ? (
+                <MobileLogo src={LogoImg} alt="Центр юридической помощи" />
+              ) : (
+                <>
+                  <DesctopLogo src={LogoImg} alt="Центр юридической помощи" />
+                  <Typography>Центр юридической помощи</Typography>
+                </>
+              )}
             </NavLink>
           </Logo>
           {mobileScreen ? (
