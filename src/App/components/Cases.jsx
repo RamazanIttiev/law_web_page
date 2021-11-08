@@ -19,7 +19,8 @@ const CaseText = styled(Typography).attrs({ variant: 'body', component: 'div' })
     position: absolute;
     left: 0;
     top: 0;
-    background: -webkit-linear-gradient(top, transparent, rgba(255, 255, 255, 0.9));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
+    background: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
   }
 `;
 
