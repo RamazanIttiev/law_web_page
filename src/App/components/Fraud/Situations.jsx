@@ -14,7 +14,6 @@ import { useTheme } from '@emotion/react';
 const Title = styled(Typography).attrs({ variant: 'h1' })`
   width: 100%;
   text-transform: uppercase;
-  margin-bottom: 48px;
 `;
 
 const Situations = () => {
@@ -27,7 +26,7 @@ const Situations = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Title>Мы можем Вам помочь, если вы оказались в следующих ситуациях</Title>
+        <Title sx={{ mb: 6 }}>Мы можем Вам помочь, если вы оказались в следующих ситуациях</Title>
         <Grid container spacing={6} rowSpacing={6}>
           <Grid item xs={11} sm={6} md={4}>
             <Card>
