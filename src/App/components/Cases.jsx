@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import MoreButton from '../Ui/MoreButton';
 
 const CaseTitle = styled(Typography).attrs({ variant: 'h1', component: 'h2' })``;
@@ -19,10 +19,7 @@ const CaseText = styled(Typography).attrs({ variant: 'body', component: 'div' })
     position: absolute;
     left: 0;
     top: 0;
-    background: linear-gradient(
-      transparent 72px,
-      ${props => props.theme.palette.background.default}
-    );
+    background: -webkit-linear-gradient(top, transparent, rgba(255, 255, 255, 0.9));
   }
 `;
 
@@ -32,30 +29,36 @@ const Image = styled.img`
 `;
 
 const Cases = ({ data }) => (
-  <Container maxWidth="md" sx={{ padding: '56px 0' }}>
-    {data.map(item => (
-      <Grid
-        alignItems="center"
-        container
-        spacing={{ xs: 6, md: 12 }}
-        key={item.id}
-        sx={{ marginBottom: 12, flexDirection: item.id % 2 === 0 ? 'row-reverse' : 'row' }}
-      >
-        <Grid item xs={11} sm={6} md={6}>
-          <CaseTitle
-            sx={{ textAlign: 'start', marginBottom: '24px', lineHeight: 1.2, fontSize: '28px' }}
-          >
-            {item.title}
-          </CaseTitle>
-          <CaseText sx={{ marginBottom: '32px' }}>{item.paragraph}</CaseText>
-          <MoreButton margin={0} text="Подробнее" {...item} />
+  <Box
+    sx={{
+      background: '#fff',
+    }}
+  >
+    <Container maxWidth="md" sx={{ padding: '56px 0' }}>
+      {data.map(item => (
+        <Grid
+          alignItems="center"
+          container
+          spacing={{ xs: 6, md: 12 }}
+          key={item.id}
+          sx={{ marginBottom: 12, flexDirection: item.id % 2 === 0 ? 'row-reverse' : 'row' }}
+        >
+          <Grid item xs={11} sm={6} md={6}>
+            <CaseTitle
+              sx={{ textAlign: 'start', marginBottom: '24px', lineHeight: 1.2, fontSize: '28px' }}
+            >
+              {item.title}
+            </CaseTitle>
+            <CaseText sx={{ marginBottom: '32px' }}>{item.paragraph}</CaseText>
+            <MoreButton margin={0} text="Подробнее" {...item} />
+          </Grid>
+          <Grid item xs={11} sm={6} md={6}>
+            <Image src={item.image} />
+          </Grid>
         </Grid>
-        <Grid item xs={11} sm={6} md={6}>
-          <Image src={item.image} />
-        </Grid>
-      </Grid>
-    ))}
-  </Container>
+      ))}
+    </Container>
+  </Box>
 );
 
 export default Cases;

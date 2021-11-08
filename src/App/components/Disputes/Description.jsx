@@ -3,7 +3,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Base = styled.div`
-  background: ${props => props.theme.palette.background.paper};
   padding: ${props => props.theme.spacing(10)} 0;
 `;
 

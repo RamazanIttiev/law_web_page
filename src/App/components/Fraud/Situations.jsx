@@ -24,7 +24,6 @@ const Situations = () => {
     <Box
       sx={{
         padding: `${theme.spacing(10)} 0`,
-        background: theme.palette.background.paper,
       }}
     >
       <Container maxWidth="lg">
