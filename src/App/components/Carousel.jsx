@@ -11,9 +11,13 @@ const Base = styled.div`
 `;
 
 const Button = styled.button`
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   background: transparent;
-  width: 60px;
+  width: 40px;
   cursor: pointer;
 `;
 
@@ -70,11 +74,11 @@ const Examples = ({ examples }) => {
               },
             },
           ]}
-          animationSpeed={1000}
+          animationSpeed={500}
         >
           {examples.map((example, index) => (
             <Slide key={+index}>
-              <Typography>{example}</Typography>
+              <Typography sx={{ p: '0 8px' }}>{example}</Typography>
             </Slide>
           ))}
         </Carousel>
