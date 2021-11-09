@@ -10,6 +10,9 @@ import Cases from './components/Insurance/Cases';
 import Error from './pages/404';
 import ScrollBar from './components/ScrollBar';
 import PhoneButton from './components/PhoneButton';
+import Terms from './components/Terms';
+import terms from './data/terms.md';
+import accept from './data/accept.md';
 
 const App = () => {
   const [scrollPostion, setScrollPostion] = useState(0);
@@ -63,6 +66,12 @@ const App = () => {
         </Route>
         <Route path="/disputes">
           <Disputes />
+        </Route>
+        <Route exact path="/terms">
+          <Terms data={terms} />
+        </Route>
+        <Route exact path="/accept">
+          <Terms data={accept} />
         </Route>
         <Route path="/insuranceCase/:id" component={Cases} />
         <Route path="*">

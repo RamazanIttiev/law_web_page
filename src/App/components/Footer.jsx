@@ -1,5 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Iframe = styled.iframe`
@@ -11,28 +12,37 @@ const Info = styled.div`
 
   p {
     word-break: break-word;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
     font-size: 18px;
 
-    @media screen and (max-width:600px) {
+    @media screen and (max-width: 600px) {
       font-size: 14px;
-    },
+    }
+
+    &:last-child {
+      margin-top: 48px;
+      margin-bottom: 0;
+    }
   }
 `;
 
 const Bold = styled.span`
   color: ${props => props.theme.palette.primary.main};
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   
   @media screen and (max-width:600px) {
     font-size: 16px;
   },
 `;
 
-const Link = styled.a`
+const StyledLink = styled.a`
   padding: 8px;
   color: black;
+`;
+
+const TermsPolicy = styled(Typography)`
+  font-size: 13px !important;
 `;
 
 const Contacts = () => (
@@ -45,12 +55,32 @@ const Contacts = () => (
           </Typography>
           <Typography>
             <Bold>Телефон:</Bold>
-            <Link href="tel:+7 932 777 77 52">+7 932 777 77 52</Link>
+            <StyledLink href="tel:+7 932 777 77 52">+7 932 777 77 52</StyledLink>
           </Typography>
           <Typography>
             <Bold>Email:</Bold>
-            <Link href="mailto:rightsprotectionrf@yandex.ru">rightsprotectionrf@yandex.ru</Link>
+            <StyledLink href="mailto:rightsprotectionrf@yandex.ru">
+              rightsprotectionrf@yandex.ru
+            </StyledLink>
           </Typography>
+          <Typography>
+            <Bold>ИНН:</Bold>
+            &nbsp;9704081475
+          </Typography>
+          <Typography>
+            <Bold>ОГРН:</Bold>
+            &nbsp;1217700363462
+          </Typography>
+          <TermsPolicy>
+            <Link target="_blank" to="/terms">
+              Положение
+            </Link>
+            &nbsp;и&nbsp;
+            <Link target="_blank" to="/accept">
+              согласие
+            </Link>
+            &nbsp;на обработку персональных данных
+          </TermsPolicy>
         </Info>
       </Grid>
       <Grid item xs={12} sm={6} md={6}>

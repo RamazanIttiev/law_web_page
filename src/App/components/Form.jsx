@@ -2,6 +2,7 @@ import { Alert, Box, Container, Snackbar, TextareaAutosize, Typography } from '@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 import { postData } from '../services';
 
 const StyledForm = styled.form`
@@ -59,6 +60,11 @@ const StyledButton = styled.button`
 `;
 
 const Title = styled(Typography).attrs({ variant: 'h1' })``;
+
+const TermsPolicy = styled(Typography)`
+  margin-top: 16px !important;
+  font-size: 13px !important;
+`;
 
 const Form = ({ handleClose = () => {}, title }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -136,6 +142,17 @@ const Form = ({ handleClose = () => {}, title }) => {
             type="text"
             placeholder="Кратко опишите проблему"
           />
+          <TermsPolicy>
+            Нажимая на кнопку, Вы принимаете&nbsp;
+            <Link target="_blank" to="/terms">
+              Положение
+            </Link>
+            &nbsp;и&nbsp;
+            <Link target="_blank" to="/accept">
+              согласие
+            </Link>
+            &nbsp;на обработку персональных данных
+          </TermsPolicy>
           <StyledButton disabled={isLoading} type="submit">
             Получить консультацию
           </StyledButton>
