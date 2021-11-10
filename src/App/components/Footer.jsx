@@ -55,13 +55,11 @@ const Contacts = () => (
           </Typography>
           <Typography>
             <Bold>Телефон:</Bold>
-            <StyledLink href="tel:+7 932 777 77 52">+7 932 777 77 52</StyledLink>
+            <StyledLink href="tel:tel:8-910-467-4000">8 910 467 4000</StyledLink>
           </Typography>
           <Typography>
             <Bold>Email:</Bold>
-            <StyledLink href="mailto:rightsprotectionrf@yandex.ru">
-              rightsprotectionrf@yandex.ru
-            </StyledLink>
+            <StyledLink href="mailto:groupbastion@yandex.ru">groupbastion@yandex.ru</StyledLink>
           </Typography>
           <Typography>
             <Bold>ИНН:</Bold>

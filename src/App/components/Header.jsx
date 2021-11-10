@@ -53,7 +53,11 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  margin: 0 24px;
+  margin: 0 16px;
+
+  @media screen and (max-width: 1024px) {
+    margin: 0 10px;
+  }
 `;
 
 const StyledLink = styled(NavLink)`
@@ -173,7 +177,7 @@ const Header = () => {
                 </List>
               </Nav>
               <Number>
-                <a href="tel:99999999999">99999999999</a>
+                <a href="tel:8-910-467-4000">8 910 467 4000</a>
               </Number>
             </>
           )}
