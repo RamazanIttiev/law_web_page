@@ -19,11 +19,11 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Playfair Display"',
+    fontFamily: '"Raleway", sans-serif',
     fontSize: 14,
     h1: {
       fontSize: 32,
-      fontFamily: '"Noto Sans Georgian"',
+      fontFamily: '"Khula", sans-serif',
       '@media (max-width:600px)': {
         fontSize: 21,
       },
