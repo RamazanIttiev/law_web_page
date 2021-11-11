@@ -1,7 +1,8 @@
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import LogoImg from '../../assets/Logo.svg';
 
 const Iframe = styled.iframe`
   width: 100%;
@@ -17,11 +18,6 @@ const Info = styled.div`
 
     @media screen and (max-width: 600px) {
       font-size: 14px;
-    }
-
-    &:last-child {
-      margin-top: 48px;
-      margin-bottom: 0;
     }
   }
 `;
@@ -45,11 +41,43 @@ const TermsPolicy = styled(Typography)`
   font-size: 13px !important;
 `;
 
+const Logo = styled.div`
+  cursor: pointer;
+  font-size: 24px;
+  margin-bottom: 16px;
+
+  a {
+    max-width: 240px;
+    color: black;
+    text-decoration: none;
+    background: white;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+  }
+`;
+
 const Contacts = () => (
   <footer>
     <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }} alignItems="center">
       <Grid item xs={12} sm={6} md={6}>
         <Info>
+          <Logo>
+            <NavLink to="/">
+              <img src={LogoImg} alt="Центр юридической помощи" />
+              <Typography sx={{ mb: '0 !important' }}>ООО &quot;Бастион&quot;</Typography>
+            </NavLink>
+          </Logo>
           <Typography>
             <Bold>Мы работаем:</Bold> с 9 до 21, пн-сб. Приём заявок 24/7
           </Typography>
@@ -69,7 +97,7 @@ const Contacts = () => (
             <Bold>ОГРН:</Bold>
             &nbsp;1217700363462
           </Typography>
-          <TermsPolicy>
+          <TermsPolicy sx={{ mt: '48px' }}>
             <Link target="_blank" to="/terms">
               Положение
             </Link>

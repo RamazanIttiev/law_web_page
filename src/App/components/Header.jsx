@@ -1,4 +1,4 @@
-import { AppBar, Container, Toolbar, Typography, useMediaQuery } from '@mui/material';
+import { AppBar, Box, Container, Toolbar, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
@@ -81,7 +81,6 @@ const Number = styled.div`
   cursor: pointer;
   background: #199c68;
   border-radius: 32px;
-  padding: 8px;
 
   a {
     padding: 8px;
@@ -89,7 +88,17 @@ const Number = styled.div`
     text-decoration: none;
     display: flex;
     align-items: center;
+    margin-bottom: 4px;
   }
+`;
+
+const Bold = styled.span`
+  font-weight: 700;
+  font-size: 18px;
+  
+  @media screen and (max-width:600px) {
+    font-size: 16px;
+  },
 `;
 
 const Header = () => {
@@ -117,7 +126,7 @@ const Header = () => {
               ) : (
                 <>
                   <DesctopLogo src={LogoImg} alt="Центр юридической помощи" />
-                  {!tabletScreen && <Typography>Центр юридической помощи</Typography>}
+                  {!tabletScreen && <Typography>ООО &quot;Бастион&quot;</Typography>}
                 </>
               )}
             </NavLink>
@@ -176,9 +185,15 @@ const Header = () => {
                   </ListItem>
                 </List>
               </Nav>
-              <Number>
-                <a href="tel:8-910-467-4000">8 910 467 4000</a>
-              </Number>
+              <Box>
+                <Number>
+                  <a href="tel:8-910-467-4000">8 910 467 4000</a>
+                </Number>
+                <Typography>
+                  <Bold>Мы работаем:</Bold>
+                  <br /> с 9 до 21, пн-сб.
+                </Typography>
+              </Box>
             </>
           )}
         </Toolbar>
