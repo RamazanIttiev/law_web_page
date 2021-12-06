@@ -126,7 +126,7 @@ const Header = () => {
               ) : (
                 <>
                   <DesctopLogo src={LogoImg} alt="Центр юридической помощи" />
-                  {!tabletScreen && <Typography>ООО &quot;Бастион&quot;</Typography>}
+                  {!tabletScreen && <Typography>Центр юридической помощи</Typography>}
                 </>
               )}
             </NavLink>
