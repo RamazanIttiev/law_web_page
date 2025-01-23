@@ -41,7 +41,7 @@ const Promo = () => {
               fontSize: desctopScreen ? '48px' : '32px',
             }}
           >
-            Центр юридической помощи
+            Центр Юридической помощи «Согласие»
           </Title>
           <Subtitle
             sx={{

@@ -74,8 +74,10 @@ const Contacts = () => (
         <Info>
           <Logo>
             <NavLink to="/">
-              <img src={LogoImg} alt="Центр юридической помощи" />
-              <Typography sx={{ mb: '0 !important' }}>ООО &quot;Бастион&quot;</Typography>
+              <img src={LogoImg} alt="Центр Юридической помощи «Согласие»" />
+              <Typography sx={{ mb: '0 !important' }}>
+                Центр Юридической помощи «Согласие»
+              </Typography>
             </NavLink>
           </Logo>
           <Typography>
@@ -83,11 +85,11 @@ const Contacts = () => (
           </Typography>
           <Typography>
             <Bold>Телефон:</Bold>
-            <StyledLink href="tel:tel:8-910-467-4000">8 910 467 4000</StyledLink>
+            <StyledLink href="tel:89150667226">8 915 066 72 26</StyledLink>
           </Typography>
           <Typography>
             <Bold>Email:</Bold>
-            <StyledLink href="mailto:groupbastion@yandex.ru">groupbastion@yandex.ru</StyledLink>
+            <StyledLink href="mailto:go09997@mail.ru">go09997@mail.ru</StyledLink>
           </Typography>
           <Typography>
             <Bold>ИНН:</Bold>

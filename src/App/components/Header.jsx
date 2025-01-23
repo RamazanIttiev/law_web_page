@@ -125,8 +125,8 @@ const Header = () => {
                 <MobileLogo src={LogoImg} alt="Центр юридической помощи" />
               ) : (
                 <>
-                  <DesctopLogo src={LogoImg} alt="Центр юридической помощи" />
-                  {!tabletScreen && <Typography>ООО &quot;Бастион&quot;</Typography>}
+                  <DesctopLogo src={LogoImg} alt="Центр Юридической помощи «Согласие»" />
+                  {!tabletScreen && <Typography>Центр Юридической помощи «Согласие»</Typography>}
                 </>
               )}
             </NavLink>
@@ -187,7 +187,7 @@ const Header = () => {
               </Nav>
               <Box>
                 <Number>
-                  <a href="tel:8-910-467-4000">8 910 467 4000</a>
+                  <a href="tel:89150667226">8 915 066 72 26</a>
                 </Number>
                 <Typography>
                   <Bold>Мы работаем:</Bold>

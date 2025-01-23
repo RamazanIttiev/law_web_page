@@ -14,7 +14,7 @@ const Disputes = () => (
     <Form title="Оставьте заявку и получите консультацию нашего юриста" />
     <Helmet>
       <meta name="description" content="Жилищные вопросы" />
-      <title>Жилищные вопросы | БАСТИОН</title>
+      <title>Центр Юридической помощи «Согласие»</title>
     </Helmet>
   </>
 );

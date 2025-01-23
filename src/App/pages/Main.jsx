@@ -28,8 +28,8 @@ const Main = () => {
       {matches && <Services />}
       <Form title="Оставьте заявку и получите консультацию нашего юриста" />
       <Helmet>
-        <meta name="description" content="БАСТИОН" />
-        <title>БАСТИОН</title>
+        <meta name="description" content="Центр Юридической помощи «Согласие»" />
+        <title>Центр Юридической помощи «Согласие»</title>
       </Helmet>
     </>
   );
