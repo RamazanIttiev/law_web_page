@@ -93,11 +93,7 @@ const Contacts = () => (
           </Typography>
           <Typography>
             <Bold>ИНН:</Bold>
-            &nbsp;9704081475
-          </Typography>
-          <Typography>
-            <Bold>ОГРН:</Bold>
-            &nbsp;1217700363462
+            &nbsp;772408834842
           </Typography>
           <TermsPolicy sx={{ mt: '48px' }}>
             <Link to="/terms">Положение</Link>
@@ -108,12 +104,13 @@ const Contacts = () => (
         </Info>
       </Grid>
       <Grid item xs={12} sm={6} md={6}>
-        <Iframe
+        <iframe
           title="map"
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A2c0fb630e9a8661cdf0bf01a87572d46ded932a066be8b02d7247754a098a2b6&amp;source=constructor"
+          src="https://yandex.ru/map-widget/v1/?from=mapframe&indoorLevel=1&ll=37.479986%2C55.727466&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjY5NDEyNhJC0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCU0LDQstGL0LTQutC-0LLRgdC60LDRjyDRg9C70LjRhtCwLCAzIgoNgOsVQhXt6F5C&source=mapframe&um=constructor%3A2c0fb630e9a8661cdf0bf01a87572d46ded932a066be8b02d7247754a098a2b6&utm_source=mapframe&z=16.95"
           width="781"
           height="400"
           frameBorder="0"
+          allowFullScreen="true"
         />
       </Grid>
     </Grid>
