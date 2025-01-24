@@ -1,8 +1,8 @@
 import { DialogContentText } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import Refund from '../../assets/refund.png';
-import Money from '../../assets/moneyBack.jpeg';
+import Refund from '../assets/refund.png';
+import Money from '../assets/moneyBack.jpeg';
 
 const List = styled.ul`
   text-align: start;

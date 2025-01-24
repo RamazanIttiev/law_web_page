@@ -1,9 +1,9 @@
 import { Container, Grid, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import Fraud from '../../../assets/fake-news.svg';
-import Insurance from '../../../assets/insurance.svg';
-import Disputes from '../../../assets/house.svg';
+import Fraud from '../../assets/fake-news.svg';
+import Insurance from '../../assets/insurance.svg';
+import Disputes from '../../assets/house.svg';
 
 const Title = styled(Typography).attrs({ variant: 'h1' })`
   width: 100%;

@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import stepBgr from '../../../assets/fraud_steps.jpeg';
+import stepBgr from '../../assets/fraud_steps.jpeg';
 
 const Title = styled(Typography).attrs({ variant: 'h1' })``;
 

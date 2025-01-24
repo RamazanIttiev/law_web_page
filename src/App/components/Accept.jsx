@@ -1,14 +1,14 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import { Box, Container } from '@mui/material';
-import { terms } from '../data/terms';
+import { accept } from '../data/accept';
 
-const Terms = () => (
+const Accept = () => (
   <Container maxWidth="lg">
     <Box sx={{ mt: 7, mb: 12 }}>
-      <Markdown>{terms}</Markdown>
+      <Markdown>{accept}</Markdown>
     </Box>
   </Container>
 );
 
-export default Terms;
+export default Accept;

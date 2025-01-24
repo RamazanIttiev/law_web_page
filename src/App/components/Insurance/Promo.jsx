@@ -11,7 +11,7 @@ import {
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import PromoBgr from '../../../assets/Promo_bgr.jpeg';
+import PromoBgr from '../../assets/Promo_bgr.jpeg';
 import { insuranceCases } from '../../data/insuranceCases';
 
 const Base = styled.div`

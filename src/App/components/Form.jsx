@@ -144,13 +144,9 @@ const Form = ({ handleClose = () => {}, title }) => {
           />
           <TermsPolicy>
             Нажимая на кнопку, Вы принимаете&nbsp;
-            <Link target="_blank" to="/terms">
-              Положение
-            </Link>
+            <Link to="/terms">Положение</Link>
             &nbsp;и&nbsp;
-            <Link target="_blank" to="/accept">
-              согласие
-            </Link>
+            <Link to="/accept">согласие</Link>
             &nbsp;на обработку персональных данных
           </TermsPolicy>
           <StyledButton disabled={isLoading} type="submit">

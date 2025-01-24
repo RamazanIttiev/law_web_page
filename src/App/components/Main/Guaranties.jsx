@@ -1,7 +1,7 @@
 import { Container, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import Eagle from '../../../assets/eagleImg.svg';
+import Eagle from '../../assets/eagleImg.svg';
 
 const Base = styled.div`
   background: ${props => props.theme.palette.background.paper};

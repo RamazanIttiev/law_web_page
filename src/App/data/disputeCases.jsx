@@ -1,13 +1,13 @@
 import { DialogContentText } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
-import Disputes1 from '../../assets/disputes1.jpeg';
-import Disputes2 from '../../assets/disputes2.jpeg';
-import Disputes3 from '../../assets/disputes3.jpeg';
-import Aprtment from '../../assets/aprtment.jpeg';
-import Aprtmen2 from '../../assets/apeartment-order.jpeg';
-import Rent from '../../assets/rent.jpeg';
-import Aprtment3 from '../../assets/apartment-developer.jpeg';
+import Disputes1 from '../assets/disputes1.jpeg';
+import Disputes2 from '../assets/disputes2.jpeg';
+import Disputes3 from '../assets/disputes3.jpeg';
+import Aprtment from '../assets/aprtment.jpeg';
+import Aprtmen2 from '../assets/apeartment-order.jpeg';
+import Rent from '../assets/rent.jpeg';
+import Aprtment3 from '../assets/apartment-developer.jpeg';
 
 const List = styled.ul`
   text-align: start;

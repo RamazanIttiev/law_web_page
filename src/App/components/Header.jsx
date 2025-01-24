@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import MobileMenu from './MobileMenu';
-import LogoImg from '../../assets/Logo.svg';
+import LogoImg from '../assets/Logo.svg';
 
 const Logo = styled.div`
   cursor: pointer;

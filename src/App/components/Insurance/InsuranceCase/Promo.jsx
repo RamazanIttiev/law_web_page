@@ -3,7 +3,7 @@ import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
-import PromoBgr from '../../../../assets/Promo_bgr.jpeg';
+import PromoBgr from '../../../assets/Promo_bgr.jpeg';
 import Button from '../../../Ui/FormButton';
 
 const Wrapper = styled.div`

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid } from '@mui/material';
 import styled from 'styled-components';
-import StatisticsBgr from '../../../assets/statisticsBgr.jpeg';
+import StatisticsBgr from '../../assets/statisticsBgr.jpeg';
 
 const Base = styled.div`
   background: url(${StatisticsBgr}) no-repeat center/cover;

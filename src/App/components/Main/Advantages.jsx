@@ -2,12 +2,12 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import { useTheme } from '@emotion/react';
-import Certificate from '../../../assets/certificate.svg';
-import Approach from '../../../assets/approach.svg';
-import Efficiency from '../../../assets/efficiency.svg';
-import Experts from '../../../assets/experts.svg';
-import Cup from '../../../assets/cup.svg';
-import Support from '../../../assets/support.svg';
+import Certificate from '../../assets/certificate.svg';
+import Approach from '../../assets/approach.svg';
+import Efficiency from '../../assets/efficiency.svg';
+import Experts from '../../assets/experts.svg';
+import Cup from '../../assets/cup.svg';
+import Support from '../../assets/support.svg';
 
 const Title = styled(Typography).attrs({ variant: 'h1' })`
   width: 100%;

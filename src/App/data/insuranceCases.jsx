@@ -1,12 +1,12 @@
 import React from 'react';
 import { Typography } from '@mui/material';
-import document from '../../assets/document.png';
-import Clock from '../../assets/clock.png';
-import alert from '../../assets/alert.png';
-import Document from '../../assets/documents.svg';
-import Court from '../../assets/gavel.svg';
-import Lawyer from '../../assets/lawyer.svg';
-import Proccess from '../../assets/proccess.svg';
+import document from '../assets/document.png';
+import Clock from '../assets/clock.png';
+import alert from '../assets/alert.png';
+import Document from '../assets/documents.svg';
+import Court from '../assets/gavel.svg';
+import Lawyer from '../assets/lawyer.svg';
+import Proccess from '../assets/proccess.svg';
 
 export const insuranceCases = [
   {

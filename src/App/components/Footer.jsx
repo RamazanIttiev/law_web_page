@@ -2,7 +2,7 @@ import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import LogoImg from '../../assets/Logo.svg';
+import LogoImg from '../assets/Logo.svg';
 
 const Iframe = styled.iframe`
   width: 100%;
@@ -100,13 +100,9 @@ const Contacts = () => (
             &nbsp;1217700363462
           </Typography>
           <TermsPolicy sx={{ mt: '48px' }}>
-            <Link target="_blank" to="/terms">
-              Положение
-            </Link>
+            <Link to="/terms">Положение</Link>
             &nbsp;и&nbsp;
-            <Link target="_blank" to="/accept">
-              согласие
-            </Link>
+            <Link to="/accept">согласие</Link>
             &nbsp;на обработку персональных данных
           </TermsPolicy>
         </Info>
